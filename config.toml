@@ -11,7 +11,7 @@ metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 disqusShortname = "thottingal-in"
-#googleAnalytics = "XXX"
+googleAnalytics = " UA-3185981-2"
 
 [Params]
   #subtitle = "Thoughts of Thottingal"
