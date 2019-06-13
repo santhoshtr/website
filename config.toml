@@ -21,14 +21,14 @@ googleAnalytics = " UA-3185981-2"
   commit = false
   rss = true
   comments = true
-#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+  gcse = "018117983803886995692:cspsge7ythu" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 #[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
+  #src = "img/triangle.jpg"
+  #desc = "Triangle"
 #[[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
+  #src = "img/sphere.jpg"
+  #desc = "Sphere"
 #[[Params.bigimg]]
 #  src = "img/hexagon.jpg"
 #  desc = "Hexagon"
