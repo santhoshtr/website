@@ -1,0 +1,20 @@
+[submodule "static/projects/js/jquery.i18n"]
+	path = static/projects/js/jquery.i18n
+	url = https://github.com/wikimedia/jquery.i18n
+	branch = master
+[submodule "static/projects/js/jquery.ime"]
+	path = static/projects/js/jquery.ime
+	url = https://github.com/wikimedia/jquery.ime
+	branch = master
+[submodule "static/projects/js/jquery.uls"]
+	path = static/projects/js/jquery.uls
+	url = https://github.com/wikimedia/jquery.uls
+	branch = master
+[submodule "static/projects/js/jquery.webfonts"]
+	path = static/projects/js/jquery.webfonts
+	url = https://github.com/wikimedia/jquery.webfonts
+	branch = master
+[submodule "static/projects/js/plural"]
+	path = static/projects/js/plural
+	url = https://github.com/santhoshtr/CLDRPluralRuleParser.git
+	branch = master
