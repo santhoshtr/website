@@ -31,6 +31,7 @@ This blog also has posts by my life partner [Kavya Manohar][3].
   * My code: [github.com/santhoshtr][6]
   * Design portfolio:&nbsp;[behance.net/sthottingal][7]
   * PGP Fingerprint: EF23 579B BE51 48A8 0EB2 979B 523D E289 34DA 0B5A
+  * [Donate](https://liberapay.com/santhosh/donate)
 
  [1]: http://smc.org.in
  [2]: https://smc.org.in/fonts/
