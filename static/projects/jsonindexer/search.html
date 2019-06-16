@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+    function search(form){
+        word =form.word.value;    
+        var entries;
+        $("#result").html("");
+        $.getJSON('myindex.json', function(data, textStatus) {
+            entries=data[0][word];
+            if(entries){
+                for(var fileid  in entries){
+                    count = entries[fileid]; 
+                    $("#result").append("Found "+count + " matches in <a href='"+data[2][fileid]+"'>"+data[2][fileid]+"</a><br/>");
+                }
+            }
+            else{
+                $("#result").html("No results found");
+            }
+        });
+        return false;    
+    }
+   </script>  
+  </head>
+  <body>
+   <form  onsubmit="return search(this);" >
+  <input type="text" id="word"/>
+  <input type="submit" id="searchbutton" value="Search"/>
+  </form>
+  <div id="result"></div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<title>Malayalam Font Embed Bookmarklet</title>
+<style type="text/css">
+ body {
+        background: #eee;
+        background-position: top center;
+        font-family: 'Lucida sans', Helvetica, Arial;
+        font-size: 15px;
+        padding: 0px;
+        margin: 0px;
+     }
+     #wrap {
+        background: #fff;
+        width: 800px;
+        margin: 40px auto 20px auto;
+        
+        padding: 20px;
+
+        border: 1px;
+        border-style: solid;
+        border-color: #ddd;
+
+        border-radius: 15px;
+        -moz-border-radius: 15px;
+        -khtml-border-radius: 15px;
+        -webkit-border-radius: 15px;
+    } 
+</style>    
+</head>
+
+<body>
+<div id="wrap">
+<h1>Malayalam Font Embed Bookmarklet</h1>
+<p>This is a set of bookmarklets that allows you to read the pages in your favourite fonts even if the system you are using does not have them.
+</p>
+<p>Drag and drop any of the following links to the bookmarks tool of your browser(or add to the favourites). When you are in a page, click on that link in bookmarks toolbar or favourites menu to get the page in the given font.</p>
+<ul>
+<li>
+<a href="javascript:(function(){jQuery('head').append('<style>');var style = jQuery('head').children(':last');style.attr({ type: 'text/css'});var font='Rachana';var css_link  ='http://smc.org.in/webfonts/'+font; jQuery('head').append('<link>');css = jQuery('head').children(':last');css.attr({ rel:'stylesheet',type: 'text/css',href: css_link });jQuery('body').css('font-family', font);
+if%20(document.title)document.title%20=%20replaceAanava(document.title);traverseDomTree(document);function%20replaceAanava(s)%20{s%20=%20s.replace%20(/\u0D7A/g,%20'\u0D23\u0D4D\u200D').replace%20(/\u0D7B/g,'\u0D28\u0D4D\u200D').replace%20(/\u0D7C/g,%20'\u0D30\u0D4D\u200D').replace(/\u0D7D/g,%20'\u0D32\u0D4D\u200D').replace%20(/\u0D7E/g,%20'\u0D33\u0D4D\u200D');return%20s;}function%20traverseDomTree(d)%20{var%20body_element%20=%20d.getElementsByTagName('body').item(0);%20traverseDomTree_recurse(body_element,%200);for(var%20i=0;%20i<window.frames.length;%20i++){%20%20%20%20%20%20traverseDomTree(window.frames[i].document);}}function%20traverseDomTree_recurse(curr_element,%20level)%20{%20%20if%20(!curr_element)%20return;%20%20if(curr_element.childNodes.length%20<=%200)%20{%20%20%20%20%20if(curr_element.nodeName%20==%20'#text'%20&amp;&amp;%20curr_element.data)%20{curr_element.data%20=%20replaceAanava(curr_element.data);}%20%20}%20%20else%20{%20%20%20%20for(var%20i=0;%20curr_element.childNodes.item(i);%20i++)%20{traverseDomTree_recurse(curr_element.childNodes.item(i),%20level+1);}%20%20}}
+})()">Rachana</a>
+</li>
+<li>
+<a href="javascript:(function(){jQuery('head').append('<style>');var style = jQuery('head').children(':last');style.attr({ type: 'text/css'});var font='Meera';var css_link  ='http://smc.org.in/webfonts/'+font; jQuery('head').append('<link>');css = jQuery('head').children(':last');css.attr({ rel:'stylesheet',type: 'text/css',href: css_link });jQuery('body').css('font-family', font);
+jQuery('body').css('font-size', '14px');
+if%20(document.title)document.title%20=%20replaceAanava(document.title);traverseDomTree(document);function%20replaceAanava(s)%20{s%20=%20s.replace%20(/\u0D7A/g,%20'\u0D23\u0D4D\u200D').replace%20(/\u0D7B/g,'\u0D28\u0D4D\u200D').replace%20(/\u0D7C/g,%20'\u0D30\u0D4D\u200D').replace(/\u0D7D/g,%20'\u0D32\u0D4D\u200D').replace%20(/\u0D7E/g,%20'\u0D33\u0D4D\u200D');return%20s;}function%20traverseDomTree(d)%20{var%20body_element%20=%20d.getElementsByTagName('body').item(0);%20traverseDomTree_recurse(body_element,%200);for(var%20i=0;%20i<window.frames.length;%20i++){%20%20%20%20%20%20traverseDomTree(window.frames[i].document);}}function%20traverseDomTree_recurse(curr_element,%20level)%20{%20%20if%20(!curr_element)%20return;%20%20if(curr_element.childNodes.length%20<=%200)%20{%20%20%20%20%20if(curr_element.nodeName%20==%20'#text'%20&amp;&amp;%20curr_element.data)%20{curr_element.data%20=%20replaceAanava(curr_element.data);}%20%20}%20%20else%20{%20%20%20%20for(var%20i=0;%20curr_element.childNodes.item(i);%20i++)%20{traverseDomTree_recurse(curr_element.childNodes.item(i),%20level+1);}%20%20}}
+})()">Meera</a>
+</li>
+<li>
+<a href="javascript:(function(){jQuery('head').append('<style>');var style = jQuery('head').children(':last');style.attr({ type: 'text/css'});var font='AnjaliOldLipi';var css_link  ='http://smc.org.in/webfonts/'+font; jQuery('head').append('<link>');css = jQuery('head').children(':last');css.attr({ rel:'stylesheet',type: 'text/css',href: css_link });jQuery('body').css('font-family', font);
+if%20(document.title)document.title%20=%20replaceAanava(document.title);traverseDomTree(document);function%20replaceAanava(s)%20{s%20=%20s.replace%20(/\u0D7A/g,%20'\u0D23\u0D4D\u200D').replace%20(/\u0D7B/g,'\u0D28\u0D4D\u200D').replace%20(/\u0D7C/g,%20'\u0D30\u0D4D\u200D').replace(/\u0D7D/g,%20'\u0D32\u0D4D\u200D').replace%20(/\u0D7E/g,%20'\u0D33\u0D4D\u200D');return%20s;}function%20traverseDomTree(d)%20{var%20body_element%20=%20d.getElementsByTagName('body').item(0);%20traverseDomTree_recurse(body_element,%200);for(var%20i=0;%20i<window.frames.length;%20i++){%20%20%20%20%20%20traverseDomTree(window.frames[i].document);}}function%20traverseDomTree_recurse(curr_element,%20level)%20{%20%20if%20(!curr_element)%20return;%20%20if(curr_element.childNodes.length%20<=%200)%20{%20%20%20%20%20if(curr_element.nodeName%20==%20'#text'%20&amp;&amp;%20curr_element.data)%20{curr_element.data%20=%20replaceAanava(curr_element.data);}%20%20}%20%20else%20{%20%20%20%20for(var%20i=0;%20curr_element.childNodes.item(i);%20i++)%20{traverseDomTree_recurse(curr_element.childNodes.item(i),%20level+1);}%20%20}}
+})()">AnjaliOldLipi</a>
+</li>
+<li>
+<a href="javascript:(function(){jQuery('head').append('<style>');var style = jQuery('head').children(':last');style.attr({ type: 'text/css'});var font='Suruma';var css_link  ='http://smc.org.in/webfonts/'+font; jQuery('head').append('<link>');css = jQuery('head').children(':last');css.attr({ rel:'stylesheet',type: 'text/css',href: css_link });jQuery('body').css('font-family', font);
+if%20(document.title)document.title%20=%20replaceAanava(document.title);traverseDomTree(document);function%20replaceAanava(s)%20{s%20=%20s.replace%20(/\u0D7A/g,%20'\u0D23\u0D4D\u200D').replace%20(/\u0D7B/g,'\u0D28\u0D4D\u200D').replace%20(/\u0D7C/g,%20'\u0D30\u0D4D\u200D').replace(/\u0D7D/g,%20'\u0D32\u0D4D\u200D').replace%20(/\u0D7E/g,%20'\u0D33\u0D4D\u200D');return%20s;}function%20traverseDomTree(d)%20{var%20body_element%20=%20d.getElementsByTagName('body').item(0);%20traverseDomTree_recurse(body_element,%200);for(var%20i=0;%20i<window.frames.length;%20i++){%20%20%20%20%20%20traverseDomTree(window.frames[i].document);}}function%20traverseDomTree_recurse(curr_element,%20level)%20{%20%20if%20(!curr_element)%20return;%20%20if(curr_element.childNodes.length%20<=%200)%20{%20%20%20%20%20if(curr_element.nodeName%20==%20'#text'%20&amp;&amp;%20curr_element.data)%20{curr_element.data%20=%20replaceAanava(curr_element.data);}%20%20}%20%20else%20{%20%20%20%20for(var%20i=0;%20curr_element.childNodes.item(i);%20i++)%20{traverseDomTree_recurse(curr_element.childNodes.item(i),%20level+1);}%20%20}}
+})()">Suruma</a>
+</li>
+<li>
+<a href="javascript:(function(){jQuery('head').append('<style>');var style = jQuery('head').children(':last');style.attr({ type: 'text/css'});var font='Kalyani';var css_link  ='http://smc.org.in/webfonts/'+font; jQuery('head').append('<link>');css = jQuery('head').children(':last');css.attr({ rel:'stylesheet',type: 'text/css',href: css_link });jQuery('body').css('font-family', font);
+if%20(document.title)document.title%20=%20replaceAanava(document.title);traverseDomTree(document);function%20replaceAanava(s)%20{s%20=%20s.replace%20(/\u0D7A/g,%20'\u0D23\u0D4D\u200D').replace%20(/\u0D7B/g,'\u0D28\u0D4D\u200D').replace%20(/\u0D7C/g,%20'\u0D30\u0D4D\u200D').replace(/\u0D7D/g,%20'\u0D32\u0D4D\u200D').replace%20(/\u0D7E/g,%20'\u0D33\u0D4D\u200D');return%20s;}function%20traverseDomTree(d)%20{var%20body_element%20=%20d.getElementsByTagName('body').item(0);%20traverseDomTree_recurse(body_element,%200);for(var%20i=0;%20i<window.frames.length;%20i++){%20%20%20%20%20%20traverseDomTree(window.frames[i].document);}}function%20traverseDomTree_recurse(curr_element,%20level)%20{%20%20if%20(!curr_element)%20return;%20%20if(curr_element.childNodes.length%20<=%200)%20{%20%20%20%20%20if(curr_element.nodeName%20==%20'#text'%20&amp;&amp;%20curr_element.data)%20{curr_element.data%20=%20replaceAanava(curr_element.data);}%20%20}%20%20else%20{%20%20%20%20for(var%20i=0;%20curr_element.childNodes.item(i);%20i++)%20{traverseDomTree_recurse(curr_element.childNodes.item(i),%20level+1);}%20%20}}
+})()">Kalyani</a>
+</li>
+<li>
+<a href="javascript:(function(){jQuery('head').append('<style>');var style = jQuery('head').children(':last');style.attr({ type: 'text/css'});var font='RaghuMalayalam';var css_link  ='http://smc.org.in/webfonts/'+font; jQuery('head').append('<link>');css = jQuery('head').children(':last');css.attr({ rel:'stylesheet',type: 'text/css',href: css_link });jQuery('body').css('font-family', font);
+if%20(document.title)document.title%20=%20replaceAanava(document.title);traverseDomTree(document);function%20replaceAanava(s)%20{s%20=%20s.replace%20(/\u0D7A/g,%20'\u0D23\u0D4D\u200D').replace%20(/\u0D7B/g,'\u0D28\u0D4D\u200D').replace%20(/\u0D7C/g,%20'\u0D30\u0D4D\u200D').replace(/\u0D7D/g,%20'\u0D32\u0D4D\u200D').replace%20(/\u0D7E/g,%20'\u0D33\u0D4D\u200D');return%20s;}function%20traverseDomTree(d)%20{var%20body_element%20=%20d.getElementsByTagName('body').item(0);%20traverseDomTree_recurse(body_element,%200);for(var%20i=0;%20i<window.frames.length;%20i++){%20%20%20%20%20%20traverseDomTree(window.frames[i].document);}}function%20traverseDomTree_recurse(curr_element,%20level)%20{%20%20if%20(!curr_element)%20return;%20%20if(curr_element.childNodes.length%20<=%200)%20{%20%20%20%20%20if(curr_element.nodeName%20==%20'#text'%20&amp;&amp;%20curr_element.data)%20{curr_element.data%20=%20replaceAanava(curr_element.data);}%20%20}%20%20else%20{%20%20%20%20for(var%20i=0;%20curr_element.childNodes.item(i);%20i++)%20{traverseDomTree_recurse(curr_element.childNodes.item(i),%20level+1);}%20%20}}
+})()">Raghu Malayalam</a>
+</li>
+<li>
+<a href="javascript:(function(){jQuery('head').append('<style>');var style = jQuery('head').children(':last');style.attr({ type: 'text/css'});var font='Dyuthi';var css_link  ='http://smc.org.in/webfonts/'+font; jQuery('head').append('<link>');css = jQuery('head').children(':last');css.attr({ rel:'stylesheet',type: 'text/css',href: css_link });jQuery('body').css('font-family', font);
+if%20(document.title)document.title%20=%20replaceAanava(document.title);traverseDomTree(document);function%20replaceAanava(s)%20{s%20=%20s.replace%20(/\u0D7A/g,%20'\u0D23\u0D4D\u200D').replace%20(/\u0D7B/g,'\u0D28\u0D4D\u200D').replace%20(/\u0D7C/g,%20'\u0D30\u0D4D\u200D').replace(/\u0D7D/g,%20'\u0D32\u0D4D\u200D').replace%20(/\u0D7E/g,%20'\u0D33\u0D4D\u200D');return%20s;}function%20traverseDomTree(d)%20{var%20body_element%20=%20d.getElementsByTagName('body').item(0);%20traverseDomTree_recurse(body_element,%200);for(var%20i=0;%20i<window.frames.length;%20i++){%20%20%20%20%20%20traverseDomTree(window.frames[i].document);}}function%20traverseDomTree_recurse(curr_element,%20level)%20{%20%20if%20(!curr_element)%20return;%20%20if(curr_element.childNodes.length%20<=%200)%20{%20%20%20%20%20if(curr_element.nodeName%20==%20'#text'%20&amp;&amp;%20curr_element.data)%20{curr_element.data%20=%20replaceAanava(curr_element.data);}%20%20}%20%20else%20{%20%20%20%20for(var%20i=0;%20curr_element.childNodes.item(i);%20i++)%20{traverseDomTree_recurse(curr_element.childNodes.item(i),%20level+1);}%20%20}}
+})()">Dyuthi</a>
+</li>
+<li>
+<a href="javascript:(function(){jQuery('head').append('<style>');var style = jQuery('head').children(':last');style.attr({ type: 'text/css'});var font='LohitMalayalam';var css_link  ='http://smc.org.in/webfonts/'+font; jQuery('head').append('<link>');css = jQuery('head').children(':last');css.attr({ rel:'stylesheet',type: 'text/css',href: css_link });jQuery('body').css('font-family', font);
+if%20(document.title)document.title%20=%20replaceAanava(document.title);traverseDomTree(document);function%20replaceAanava(s)%20{s%20=%20s.replace%20(/\u0D7A/g,%20'\u0D23\u0D4D\u200D').replace%20(/\u0D7B/g,'\u0D28\u0D4D\u200D').replace%20(/\u0D7C/g,%20'\u0D30\u0D4D\u200D').replace(/\u0D7D/g,%20'\u0D32\u0D4D\u200D').replace%20(/\u0D7E/g,%20'\u0D33\u0D4D\u200D');return%20s;}function%20traverseDomTree(d)%20{var%20body_element%20=%20d.getElementsByTagName('body').item(0);%20traverseDomTree_recurse(body_element,%200);for(var%20i=0;%20i<window.frames.length;%20i++){%20%20%20%20%20%20traverseDomTree(window.frames[i].document);}}function%20traverseDomTree_recurse(curr_element,%20level)%20{%20%20if%20(!curr_element)%20return;%20%20if(curr_element.childNodes.length%20<=%200)%20{%20%20%20%20%20if(curr_element.nodeName%20==%20'#text'%20&amp;&amp;%20curr_element.data)%20{curr_element.data%20=%20replaceAanava(curr_element.data);}%20%20}%20%20else%20{%20%20%20%20for(var%20i=0;%20curr_element.childNodes.item(i);%20i++)%20{traverseDomTree_recurse(curr_element.childNodes.item(i),%20level+1);}%20%20}}
+})()">Lohit Malayalam</a>
+</li>
+</ul>
+<p>You can test this in this page itself. Watch how the following text changes when you click on the above links
+</p>
+<p>
+രാത്രിമഴ,ചുമ്മാതെ കേണും ചിരിച്ചും വിതുമ്പിയും<br/>
+നിര്‍ത്താതെ പിറുപിറുത്തും നീണ്ട മുടിയിട്ടുലച്ചും<br/>
+കുനിഞ്ഞിരിക്കുന്നൊരു യുവതിയാം ഭ്രാന്തിയെപ്പോലെ<br/>
+രാത്രിമഴ,പണ്ടെന്റെ സൌഭാഗ്യരാത്രികളിലെന്നെ ചിരിപ്പിച്ച ,<br/>
+കുളിര്‍ കോരിയണിയിച്ച വെണ്ണിലാവേക്കാള്‍ പ്രിയം<br/>
+തന്നുറക്കിയോരന്നത്തെയെന്‍പ്രേമസാക്ഷി<br/>
+രാത്രിമഴ, രാത്രിമഴയോടു ഞാന്‍ പറയട്ടെ,<br/>
+നിന്റെ ശോകാര്‍ദ്രമാം സംഗീതമറിയുന്നു ഞാന്‍<br/>
+നിന്റെയലിവും അമര്‍ത്തുന്ന രോഷവും,<br/>
+ഇരുട്ടത്ത്‌ വരവും,തനിച്ചുള്ള തനിച്ചുള്ള തേങ്ങിക്കരച്ചിലുംപുലരിയെത്തുമ്പോള്‍<br/>
+മുഖം തുടച്ചുള്ള നിന്‍ തിടുക്കവും കള്ളച്ചിരിയും , നാട്യവും ഞാനറിയും ....<br/>
+അറിയുന്നതെന്തു കൊണ്ടെന്നോ.....സഖീ....<br/>
+ഞാനുമിതു പോലെ...രാത്രിമഴപോലെ.....<br/>
+രാത്രിമഴപോലെ....രാത്രിമഴപോലെ..<br/>
+-രാത്രിമഴ - സുഗതകുമാരി.
+</p>
+</div>
+</body></html>
+

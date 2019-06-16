@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+<style>
+	body {
+		background: black;
+	}
+	b{
+		position: absolute;
+		color: green;
+		font: 1.5em Meera;
+	}
+</style>
+<script>
+var sin=Math.sin,
+	xoffset = 500,
+	yoffset = 250,
+	fontsize = 10,
+	malayalam = "കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഷറഅആഇഈഉഊഋഎഏഒദധനപ".split("");
+	z=0;
+
+function draw(){
+	for(i=0; i<50; i++){
+		z?0:document.write('<b id=x'+i+'>'+malayalam[i]+'</b>');
+		w=i*sin(z);
+		letters=document.all['x'+i];
+		if(letters!=null){
+			style=letters.style;
+			style.top=sin(w)*i*4+yoffset;
+			style.left=sin(w+2)*i*4+xoffset;
+		}
+	}
+	z+=.015;
+	setTimeout('draw()',100)
+};
+draw()
+</script>
+

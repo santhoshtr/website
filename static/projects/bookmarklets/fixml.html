@@ -1,0 +1,13 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head><body>
+<h1>FixMl Bookmarklet</h1>
+<p>
+This is a bookmarklet to convert a webpage to Malayalam Unicode 5.0
+version.Drag and drop the following link to the bookmarks or favourites
+toolbar of your browser.
+To convert a page to unicode 5.0 version, click on the link in the
+toolbar.
+</p>
+<a href="javascript:(function(){if%20(document.title)document.title%20=%20replaceAanava(document.title);traverseDomTree(document);function%20replaceAanava(s)%20{s%20=%20s.replace%20(/\u0D7A/g,%20'\u0D23\u0D4D\u200D').replace%20(/\u0D7B/g,'\u0D28\u0D4D\u200D').replace%20(/\u0D7C/g,%20'\u0D30\u0D4D\u200D').replace(/\u0D7D/g,%20'\u0D32\u0D4D\u200D').replace%20(/\u0D7E/g,%20'\u0D33\u0D4D\u200D');return%20s;}function%20traverseDomTree(d)%20{var%20body_element%20=%20d.getElementsByTagName('body').item(0);%20traverseDomTree_recurse(body_element,%200);for(var%20i=0;%20i<window.frames.length;%20i++){%20%20%20%20%20%20traverseDomTree(window.frames[i].document);}}function%20traverseDomTree_recurse(curr_element,%20level)%20{%20%20if%20(!curr_element)%20return;%20%20if(curr_element.childNodes.length%20<=%200)%20{%20%20%20%20%20if(curr_element.nodeName%20==%20'#text'%20&amp;&amp;%20curr_element.data)%20{curr_element.data%20=%20replaceAanava(curr_element.data);}%20%20}%20%20else%20{%20%20%20%20for(var%20i=0;%20curr_element.childNodes.item(i);%20i++)%20{traverseDomTree_recurse(curr_element.childNodes.item(i),%20level+1);}%20%20}}})()">Clean</a>
+</body></html>

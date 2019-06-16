@@ -1,0 +1,30 @@
+h1 {
+ background-color: #99CCFF;
+  color: #fff;
+  padding: 2px;
+}
+table{
+width: 100%; padding: 1px;
+border: 1px solid #3399FF;
+border-collapse: collapse;
+}
+table tr th {
+font-size: 20px;
+font-color: #3399FF;
+border: 1px dotted #666;
+border-bottom: 1px solid #3399FF;
+font-weight: bold;
+background-color: #99CCFF;
+}
+table tr td { font-size: 20px;
+border: 1px dotted #666;
+background-color: #F4F4F4;
+vertical-align: middle;
+padding: 2px;
+}
+
+table tr:hover th[scope=row], table tr:hover td
+{
+  background-color: #99CCFF;
+  color: #fff;
+}

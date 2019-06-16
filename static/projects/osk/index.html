@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Virtual Keyboard Language Layouts</title>
+
+	<!-- demo -->
+	<link href="demo/demo.css" rel="stylesheet">
+
+	<!-- jQuery & jQuery UI + theme (required) -->
+	<link href="css/jquery-ui.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+
+	<!-- keyboard widget css & script (required) -->
+	<link href="css/keyboard.css" rel="stylesheet">
+	<script src="js/jquery.keyboard.js"></script>
+ 
+
+
+	<!-- preloaded keyboard layout -->
+	<script src="layouts/malayalam.js" charset="utf-8"></script>
+	 
+	<script>
+	var showKb = function(name){
+		$('#multi').keyboard({
+			layout: name,
+			usePreview: false,
+			alwaysOpen: false
+		});
+	};
+
+	$(function() {
+		$('#lang').change(function(){
+			var kb = $('#multi'),
+				opt = $(this).find('option:selected'),
+				layout = opt.attr('class'),
+				file = $(this).val();
+			$('#multi')[file.match('arabic') ? 'addClass' : 'removeClass']('rtl');
+			if (!$('script[src*=' + file + ']').length) {
+				$.getScript('layouts/' + file + '.js', function() {
+					if (kb.data('keyboard')) { kb.getkeyboard().destroy(); }
+					showKb( layout );
+				});
+			} else {
+				showKb( layout );
+			}
+		}).trigger('change');
+
+	});
+
+	// Renaming some of the default keyboard key names (including symbols)
+	// *Note* this will effect ALL layouts on this page
+	$.extend(true, $.keyboard.defaultOptions.display, {
+		'accept' : '\u2714 Accept:Accept (Shift-Enter)', // check mark
+		'bksp'   : ($.browser.msie ? '\u2190 Bksp:Backspace' : '\u232b Bksp:Backspace'), // Arrow with X (not in IE) or Left arrow (same as &larr;)
+		'cancel' : '\u2716 Cancel:Cancel (Esc)', // big X, close - same action as cancel
+		'enter'  : '\u21b5 Enter:Enter',  // down, then left arrow - enter symbol
+		'shift'  : '\u21e7 Shift:Shift',  // thick hollow up arrow
+		'sign'   : '\u00b1:Change Sign',  // +/- sign for num pad
+		'space'  : ' :Space',
+		'tab'    : '\u21e5 Tab:Tab'       // right arrow to bar (used since this virtual keyboard works with one directional tabs)
+	});
+	</script>
+	<style>
+	/* making a few keys wider, to include the symbol - use .ui-keyboard-actionkey to affect all (including space) */
+	.ui-keyboard-accept, .ui-keyboard-cancel, .ui-keyboard-bksp, .ui-keyboard-enter, .ui-keyboard-shift {
+		font-size: .8em;
+		width: 5.2em;
+		height: 2em;
+	}
+	.rtl {
+		direction: rtl;
+		text-align: right;
+	}
+	</style>
+</head>
+<body>
+
+<div id="page-wrap">
+	 
+	<!-- End Links -->
+
+	<h1><a href="https://github.com/Mottie/Keyboard">Virtual Keyboard Language Layouts</a></h1>
+ 
+
+	<div id="switcher"></div>
+	<br>
+	<div class="block2">
+		<select id="lang">
+			<!-- value="file name", class="layout name", Title -->
+			<option value="albanian" class="albanian-qwerty">Albanian (qwerty)</option>
+			<option value="albanian" class="albanian-qwertz">Albanian (qwertz)</option>
+			<option value="arabic" class="arabic-azerty">Arabic (azerty)</option>
+			<option value="arabic" class="arabic-qwerty-1">Arabic (qwerty-1)</option>
+			<option value="arabic" class="arabic-qwerty-2">Arabic (qwerty-2)</option>
+			<option value="arabic" class="arabic-qwerty-3">Arabic (qwerty-3)</option>
+			<option value="arabic" class="arabic-qwerty-4">Arabic (qwerty-4)</option>
+			<option value="belarusian" class="belarusian-qwerty">Belarusian (Belarus)</option>
+			<option value="bengali" class="bengali-qwerty-1">Bengali (qwerty-1)</option>
+			<option value="bengali" class="bengali-qwerty-2">Bengali (qwerty-2)</option>
+			<option value="bulgarian" class="bulgarian-qwerty">Bulgarian (qwerty)</option>
+			<option value="catalan" class="catalan-qwerty">Catalan (qwerty)</option>
+			<option value="danish" class="danish-qwerty">Danish (qwerty)</option>
+			<option value="german" class="german-qwertz-1">German (qwertz-1)</option>
+			<option value="german" class="german-qwertz-2">German (qwertz-2)</option>
+			<option value="malayalam" class="malayalam-inscript">Malayalam Inscript</option>
+			<option value="russian" class="russian-qwerty">Russian (qwerty)</option>
+			<option value="swedish" class="swedish-qwerty">Swedish (qwerty)</option>
+			<option value="swedish" class="swedish-dvorak">Swedish (dvorak)</option>
+
+<!--
+			<option value="" class=""></option>
+-->
+		</select>
+		<div style="height: 50px;"></div>
+
+		<h2></h2>
+		<input id="multi" type="text" />
+	</div>
+	<br class="clear" />
+
+	 
+</div>
+
+</body>
+</html>

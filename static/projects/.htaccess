@@ -1,0 +1,7 @@
+Options +Indexes
+IndexOptions +FancyIndexing
+IndexOptions +FoldersFirst
+IndexOptions +XHTML
+IndexOptions +HTMLTable
+IndexOptions +SuppressRules 
+IndexOptions NameWidth=*
