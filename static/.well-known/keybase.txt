@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/sthottingal
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://thottingal.in
+  * I am sthottingal (https://keybase.io/sthottingal) on keybase.
+  * I have a public key with fingerprint EF23 579B BE51 48A8 0EB2  979B 523D E289 34DA 0B5A
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01016e4f0b0d0d96fe9f917943006cc4d6a91b92836ff0e1c81c0b20de76e16d8a6d0a",
+      "fingerprint": "ef23579bbe5148a80eb2979b523de28934da0b5a",
+      "host": "keybase.io",
+      "key_id": "523de28934da0b5a",
+      "kid": "01016e4f0b0d0d96fe9f917943006cc4d6a91b92836ff0e1c81c0b20de76e16d8a6d0a",
+      "uid": "8a496afa62e95bf1973f15636c5ca719",
+      "username": "sthottingal"
+    },
+    "service": {
+      "hostname": "thottingal.in",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1562576299,
+  "expire_in": 157680000,
+  "prev": "9db89384e05d800832b41acfcc434f2895d2789668bc05aa92c26e51c29aa68a",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.0
+Comment: https://keybase.io/crypto
+
+yMIkAnicrVJbSFRBGF5Ly0uSSGCFUoxkBiJzbrNnFgXTEDWp0JfUcp1zzpzd42XP
+unvWMjF8MFKjerEi8hJEEipBRIiaoOFD2Y2gKIUuRqYFFoTSxaTmiNFLj83LMP//
+fd98/zczHrvWER1WlPm2VZyKKQ27P3Yp5DicHNHXABRTqweuBlBFVzZardGg5a4y
+NOACkIMcoqIOFahBDSOdYh1zTiwKECJVFTVEMKdgXhaQrkPKqTKnQoWHGnUiyiFN
+JkiDBKQB3fB5aMAfMHwWk6U6L0hOrChU4kSZyJAqPGZniRc0ystYEDUCFckmes2g
+zWDmFBKk6YbJauzgXrH3D/x/9h1akZOJiBHRCeIplhSdw05B5yQkIFVSiZPDNjBI
+Az5SQxk6aHlNy2IDk2rQmAZYo85QqZ2tPcwq6C8m3fAxvj9gWqZqVrOW17L8QZdN
+ter9NvYIVdyrKm7F8GmMxhh1NBA0TB9wcQypWoYty0zxkhPxGKcBetRvBKjbsBGs
+JkO27HtoHZPEmsJik0UKJY11ZIFXRI6oOstGEHUWqaTxThkjJCsqlAjBvMoj9loq
+jwlBsh1NkNb6TOCSmE3iscc2PD5ihQIUNN4ZPRTuCIt2rItYY/8xR3RU3J+f17tr
+/a/iR5E5z2ayjR2hzMWCkf68yaaf423LXV0tS968TndEaXhZcmzYZPj1pCH1xvy1
+k9Kc1O2oq6qpXr51uzOrZtPnb3Elgy+aPwmJTz9Opjf2pL0uIB/MqRwAXRkJE93z
+lQ9zuVnlfMzSUHv8j5EhaeTYzfqdu2en871ZAEw0XskfEA+8bAos6G3TXVu/bytK
+6TmxsHf7qdnKi+mRc1Pcvi+bZ/qllOyqloTLrRW9qZWPB995kiqfZ0Sdfu9JfXCh
+IjHUede/8+uicyD/SflxPrW4o3B/c0ZH/3Buau65uKtnC1v7ykqE4Yyxe7Xl7e6B
+MxNbwOie0IZE4c3GV+3wYGb8byiXPd0=
+=yEix
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sthottingal
+
+==================================================================
+
