@@ -19,7 +19,7 @@ I lead varoius language computing projects at [Swathanthra Malayalam Computing.]
 
 I have done significant contributions to Malayalam digital typography. I have designed two popular Malayalam typefaces named Chilanka and Manjari. Also maintains a number of other Malayalam unicode fonts. You can see all of these fonts in [SMC website][2]
 
-Currently I am working as senior software engineer at&nbsp;Language Engineering team of Wikimedia Foundation. I work on MediaWiki language support, internationalization, localization, input methods for large number of languages in which Wikipedia exist, fonts, translation tools etc. I live at Palakkad, Kerala, India. I work remotely.
+Currently I am working as Principal software engineer at&nbsp;Language Engineering team of Wikimedia Foundation. I work on MediaWiki language support, internationalization, localization, input methods for large number of languages in which Wikipedia exist, fonts, translation tools etc. I live at Palakkad, Kerala, India. I work remotely.
 
 This blog also has posts by my life partner [Kavya Manohar][3].
 
