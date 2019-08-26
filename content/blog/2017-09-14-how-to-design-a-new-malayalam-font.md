@@ -4,8 +4,6 @@ author: Santhosh Thottingal
 type: post
 date: 2017-09-14T16:56:00+00:00
 url: /blog/2017/09/14/how-to-design-a-new-malayalam-font/
-medium_post:
-  - 'O:11:"Medium_Post":11:{s:16:"author_image_url";s:75:"https://cdn-images-1.medium.com/fit/c/200/200/1*As1EIgy-TLEcibTNPBApCQ.jpeg";s:10:"author_url";s:31:"https://medium.com/@sthottingal";s:11:"byline_name";N;s:12:"byline_email";N;s:10:"cross_link";s:2:"no";s:2:"id";s:12:"4d3779cb66f4";s:21:"follower_notification";s:3:"yes";s:7:"license";s:11:"cc-40-by-sa";s:14:"publication_id";s:2:"-1";s:6:"status";s:6:"public";s:3:"url";s:399:"https://medium.com/@sthottingal/%E0%B4%AA%E0%B5%81%E0%B4%A4%E0%B4%BF%E0%B4%AF%E0%B5%8A%E0%B4%B0%E0%B5%81-%E0%B4%AE%E0%B4%B2%E0%B4%AF%E0%B4%BE%E0%B4%B3%E0%B4%82-%E0%B4%AB%E0%B5%8B%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%8D-%E0%B4%A8%E0%B4%BF%E0%B5%BC%E0%B4%AE%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B4%A4%E0%B5%86%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%A8%E0%B5%86-4d3779cb66f4";}'
 categories:
   - Fonts
   - Malayalam
@@ -33,7 +31,7 @@ tags:
 
 ഫോണ്ട് ഡിസൈനിങ്ങിനു പല സോഫ്റ്റ്‌വെയർ പാക്കേജുകൾ ലഭ്യമാണു്. ഞാനുപയോഗിക്കാറുള്ളതു് [ഫോണ്ട്ഫോർജ്][2] ആണു്. ലിനക്സധിഷ്ഠിത ഓപ്പറേറ്റിങ്ങ് സിസ്റ്റങ്ങളിൽ ഇതു് സൗജന്യമായി ലഭ്യമാണ്. വിൻഡൊസിലും മാക്കിലും പ്രവർത്തിക്കുന്ന സ്വതന്ത്ര സോഫ്റ്റ്‌വെയറാണ്. ഫോണ്ട്ഫോർജിൽ അക്ഷരരൂപങ്ങൾ വരക്കാനുള്ള സൌകര്യമുണ്ടെങ്കിലും അവ പ്രയാസമായിട്ടാണ് എനിക്ക് തോന്നിയിട്ടുള്ളതു്. അതുകൊണ്ടു് വരകൾ [ഇങ്ക്‌സ്കേപ്][3] ഉപയോഗിച്ചാണ് ചെയ്യാറു്. അങ്ങനെ വരച്ച SVG ഫയലുകൾ ഫോണ്ട് ഫോർജിൽ ഇമ്പോർട്ട് ചെയ്ത് ഉപയോഗിക്കും. ഇങ്ക്‌സ്കേപ്പും എല്ലാ ഓപ്പറേറ്റിങ്ങ് സിസ്റ്റങ്ങളിലും സൌജന്യമായി ലഭ്യമായ സ്വതന്ത്ര സോഫ്റ്റ്‌വെയറാണ്. ഈ ടൂളുകളുടെ ഉപയോഗം പരിശീലിക്കുകതന്നെ വേണം.
 
-<figure id="attachment_1034" aria-describedby="caption-attachment-1034" style="width: 840px" class="wp-caption aligncenter">[<img class="size-large wp-image-1034" src="/wp-content/uploads/2017/09/Spectacle.B28612-1024x534.png" alt="" width="840" height="438" srcset="/wp-content/uploads/2017/09/Spectacle.B28612-1024x534.png 1024w, /wp-content/uploads/2017/09/Spectacle.B28612-300x156.png 300w, /wp-content/uploads/2017/09/Spectacle.B28612-768x400.png 768w, /wp-content/uploads/2017/09/Spectacle.B28612-1200x625.png 1200w, /wp-content/uploads/2017/09/Spectacle.B28612.png 1554w" sizes="(max-width: 840px) 100vw, 840px" />][4]<figcaption id="caption-attachment-1034" class="wp-caption-text">ഫോണ്ട്ഫോർജ്</figcaption></figure>
+{{< figure src="/wp-content/uploads/2017/09/Spectacle.B28612-1024x534.png" title="ഫോണ്ട്ഫോർജ്" >}}
 
 ഫോണ്ട്‌ഫോർജ് പക്ഷേ ടൈപ്പ് ഡിസൈൻ ടൂളുകളിൽ മെച്ചപ്പെട്ടതെന്നു പറയാനാകില്ല. മാക്കിനു മാത്രമുള്ള [Glyphs][5], [Robofont][6] തുടങ്ങിയവയൊക്കെയാണു് ഈ മേഖലയിലെ പ്രൊഫഷണലുകൾ ഉപയോഗിക്കുന്നതു്. പക്ഷേ ഇരുപതിനായിരത്തിലധികം രൂപ വിലയുണ്ടു് ഇവയുടെ ലൈസൻസിന്.
 
@@ -43,17 +41,16 @@ tags:
 
 വരയ്ക്കുമ്പോൾ ശ്രദ്ധിക്കാൻ ഒരുപാടു കാര്യങ്ങളുണ്ടു്. അക്ഷരങ്ങളുടെ ഉയരം, വരകളുടെ കട്ടി എന്നിവ എല്ലാ അക്ഷരങ്ങൾക്കും ഒരുപോലെ ആവണമല്ലോ. ഗ്രിഡ് മാർക്ക് ചെയ്ത ഒരു ടെമ്പ്ലേറ്റ് ഇമേജിലാണ് ഞാൻ വരയ്ക്കാറ്. അതിൽ ബേസ് ലൈൻ, x-height, Em-size, bearings തുടങ്ങിയ ടൈപ്പൊഗ്രഫി അളവുകൾ എല്ലാം അടയാളപ്പെടുത്തിയിരിക്കും. ഈ വാക്കുകൾ പരിചയമില്ലെങ്കിൽ പേടിക്കേണ്ട, [പഠിച്ചെടുക്കാവുന്നതാണ്][7]. പക്ഷേ ഈ ഒരു ലേഖനത്തിൽ ടൈപ്പൊഗ്രഫി അനുപാതങ്ങളെപ്പറ്റി പറയാനുദ്ദേശിക്കുന്നില്ല. ഈ അളവുകൾ ഓരോ ഡിസൈനിനും ഓരോന്നാണ്. അവ എങ്ങനെ തീരുമാനിക്കുന്നു എന്നതു് വളരെ പ്രധാനമാണ്.
 
-<figure id="attachment_1098" aria-describedby="caption-attachment-1098" style="width: 900px" class="wp-caption aligncenter">[<img class="size-full wp-image-1098" src="/wp-content/uploads/2017/09/anatomy_of_typography_by_yordanh-d2w81pt.jpg" alt="" width="900" height="563" srcset="/wp-content/uploads/2017/09/anatomy_of_typography_by_yordanh-d2w81pt.jpg 900w, /wp-content/uploads/2017/09/anatomy_of_typography_by_yordanh-d2w81pt-300x188.jpg 300w, /wp-content/uploads/2017/09/anatomy_of_typography_by_yordanh-d2w81pt-768x480.jpg 768w" sizes="(max-width: 900px) 100vw, 900px" />][8]<figcaption id="caption-attachment-1098" class="wp-caption-text">Source: https://pica-ae.deviantart.com/journal/Project-Educate-About-Typefaces-293238420</figcaption></figure>
 
 [ചിലങ്ക][9], [മഞ്ജരി][10] എന്നിവയുടെ സോഴ്സ് കോഡിനോടൊപ്പം ഉപയോഗിച്ച എല്ലാ svg ഇമേജുകളും കൊടുത്തിട്ടുണ്ടു്. അവ റെഫർ ചെയ്യുന്നതു് മേൽപ്പറഞ്ഞ കാര്യങ്ങൾ മനസ്സിലാക്കാൻ സഹായിച്ചേക്കും.
 
 [bezier കർവുകളാണ്][11] ഒരു ഫോണ്ടിലെ അക്ഷരരൂപങ്ങളെ നിശ്ചയിക്കുന്നതു്. പേപ്പറിൽ വരച്ചാലും ട്രേയ്സ് ചെയ്ത് ഫോണ്ടിലേക്ക് ചേർക്കേണ്ടതു് ബെസിയർ കർവുകളാൽ നിർവചിച്ച രൂപമാണ്. വൃത്തിയായി കൃത്യതയോടെ ഈ കർവുകൾ എങ്ങനെ വരക്കാമെന്ന് മിക്ക ഇമേജ് എഡിറ്റിങ്ങ് സോഫ്റ്റ്‌വെയറുകളും പരിശീലിക്കുമ്പോൾ പരിചയിക്കുന്നതാണ്. തുടക്കക്കാർക്ക് വേണമെങ്കിൽ <http://bezier.method.ac/> എന്ന ഒരു ഗെയിം ഉപയോഗിച്ചിത് പരിശീലിക്കാം.
 
-<figure id="attachment_1033" aria-describedby="caption-attachment-1033" style="width: 840px" class="wp-caption aligncenter">[<img class="size-large wp-image-1033" src="/wp-content/uploads/2017/09/Spectacle.j28612-1024x779.png" alt="" width="840" height="639" srcset="/wp-content/uploads/2017/09/Spectacle.j28612-1024x779.png 1024w, /wp-content/uploads/2017/09/Spectacle.j28612-300x228.png 300w, /wp-content/uploads/2017/09/Spectacle.j28612-768x585.png 768w, /wp-content/uploads/2017/09/Spectacle.j28612.png 1105w" sizes="(max-width: 840px) 100vw, 840px" />][12]<figcaption id="caption-attachment-1033" class="wp-caption-text">മഞ്ജരി ഫോണ്ടിലെ യ എന്ന അക്ഷരത്തിന്റെ വര. ബെസിയർ കർവുകളും ടൈപ്പോഗ്രഫി മെട്രിക്സ് ഗൈഡുകളും ശ്രദ്ധിക്കുക.</figcaption></figure>
+
+{{< figure src="/wp-content/uploads/2017/09/Spectacle.j28612-1024x779.png" title="മഞ്ജരി ഫോണ്ടിലെ യ എന്ന അക്ഷരത്തിന്റെ വര. ബെസിയർ കർവുകളും ടൈപ്പോഗ്രഫി മെട്രിക്സ് ഗൈഡുകളും ശ്രദ്ധിക്കുക." >}}
+
 
 ### അക്ഷരങ്ങളുടെ രൂപകല്പന
-
-<figure id="attachment_1099" aria-describedby="caption-attachment-1099" style="width: 900px" class="wp-caption aligncenter">[<img class="wp-image-1099 size-full" src="/wp-content/uploads/2017/09/TypographyCalligraphy.png" alt="" width="900" height="612" srcset="/wp-content/uploads/2017/09/TypographyCalligraphy.png 900w, /wp-content/uploads/2017/09/TypographyCalligraphy-300x204.png 300w, /wp-content/uploads/2017/09/TypographyCalligraphy-768x522.png 768w" sizes="(max-width: 900px) 100vw, 900px" />][13]<figcaption id="caption-attachment-1099" class="wp-caption-text">Source: https://medium.com/type-talk/the-typography-lettering-and-calligraphy-cousins-d66543b0ff3c</figcaption></figure>
 
 സ്വന്തമായൊരു ഡിസൈൻ ആശയം മനസ്സിലുണ്ടാകണമെന്നു പ്രത്യേകം പറയേണ്ടതില്ലല്ലോ. കാലിഗ്രഫിയിൽ നിന്നും ടൈപ് ഡിസൈനിങ്ങിനെ വ്യത്യസ്തമാക്കുന്നതു് കാലിഗ്രാഫി ആശയങ്ങൾ പലപ്പോഴും കുറച്ചു അക്ഷരങ്ങൾക്കു വേണ്ടി ആ അക്ഷരങ്ങളുടെ പ്രത്യേകതകൾ ഉൾക്കൊണ്ടുകൊണ്ട് ചെയ്യുന്നതാണ്. അതേ സമയം ടൈപ്പ് ഡിസൈനിൽ ഒരു ആശയം മലയാളത്തിലെ എല്ലാ അക്ഷരങ്ങളിലും പ്രയോഗിക്കണം. ഉദാഹരണത്തിനു് നാരായണഭട്ടതിരി &#8220;കാക്ക&#8221; എന്ന വാക്ക് കാക്കയുടെ രൂപം ആവാഹിച്ചുകൊണ്ടു വരയ്ക്കും. പക്ഷേ അതു് ടൈപ്പ് ഡിസൈനിനു പറ്റില്ല &#8211; കാരണം അറുനൂറോളം അക്ഷരരൂപങ്ങളിലേക്ക് ആ തീം പകർത്താനാവില്ല. അതുകൊണ്ടു് മനസ്സിലുള്ള ഡിസൈൻ ടൈപ്പ് ഡിസൈനിലേക്ക് ഉപയോഗിക്കുന്നതിനുമുമ്പ് ഈ ശൈലിയിൽ എല്ലാ അക്ഷരങ്ങളും വരയ്ക്കാൻ സാധിക്കുമോ എന്നൊക്കെ ആലോചിക്കണം.
 
