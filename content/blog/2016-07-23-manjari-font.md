@@ -27,7 +27,7 @@ The curves are constructed along the spiral segments. The resulting shapes are e
 
 <img class="aligncenter" src="/wp-content/uploads/2016/07/Manjari-Ka.png" />
 
-The design of the curves in Manjari are theoretically based on the PHD thesis by Raph Levien &#8211; &#8220;From Spiral to Spline: Optimal Techniques in Interactive Curve Design&#8221; (<a href="http://www.levien.com/phd/thesis.pdf" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.levien.com/phd/thesis.pdf&source=gmail&ust=1468229827343000&usg=AFQjCNFSSMUGw9RXJX9QqixuL6zXQ6g2GA">http://www.levien.com/phd/<wbr />thesis.pdf</a>). The Inconsolata monospace humanist latin font known for its clean lines and elegant design by Levien himself is based on this theory.
+The design of the curves in Manjari are theoretically based on the PHD thesis by Raph Levien ["From Spiral to Spline: Optimal Techniques in Interactive Curve Design"](http://www.levien.com/phd/thesis.pdf). The Inconsolata monospace humanist latin font known for its clean lines and elegant design by Levien himself is based on this theory.
 
 Normal, Bold, Thin style variants are available. This is the first Malayalam unicode font with thin style variant
 
