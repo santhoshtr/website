@@ -21,7 +21,7 @@ I am happy to announce the new Malayalam font I was designing for past several m
 
 Malayalam script is known for its curly characters with beautiful loops. Encoded in unicode around 2001, it is relatively new to the digital age. The script has been evolving from rectangle shaped to oval shaped types of varying proportions. The popular culture is more of oval/ellipse shaped curves, mainly because writing methods using stensils or pens demanded less sharp corners. The character or ligature shapes has also been changing gradually towards the shapes that are easy with pens. The Manjari font takes that to another level by smoothening all curves to its maximum.
 
-<img class="wp-image-584 aligncenter" src="/wp-content/uploads/2016/07/Manjari-Body-Text.png" width="981" height="255" />
+<img class="wp-image-584 aligncenter" src="/wp-content/uploads/2016/07/Manjari-Body-Text.png" />
 
 The curves are constructed along the spiral segments. The resulting shapes are extra smooth. The curve perfection resulted in whitespaces that aquired beautiful leaf and drop shapes between the bowls and loops of the script. It is illustrated in the specimen. The spiral smoothness of curves were complemented by rounded terminals which gives very soft feeling for the eyes.
 
