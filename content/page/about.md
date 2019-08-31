@@ -19,14 +19,12 @@ I lead varoius language computing projects at [Swathanthra Malayalam Computing.]
 
 I have done significant contributions to Malayalam digital typography. I have designed two popular Malayalam typefaces named Chilanka and Manjari. Also maintains a number of other Malayalam unicode fonts. You can see all of these fonts in [SMC website][2]
 
-Currently I am working as Principal software engineer at&nbsp;Language Engineering team of Wikimedia Foundation. I work on MediaWiki language support, internationalization, localization, input methods for large number of languages in which Wikipedia exist, fonts, translation tools etc. I live at Palakkad, Kerala, India. I work remotely.
+For my contributions to Malayalam language, I was honored with [Maharshi Badrayan Vyas Samman by the Hon. President of India][8] in 2019.
 
-This blog also has posts by my life partner [Kavya Manohar][3].
+Currently I am working as Principal Software Engineer at Language Engineering team of Wikimedia Foundation. I work on MediaWiki language support, internationalization, localization, input methods for large number of languages in which Wikipedia exist, fonts, translation tools etc. I live at Palakkad, Kerala, India. I work remotely.
 
   * Contact:&nbsp;santhosh dot thottingal&nbsp;at gmail dot com
-<li style="text-align: left;">
-  <a href="http://thottingal.in/documents/SanthoshResume2017.pdf" target="_blank" rel="noopener">Resume</a>
-</li>
+  * [Resume][3]
   * In social media: [Twitter][4], [Facebook][5]
   * My code: [github.com/santhoshtr][6]
   * Design portfolio:&nbsp;[behance.net/sthottingal][7]
@@ -35,8 +33,9 @@ This blog also has posts by my life partner [Kavya Manohar][3].
 
  [1]: http://smc.org.in
  [2]: https://smc.org.in/fonts/
- [3]: http://thottingal.in/page/about-kavya/
+ [3]: http://thottingal.in/documents/SanthoshResume2017.pdf
  [4]: https://twitter.com/santhoshtr
  [5]: https://www.facebook.com/santhosh.thottingal
  [6]: http://github.com/santhoshtr
  [7]: https://behance.net/sthottingal
+ [8]: https://thottingal.in/blog/2019/08/16/presidential-award/
