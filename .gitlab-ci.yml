@@ -13,6 +13,7 @@ test:
 pages:
   script:
   - hugo
+  - find public \( -name '*.html' -o -name '*.css' -o -name '*.js' \) -print0 | xargs -0 gzip -9 -kv
   artifacts:
     paths:
     - public
