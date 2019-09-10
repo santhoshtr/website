@@ -135,7 +135,7 @@ MYLTD52 പായ\N_NN കെട്ടിയ\JJ വലിയ\JJ വഞ്ചി�
 
 ## Conclusion
 
-Malayalam is a morphologically rich language and require sequence based POS tagging system with wide set of POS tags and Feature tags. A smaller POS tagging system like BIS POS tagging system does not address the language characteristics. The POS tag set itself is incomplete and not prepared with details. Using such a tag system will miss most of the important POS information required for higher level processing. The tagging examples given in the POS tag document and the corpus provided by TDIL are full mistakes and make me wornder whether it went through any review at all. I would not advice to use that corpus for any statistical training purpose or any reference purpose.
+Malayalam is a morphologically rich language and require sequence based POS tagging system with wide set of POS tags and Feature tags. A smaller POS tagging system like BIS POS tagging system does not address the language characteristics. The POS tag set itself is incomplete and not prepared with details. Using such a tag system will miss most of the important POS information required for higher level processing. The tagging examples given in the POS tag document and the corpus provided by TDIL are full mistakes and make me wonder whether it went through any review at all. I would not advice to use that corpus for any statistical training purpose or any reference purpose.
 
 Even though I used Malayalam language as example, the BIS tag set has same tags for other languages as well. I would argue that those languages also face more or less same issues I explained in this article.
 
