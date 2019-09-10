@@ -27,9 +27,9 @@ There are alternate tagsets such as Brown tagset, which defines 87 tags for Engl
 
 ## POS tagging for morphologically rich languages
 
-Languages with rich morphology require a more complex tagging scheme and methods. Malayalam is one such language, so is many of the dravidian languages, Tirkish, Hungarian, Finnish, Czech and many others. A rich morphology language has more information in a word compared to languages like English. If the word is agglutinated and inflected, it has multiple words and inflection information. Since POS tagging is the basis for higher level information processing, extracting as much information as possible from the word is important.
+Languages with rich morphology require a more complex tagging scheme and methods. Malayalam is one such language, so is many of the dravidian languages, Turkish, Hungarian, Finnish, Czech and many others. A rich morphology language has more information in a word compared to languages like English. If the word is agglutinated and inflected, it has multiple words and inflection information. Since POS tagging is the basis for higher level information processing, extracting as much information as possible from the word is important.
 
-To understand the productive word formation in a morphologically rich language, compared to English, a corpora analysis can be used. A 250,000 word token corpus of Hungarian has more than twice as many word types as a similarly sized corpus of English (Oravecz and Dienes, 2002). A 10 million word corpus of Turkish has 4 times unique words compared to similarly sized English corpus(Hakkani-T ̈ur et al.,  2002). A 10 million word corpus of Malayalam has 14 times unique words compared to similarly sized English corpus, as calcualted from [SMC Corpus][7].
+To understand the productive word formation in a morphologically rich language, compared to English, a corpora analysis can be used. A 250,000 word token corpus of Hungarian has more than twice as many word types as a similarly sized corpus of English (Oravecz and Dienes, 2002). A 10 million word corpus of Turkish has 4 times unique words compared to similarly sized English corpus(Hakkani-T ̈ur et al., 2002). A 10 million word corpus of Malayalam has 14 times unique words compared to similarly sized English corpus, as calcualted from [SMC Corpus][7].
 
 | Language|Corpus size| Unique words|
 |--------|------------|------|
@@ -151,7 +151,7 @@ Thanks for reading!
 [4]: https://tdil-dc.in/index.php?option=com_download&task=showresourceDetails&toolid=1886&lang=en
 [5]: https://www.aclweb.org/anthology/W19-6801
 [6]: https://web.stanford.edu/~jurafsky/slp3/8.pdf
-[7]: [https://gitlab.o](https://gitlab.com/smc/corpus)
+[7]: https://gitlab.com/smc/corpus
 [8]: http://universaldependencies.org/
 [9]: /blog/2017/12/10/number-spellout-and-generation-in-malayalam-using-morphology-analyser/
 [10]: https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html
