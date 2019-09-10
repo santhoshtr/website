@@ -34,7 +34,7 @@ To understand the productive word formation in a morphologically rich language, 
 | Language|Corpus size| Unique words|
 |--------|------------|------|
 | English | 10 million| 97,734 |
-| Turikish | 10 million| 4,17,775 |
+| Turkish | 10 million| 4,17,775 |
 | Malayalam | 10 million| 14,27,392 |
 
 In English, lot of information about the syntactic function of a word is represented by word order or neighborimg function words. For example in the phrase `at Palakkad` the word `at`  and its word order in the sentence gives the place name `Palakkad` its locative inflection. If we consider the same word in Malayalam, `പാലക്കാട്ടിൽ`, the word `പാലക്കാട്` is inflected(locative) and contains the whole information. Identifying പാലക്കാട്ടിൽ just as Proper noun is not sufficient. The nominal inflection, that is is locative here, should also be identified.
