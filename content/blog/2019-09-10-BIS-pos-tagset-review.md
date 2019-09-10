@@ -3,7 +3,7 @@ title: "POS Tagging: A review of BIS POS tagset and ILCI-II Malayalam Text Corpu
 author: Santhosh Thottingal
 type: post
 date: 2019-09-10T11:16:44+05:30
-url: /blog/2019/09/10/bis-post-tagset-review/
+url: /blog/2019/09/10/bis-pos-tagset-review/
 categories:
   - Linguistics
 tags:
