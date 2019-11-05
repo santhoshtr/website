@@ -96,7 +96,10 @@ Ok. so after testing these hyphenation dictionaries, if we provide them to upstr
 
 But&#8230;. How to solve this problem in web pages?!. We will discuss it in next blogpost!
 
-PS: Thanks to Nemeth Laszlo , author of Hunspell and Openoffice Hyphenation for helping me to prepare the hyphenation tables.
+## Thanks
+
+* Thanks to Hussain K H and Kevin Siji for their valuable inputs in preparing Malayalam hyphenation patterns.
+* Thanks to Nemeth Laszlo, author of Hunspell and Openoffice Hyphenation for helping me to prepare the hyphenation tables.
 
 * * *
 
