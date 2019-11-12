@@ -18,7 +18,8 @@ tags:
 ---
 Writing a number 6493 as _six thousand four hundred and ninety three_ is known as _spellout_ of that number. The most familiar example of this is in cheques. Text to speech systems also need to convert numbers to words.
 
-<figure style="width: 3022px" class="wp-caption aligncenter">[<img class="size-large" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Sample_cheque.jpeg" width="3022" height="1359" />][1]<figcaption class="wp-caption-text">Source: https://commons.wikimedia.org/wiki/File:Sample_cheque.jpeg by User:Tshrinivasan</figcaption></figure>
+
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Sample_cheque.jpeg" title="Source: https://commons.wikimedia.org/wiki/File:Sample_cheque.jpeg by User:Tshrinivasan" >}}
 
 The reverse process of this, to convert a phrase like _six thousand four hundred and ninety three_ to number 6493 &#8211; the number generation, is also common. In software, it is often required in Speech recognition and in general any kind of semantic analysis of text.
 
@@ -93,7 +94,7 @@ The approach I derived after trying out some choices is as follows:
 
 To illustrate this, let use use some examples,
 
-[<img class="aligncenter wp-image-1202 size-full" src="/wp-content/uploads/2017/12/Spectacle.th9870.png" alt="" width="1008" height="493" srcset="/wp-content/uploads/2017/12/Spectacle.th9870.png 1008w, /wp-content/uploads/2017/12/Spectacle.th9870-300x147.png 300w, /wp-content/uploads/2017/12/Spectacle.th9870-768x376.png 768w" sizes="(max-width: 1008px) 100vw, 1008px" />][6]
+<img class="aligncenter wp-image-1202 size-full" src="/wp-content/uploads/2017/12/Spectacle.th9870.png" alt="" width="1008" height="493" srcset="/wp-content/uploads/2017/12/Spectacle.th9870.png 1008w, /wp-content/uploads/2017/12/Spectacle.th9870-300x147.png 300w, /wp-content/uploads/2017/12/Spectacle.th9870-768x376.png 768w" sizes="(max-width: 1008px) 100vw, 1008px" />
 
 As you can observe, only the atomic numbers are used as morphemes and place values are indicated using tags. You can also see that the analysis is easy to interpret for a program to generate the number.
 
