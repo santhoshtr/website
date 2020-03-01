@@ -27,7 +27,7 @@ The curves created in a two dimensional space can be represented by x,y coordina
 
 {{< figure src="/wp-content/uploads/2020/02/hwr-ka-coordinates.png" caption="Simplified shape of ക and its coordinates" >}}
 
-This is just one way of writing ക. It is possible that there are more than on style of writing a letter. We can use that also as base image. ക is usually written with a single stroke. Meaning, you take the pen up only after writing the full letter. But consider the letter `+`- it has two strokes. You need to take the pen up after a stroke. We also need to make sure that the direction of pen movement is taken into consideration. So the array of points should follow the same order of pen movement.
+This is just one way of writing ക. It is possible that there are more than one style of writing a letter. We can use that also as base image. ക is usually written with a single stroke. Meaning, you take the pen up only after writing the full letter. But consider the letter `+`- it has two strokes. You need to take the pen up after a stroke. We also need to make sure that the direction of pen movement is taken into consideration. So the array of points should follow the same order of pen movement.
 
 Considering all these, we can have a representation of reference image of ക as :
 
