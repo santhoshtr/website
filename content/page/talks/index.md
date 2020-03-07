@@ -6,9 +6,16 @@ date: 2010-08-23T11:10:19+00:00
 
 ---
 An attempt to list down all the public talks/presentations/workshops I did.
+## 2020
+
+  * Feb 15: Professional Student Summit, CUSAT, Kochi
 
 ## 2019
 
+  * Dec 16: Malayalam computing, Kerala University
+  * Nov 1: While receiving Mathrubhasha Puraskaram, Kaladai Sanskit University.
+  * Oct 16: Malayalam computing, Government arts college, Malappuram.
+  * Oct 11: IEEE Malabar Hub Meet -2k19, GEC Palakkad
   * Feb 24 &#8211; Malayalam computing,  Excelsior 2019 by IEEE, GEC Palakkad
   * Feb 16 &#8211; Malayalam computing, National conference on Sanskrit and language computing, Kaladi Sanskrit University.
 
@@ -16,7 +23,7 @@ An attempt to list down all the public talks/presentations/workshops I did.
 
   * December 16 &#8211; Malayalam computing introduction, Kerala University
   * July 20, _Can computers understand Malayalam_ &#8211; Keynote speech, [International Conference on Next Gen Information Systems and Technologies][1] organized by Department of Computer Science & Engineering, NSS College of Engineering, Palakkad.
-  * June 14, 15 [Graphemics in the 21st century—From graphemes to knowledge][2], held at [Pôle numérique Brest Iroise][3] at Brest, France, presented a paper titled: _Malayalam Orthographic Reforms: Impact on Language and Popular Culture[[pdf][4]]._ 
+  * June 14, 15 [Graphemics in the 21st century—From graphemes to knowledge][2], held at [Pôle numérique Brest Iroise][3] at Brest, France, presented a paper titled: _Malayalam Orthographic Reforms: Impact on Language and Popular Culture[[pdf][4]]._
   * March 17, 2018 National Conference on Indian Language Computing, CUSAT, Kochi, plenary session talk on  _Functional Morphology Analyzer and Generator for Malayalam using Finite State Transducer Technology_
   * March 2, 2018 ‘_Spiral splines in typeface design: A case study of Manjari Malayalam typeface_’.[Paper presented at Typoday conference, Mumbai][5]
   * 6 February 2018, _Malayalam morphology analysis_ &#8211; International Seminar on Malayalam language and globalization, University of Calicut.
