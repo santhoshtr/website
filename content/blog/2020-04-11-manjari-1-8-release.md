@@ -58,6 +58,10 @@ Use `addfontfeature`
 \end{document}
 ```
 
+# MS Word, Phtotoshop, Indesign, Illustrator
+
+See this [article][5] and this [article][6]
+
 Here is an image showing tabular and slashed zero.
 
 {{< figure src="/wp-content/uploads/2020/04/manjari-zero-tnum-card.png">}}
@@ -70,3 +74,5 @@ Manjari already supports some stylistic variants too. See this [blog post][2]
 [2]: https://thottingal.in/blog/2018/01/06/stylistic-alternates-manjari-chilanka/
 [3]: http://dhs.kerala.gov.in
 [4]: http://dhs.kerala.gov.in/wp-content/uploads/2020/04/Daily-Bulletin-HFWD-Malayalam-April-10.pdf
+[5]: https://medialoot.com/blog/how-to-enable-opentype-features-in-word-photoshop-and-illustrator/
+[6]: http://leeviathan.com/opentype-features-and-how-to-use-them/
