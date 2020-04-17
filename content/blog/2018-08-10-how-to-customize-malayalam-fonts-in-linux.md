@@ -20,38 +20,30 @@ The advantage of setting these preference at system level is, you don&#8217;t ne
 
 First, create a file named **~/.config/fontconfig/conf.d/50-my-malayalam.conf.** If the folders for this file does not exist, just create them. To this file, add the following content.
 
-<pre class="wp-block-code"><code>&lt;?xml version="1.0"?>
-&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-&lt;fontconfig>
-&lt;!-- Malayalam (ml) -->
-&lt;match target="font">
-        &lt;test name="lang" compare="contains">
-                &lt;string>ml&lt;/string>
-        &lt;/test>
-        &lt;alias>
-                &lt;family>sans-serif&lt;/family>
-                &lt;prefer>
-                        &lt;family>Manjari&lt;/family>
-                &lt;/prefer>
-        &lt;/alias>
-&lt;/match>
-
-&lt;match target="font">
-        &lt;test name="lang" compare="contains">
-                &lt;string>ml&lt;/string>
-        &lt;/test>
-        &lt;alias>
-                &lt;family>serif&lt;/family>
-                &lt;prefer>
-                        &lt;family>Rachana&lt;/family>
-                &lt;/prefer>
-        &lt;/alias>
-&lt;/match>
-
-&lt;!-- Malayalam (ml) ends -->
-
-&lt;/fontconfig>
-</code></pre>
+```lang=xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+<match>
+  <test name="lang" compare="contains">
+    <string>ml</string>
+  </test>
+  <test name="family">
+    <string>sans-serif</string>
+  </test>
+  <edit name="family" mode="prepend">
+    <string>Manjari</string>
+  </edit>
+</match>
+<alias>
+  <family>Manjari</family>
+  <default>
+    <family>sans-serif</family>
+  </default>
+</alias>
+</fontconfig>
+</pre>
+```
 
 Save the file and you are done. You can check if the default font for Malayalam changed or not using the following command
 
