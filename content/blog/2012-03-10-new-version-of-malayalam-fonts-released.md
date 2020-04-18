@@ -23,16 +23,18 @@ tags:
   2. Rachana, Meera and Dyuthi had wrong glyphs used as placeholder glyphs. <a href="https://savannah.nongnu.org/bugs/?35098" target="_blank">Bugs</a> <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=661898" target="_blank">like</a> these are fixed.
   3. Virama 0D4D had a wrong LSB that cause the cursor positioning and glyph boundary go wrong. Fixed that <a href="https://bugzilla.redhat.com/show_bug.cgi?id=616324" target="_blank">bug</a>
 
-    [<img class="alignnone size-full wp-image-393" title="meera-virama-cursor" src="/wp-content/uploads/2012/03/meera-virama-cursor.png" alt="" width="147" height="63" />][1]
+{{< figure src="/wp-content/uploads/2012/03/meera-virama-cursor.png">}}
+
   4. Atomic Chilu code points introduced in Unicode 5.1 was missing in all the fonts that SMC maintained because of the controversial decision by Unicode and SMC&#8217;s stand against that. Issues still exist, but content with code point is present, to avoid any difficulties to users, added those characters to Meera and Rachana fonts.
 
-    [<img class="alignnone size-full wp-image-394" title="chillus" src="/wp-content/uploads/2012/03/chillus.png" alt="" width="439" height="68" srcset="https://thottingal.in/wp-content/uploads/2012/03/chillus.png 439w, https://thottingal.in/wp-content/uploads/2012/03/chillus-300x46.png 300w" sizes="(max-width: 439px) 100vw, 439px" />][2]
+{{< figure src="/wp-content/uploads/2012/03/chillus.png">}}
   5. Rupee Symbols added to Meera and Rachana. Thanks to <a href="http://hiran.in" target="_blank">Hiran</a> for designing Sans and Serif glyphs for Rupee.
 
-    [<img class="alignnone size-full wp-image-392" title="rupee-meera" src="/wp-content/uploads/2012/03/rupee-meera.png" alt="" width="181" height="55" />][3]
+{{< figure src="/wp-content/uploads/2012/03/rupee-meera.png">}}
+
   6. Dot Reph(0D4E) &#8211; The glyphs for this was already present in Meera but unmapped to any unicode point. GSUB Lookup tables added to the glyphs according to unicode specification.
 
-    [<img class="alignnone  wp-image-391" title="dotrepha" src="/wp-content/uploads/2012/03/dotrepha.png" alt="" width="635" height="119" srcset="https://thottingal.in/wp-content/uploads/2012/03/dotrepha.png 1039w, https://thottingal.in/wp-content/uploads/2012/03/dotrepha-300x56.png 300w, https://thottingal.in/wp-content/uploads/2012/03/dotrepha-1024x192.png 1024w" sizes="(max-width: 635px) 100vw, 635px" />][4]
+{{< figure src="/wp-content/uploads/2012/03/dotrepha.png">}}
 
 For a more detailed change description see <a href="http://lists.smc.org.in/pipermail/discuss-smc.org.in/2012-February/013317.html " target="_blank">this</a> mail thread. There are some minor changes as well.
 
