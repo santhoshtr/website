@@ -9,7 +9,7 @@ categories:
   - Tamil
 ---
 
-Today(August 09, 2020), [Tamil Virtual Academy][1] organized a virual meetup on Tamil computing and its roadmap. This full day event had 18 sessions presented by various people working on Tamil computing. Event was chaired by T. Udhayachandran IAS, Chairman of TVU.
+Today(August 09, 2020), [Tamil Virtual Academy][1] organized a virual meetup on Tamil computing and its roadmap. This full day event had 18 sessions presented by various people working on Tamil computing. Event was chaired by T. Udhayachandran IAS, Director of TVU.
 
 I was also invited for the program. I talked about potentially collaboration of Tamil and Malayalam computing communities to solve common problems. Opensource based language computing helps to accelerate language computing in both languages by such collaboration. Here is my [presentation slides][2].
 
