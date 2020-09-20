@@ -42,7 +42,6 @@ First, create a file named **~/.config/fontconfig/conf.d/50-my-malayalam.conf.**
   </default>
 </alias>
 </fontconfig>
-</pre>
 ```
 
 Save the file and you are done. You can check if the default font for Malayalam changed or not using the following command
