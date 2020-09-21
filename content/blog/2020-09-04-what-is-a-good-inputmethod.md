@@ -81,7 +81,7 @@ These type of keyboards are "intelligent" keyboards and expect no learning from 
 
 I called it probabilistic because they give you suggestions about what to type as a probability of what you typed in English. Since there is no fixed keymaps, every output is guess and often there are multiple guesses.
 
-Varnam Input method, Google input tool are some examples.
+[Varnam Input method][13], Google input tool are some examples.
 
 ![](https://www.varnamproject.com/images/main.gif)
 Varnam Input method
@@ -162,3 +162,4 @@ Yes, the input method should be easy to learn and practice. How much easy? Pleas
 [10]: http://www.tdil-dc.in/index.php?option=com_vertical&parentid=12&lang=en
 [11]: https://swanalekha.smc.org.in
 [12]: https://en.wikipedia.org/wiki/Pinyin
+[13]: https://www.varnamproject.com
