@@ -2,9 +2,8 @@
 title: "What is a good input method?"
 author: Santhosh Thottingal
 type: post
-date: 2020-09-04T16:10:00+05:30
-url: /blog/2020/09/04/good-inputmethod/
-draft: true
+date: 2020-09-21T14:10:00+05:30
+url: /blog/2020/09/21/good-inputmethod/
 categories:
   - Malayalam
   - Input methods
@@ -14,7 +13,7 @@ tags:
 
 ---
 
-As more and more people enter to the Malayalam digital world, the issue of not having any formal training for Malayalam computing is more observed. People sometimes just search for input methods in web, ask friends, try to use whatever coming with the devices they have. Since I myself is an author of two input methods, sometimes people ask me too. This essay is about the characteristics of good input method aimed to help people to make right choice. This essay does not recommend any particular input method though. I will focus on Malayalam language, but some concepts may be applicable for similar languages.
+As more and more people enter to the Malayalam digital world, the issue of not having any formal training for Malayalam computing is more observed. People sometimes just search for input methods in web, ask friends or use whatever coming with the devices they have. Since I myself is an author of two input methods, sometimes people ask me too. This essay is about the characteristics of a good input method to help people make the right choice. This essay does not recommend any particular input method though. I will focus on Malayalam language, but some concepts may be applicable for similar languages.
 
 ## What is an input method?
 
@@ -22,28 +21,9 @@ An [input method][1] or Input Method Editor(IME) is a program that helps to ente
 
 ## Why the selection of input method is important?
 
-Learning an input method and practicing typing Malayalam with that is as important as you learn to write using a pen when you were a kid. You learned that skill once, by taking time, once for your life time. Writing using pen used to be the only way to communicate in written form. Now onwards it is typing. You should master this skill to express freely. You should own the pen, you should own the input method. It should not spy you. I will explain these concepts in detail in this essay.
+Learning an input method and practicing typing Malayalam with that is as important as you learn to write using a pen when you were a kid. You learned that skill once, by taking time, once for your life time. Writing using pen used to be the only way to communicate in written form. Now a days it is typing. You should master this skill to express freely. You should own the pen, you should own the input method. It should not spy you. I will explain these concepts in detail in this essay.
 
-Now a days, people learn Malayalam typing based on social needs. "I want to chat with my friends in Malayalam", "I want to participate in whatsapp discussions in Malayalam", "I am a Malayalam teacher, it is bad if I don't know typing in Malayalam", "I am a software engineer, it is bad if I don't know typing in my mother tongue" and so on. There will be a tendency to learn this skill quickly and start using it. The immediate need to write your name or write some informal chat message can be met by any kind of input method, but soon you will realize that you need to write serious things also. You will realize I need to prepare a formal document, I need to typeset a report or a notice and so on. You should not require relearning a new input method at that point. So don't take the learning Malayalam typing lightly.
-
-## Inscript
-
-There is a misconception that one should use a government prescribed official keyboard for typing in Malayalam. First of all, there is no such official prescription.
-
-Historically, for Indian languages, [InScript][2] keyboard was designed as a layout that can be directly mapped to the available keys in the keyboard. The Inscript standard went through a revision in 2010 to accommodate more characters that were added later to unicode and also to fix several usability issues and bugs. It also aimed to add Rupee symbol(₹) to the keyboard. But this revision, known as [Enhanced InpScript specification][3] had several issues for Malayalam, and [we pointed out them to CDAC][4] who were designing it. Mainly it broke the backward compatibility with previous version. Remember that, by 2010, students in Kerala schools started learning Inscript. So it raised the issue of relearning the changed key positions. As more characters were added to unicode Malayalam codeblock, to accommodate some of them, a third layer was introduced in Inscript Malayalam.
-
-![](/wp-content/uploads/2020/09/InscriptForMalayalam.png)
-Malayalam Inscript old version layout
-
-![](/wp-content/uploads/2020/09/MalayalamInscript2.png)
-Malayalam Inscript enhanced layout with 3 layers
-
-CDAC did not finalize or release this version officially. Some operating systems started adding this input method specification since support for Rupee sign was important.
-
-![](/wp-content/uploads/2020/09/input_sources_gnome.png)
-Input method selection screen in Ubuntu.
-
-Because of the quasi-official status of Inscript, it is taught as part of Malayalam typing training, but some teach old version of Inscript, some teach new version and complaints about key position change is common. The usability issues and learning effort makes it less attractive. Occassionally I see people customizing the key layout(Example: [Peruma][5] -A Malayalam Inscript Keyboard for Windows). Interestingly, the customized keyboards are called with same name Inscript to add more confusion.
+Now a days, people learn Malayalam typing based on social needs. "I want to chat with my friends in Malayalam", "I want to participate in Whatsapp discussions in Malayalam", "I am a Malayalam teacher, it is bad if I don't know typing in Malayalam", "I am a software engineer, it is bad if I don't know typing in my mother tongue" and so on. There will be a tendency to learn this skill quickly and start using it. The immediate need to write your name or write some informal chat message can be met by any kind of input method, but soon you will realize that you need to write serious things also. You will realize I need to prepare a formal document, I need to typeset a report or a notice and so on. You should not require relearning a new input method at that point. So don't take the learning Malayalam typing lightly.
 
 ## Choices
 
@@ -51,16 +31,94 @@ If you just do a web search for Malayalam keyboard in Google or its playstore, y
 
 There are three main types of input methods available now a days:
 
-* Keyboard based input methods
-* Speech recognition based input methods
-* Handwriting recognition based input methods
+### Keyboard based input methods
+
+Keyboards remains the most accurate and robust ways to input. Once practiced, they are the fastest too. There are one to one mapping keyboard based input methods like Inscript, where each physical key in keyboard is mapped to a single unicode codepoint.
+
+#### Inscript
+
+There is a misconception that one should use a government prescribed official keyboard for typing in Malayalam. First of all, there is no such official prescription.
+
+Historically, for Indian languages, [InScript][2] keyboard was designed as a layout that can be directly mapped to the available keys in the keyboard. The Inscript standard went through a revision in 2010 to accommodate more characters that were added later to unicode and also to fix several usability issues and bugs. It also aimed to add Rupee symbol(₹) to the keyboard. But this revision, known as [Enhanced InpScript specification][3] had several issues for Malayalam, and [we pointed out them to CDAC][4] who were designing it. Mainly it broke the backward compatibility with previous version. Remember that, by 2010, students in Kerala schools started learning Inscript. So it raised the issue of relearning the changed key positions. As more characters were added to unicode Malayalam codeblock, to accommodate some of them, a third layer was introduced in Inscript Malayalam.
+
+According to TDIL, the layout of inscipt is chosen for [the following rationale][10]: "This layout uses the standard QWERTY 101 keyboard. The mapping of the characters is such that it remains common for all the Indian languages (written left to right). This is because of the fact that the basic character set of the Indian languages is common. The vowels are divided into long and short vowels and the consonants are divided into vargs. The INSCRIPT layout takes advantage of these facts and thus the organization is simple. Due to the phonetic nature of the keyboard, a person who knows typing in one Indian script can type in any other Indian script. The logical structure allows ease in learning. In the Inscript keyboard layout, all the vowels are placed on the left side of the keyboard layout and the consonants, on the right side. The placement is such that the characters of one varg are split over two keys. The splitting of the word into keystrokes is based on the phonetic spelling of the word. The sequence required for typing a word is same as the sequence in which the characters of the word are pronounced."
+
+![](/wp-content/uploads/2020/09/InscriptForMalayalam.png)
+Malayalam Inscript old version layout
+
+![](/wp-content/uploads/2020/09/MalayalamInscript2.png)
+Malayalam Inscript enhanced layout with 3 layers
+
+CDAC did not finalize or release this version officially till 2016. Some operating systems started adding this input method specification since support for Rupee sign was important.  In 2016, Enhanced Inscript  became BIS [IS 16350:2016][9] standard.
+
+![](/wp-content/uploads/2020/09/input_sources_gnome.png)
+Input method selection screen in Ubuntu.
+
+Because of the quasi-official status of Inscript, it is taught as part of Malayalam typing training, but some teach old version of Inscript, some teach new version and complaints about key position change is common. The usability issues and learning effort makes it less attractive. Occassionally I see people customizing the key layout(Example: [Peruma][5] -A Malayalam Inscript Keyboard for Windows). Interestingly, the customized keyboards are called with same name Inscript to add more confusion.
+
+#### Phonetic keyboards
+
+While the inscript layout claims to be logically designed, some people find it difficult to learn, and prefer phonetic keyboards. In phonetic keybaords, the English keys in physical keyboard are mapped to phonetically similar letters in a language. So p will be mapped to പ(pa), instead of ജ(ja).
+
+Both phonetic or inscript, or in general one to one keymap based keyboards are the most flexible keyboards. The user need to decide the character sequences.
+
+#### Transliteration based keyboards
+
+These are the most popular keyboards for Indian languages. There is a wide spread habit of writing Indian scripts using latin alphabet(transliteration). The same latin alphabet sequences are used to input a language. They are not one to one mapping, they are sequence based. Typing `ki` produces കി.  For Malayalam, [Swanalekha][11], Mozhi are some of the popular transliteration based input methods.
+
+![Swanalekha transliteration key mapping](https://swanalekha.smc.org.in/img/swanalekha.png)
+Swanalekha transliteration key mapping
+
+In general, these keyboards also provide flexibility to type anything as long as the user use the correct key sequences.
+
+The popularity of transliteration is not limited to Indian languages. For example, a widely used input method in Chinese, [Pinyin][12] is a transliteration based input method.
+
+![Typing in Chinese using pinyin](/wp-content/uploads/2020/09/pinyin.png)
+
+### Probabilistic keyboards
+
+These type of keyboards are "intelligent" keyboards and expect no learning from users at all. They are mainly transliteration based, but does not expect user to learn any transliteration schemes. Based on different algorithms, the keyboards will predict what you meant to type and provide auto completion.
+
+I called it probabilistic because they give you suggestions about what to type as a probability of what you typed in English. Since there is no fixed keymaps, every output is guess and often there are multiple guesses.
+
+Varnam Input method, Google input tool are some examples.
+
+![](https://www.varnamproject.com/images/main.gif)
+Varnam Input method
+
+![](/wp-content/uploads/2020/09/google-input-tool.png)
+Google Input tool
+
+Since predicting what the user meant require longer sequences, these input methods are word translitrations. That means, user types approximate transliteration of a word, and then the input method offers suggestions. The aspect of "no learning" comes with the cost that, the input method "dictates" what you can type. If you want to literally input something that the system does not know, you are at loss. Similarly, the usual editing practices like deleting few characters using backspace and continuing there is painful because, what you continue is considered as a new word.
+
+As it is very easy to start with, many users try these "intelligent" keyboards. But they are not general purpose input methods and often hinders your speed and flexibility.
+
+### Speech recognition based input methods
+
+Speech recognition based input methods like Google voice input is very popular in chat applications. They are getting better at recognizing speech and demand very low effort from the user. Recognition is often at group of words level. In a mobile context, this hands free input method is very efficient for quick communication.
+
+But it is important to differentiate this from a keyboard based input method. Speech recognition based input method is not a replacement for keyboard based input method. There is no concept of "editing" the text using speech recognition. It is not easy to move back and forth through the content and make changes. It is designed for a small amount of content in a simple context like chat application. Speech recognition also has limitations of requiring relatively noise-free surroundings.
+
+### Handwriting recognition based input methods
+
+This is another input method with relatively nil learning. Users write using a finger or stylus in a virtual pad in the screen. Google handwriting tool is an example. The efficiency and accuracy is getting better everyday. Similar to speech recognition based input method, this is also designed for quick communications in non-sophisticated contexts with very little editing involved. Again, this is also not a replacement for keyboard based input method. Ambiguity in handwriting is often introduced as spelling mistakes. For example, symbols like [0, o, ഠ, ം], [l, 1, |, \\, /, I, i], [:, ഃ]  are all often misinterpreted. In formal communication or writing context, it is not uncommon for a user to have to switch to keyboard based input method for corrections.
+
+## Integration
+
+A recent small study by my colleagues at Wikimedia found that many non-latin users think that they cannot input non-lating content directly to any application. Instead they use random websites that provide online typing tool and copy paste that content to other applications. This is a big gap in awareness. Now a days you can input content to any application directly just like how you would type English. A good input method is well integrated to operating system and won't require copy paste.
+
+Many applications respond to keypresses in various ways(autocomplete, contextual help). You will lose all those features, if content is not entered directly, but used copy paste. Almost all applications provide undo-redo support for editing. If the input method is not well integrated to operating system, you will lose that features as well.
+
+For example, a "smart" keyboard that shows latin and when you press space, converting what you typed to your preferred language is intercepting with the undo redo operations(in general edit transactions. The application see you first typing English and then suddenly changes to Malayalam for example.
+
+A good input method won't reveal your input keys to application, It will internally process it and present the output to application. For example, if you are using a transliteration based input method "Swanalekha", even if you are typing in english key sequences, the screen does not show those characters, the application to which you are typing does not see those English characters. It only gets Malayalam. The keys are processed in a special layer called "composition or pre-edit".
 
 ## Features of good input methods
 
 ### Control
 
 You should master this skill to express freely. Just like the pen does not
-interfere with what you write, the input methods should just do what you wanted to write. It should not control what you can type, where you can type.
+interfere with what you write, the input methods should just do what you wanted to write. It should not control what you can type, where you can type. Probabilistic or "intelligent" keyboards control what you type and what you can type. They also decide the spelling or style of words too based on popularity(or sometimes popular mistakes).
 
 ### Privacy
 
@@ -88,6 +146,9 @@ A well maintained input method will have a bug tracker where people can report i
 
 A well maintained input method will also have accompanied up to date documentation. This is helpful for you to refer, learn the input method, solve technical issues.
 
+### Easy to learn
+
+Yes, the input method should be easy to learn and practice. How much easy? Please expect a minimum effort here. You did not learn to write using pen in 10 minutes. So a lifelong skill require time to learn and master. If you are not willing to spend time to learn an input method, the choices are input methods that predict what you meant in probabilistic way and they often control what you can write.
 
 [1]: https://en.wikipedia.org/wiki/Input_method
 [2]: https://en.wikipedia.org/wiki/InScript_keyboard
@@ -97,3 +158,7 @@ A well maintained input method will also have accompanied up to date documentati
 [6]: https://support.google.com/chrome/thread/32057437?hl=en
 [7]: https://thottingal.in/blog/2017/08/16/your-language-your-pen/
 [8]: https://thottingal.in/blog/2007/10/11/%E0%B4%B5%E0%B4%B0%E0%B4%AE%E0%B5%8A%E0%B4%B4%E0%B4%BF%E0%B4%AF%E0%B4%BF%E0%B4%B2%E0%B5%81%E0%B4%82-%E0%B4%AE%E0%B5%8A%E0%B4%B4%E0%B4%BF-%E0%B4%95%E0%B5%80%E0%B4%AE%E0%B4%BE%E0%B4%A8%E0%B4%BF%E0%B4%B2/
+[9]: https://www.services.bis.gov.in:8071/php/BIS_2.0/bisconnect/standard_review/Standard_review/Isdetails?ID=MjIxOTY%3D
+[10]: http://www.tdil-dc.in/index.php?option=com_vertical&parentid=12&lang=en
+[11]: https://swanalekha.smc.org.in
+[12]: https://en.wikipedia.org/wiki/Pinyin
