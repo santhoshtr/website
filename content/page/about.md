@@ -24,7 +24,9 @@ For my contributions to Malayalam language, I was honored with [Maharshi Badraya
 
 Currently I am working as Principal Software Engineer at Language Engineering team of Wikimedia Foundation. I work on MediaWiki language support, internationalization, localization, input methods for large number of languages in which Wikipedia exist, fonts, translation tools etc. I live at Palakkad, Kerala, India. I work remotely.
 
-* Contact:&nbsp;santhosh dot thottingal&nbsp;at gmail dot com
+[docs.thottingal.in][10] is my personal knowledge space I try to document and share everything I know about this world in form of an [Digital gardens][11] or [Zettelkasten][12].
+
+* Contact: santhosh dot thottingal at gmail dot com
 * [Resume][3]
 * In social media: [Twitter][4], [Facebook][5]
 * My code: [github.com/santhoshtr][6]
@@ -41,3 +43,6 @@ Currently I am working as Principal Software Engineer at Language Engineering te
  [7]: https://behance.net/sthottingal
  [8]: https://thottingal.in/blog/2019/08/16/presidential-award/
  [9]: https://ssus.ac.in/
+ [10]: https://docs.thottingal.in
+ [11]: https://joelhooks.com/digital-garden
+ [12]: https://en.wikipedia.org/wiki/Zettelkasten
