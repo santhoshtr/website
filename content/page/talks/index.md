@@ -6,9 +6,16 @@ date: 2010-08-23T11:10:19+00:00
 
 ---
 An attempt to list down all the public talks/presentations/workshops I did.
+
+> For a more recent list, please take a look at [my digital garden](https://docs.thottinga.in)
+
 ## 2020
 
   * Feb 15: Professional Student Summit, CUSAT, Kochi
+  * June 19: വായനാദിനം - കോട്ടയം മഹാത്മാഗാന്ധി യൂണിവേഴ്സിറ്റി - മലയാളം കമ്പ്യൂട്ടിങ്ങ്
+  * Aug 9: Tamil Virutal Academi meetup on Tamil computing
+  * Sep 12: NSS Collge of Engineering - Anniversary talk on FOSS Cell - Malayalam computing
+  * COVID-19 Lockdown time video interviews
 
 ## 2019
 

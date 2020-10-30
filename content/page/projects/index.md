@@ -9,7 +9,7 @@ date: 2010-06-27T14:29:02+00:00
 
 This page lists some of my projects and hacks. Most of the projects are done with the [Swathanthra Malayalam Computing][1] community. But the projects are generic in nature most of the time , not limiting to Malayalam alone.
 
-**Important**: It is bit difficult to maintain this page up to date. So see my [github profile][2] in addition to this incomplete list
+> **Important**: It is bit difficult to maintain this page up to date. So see my [github profile][2] in addition to this incomplete list. Also please take a look at [my digital garden](https://docs.thottinga.in)
 
 **Silpa**
 
