@@ -19,7 +19,7 @@ Now, the Malayalam learning application is available at https://learn.smc.org.in
 
 {{< figure src="/wp-content/uploads/2020/11/learn.smc.org.in.png">}}
 
-Source code: https://github.com/santhoshtr/mlmash
+Source code: https://gitlab.com/smc/mlmash
 
 I added all letters of Malayalam there. Added a few common ligatures too. [Kavya](https://kavyamanohar.com/) helped to record and add pronunication of these letters with couple of examples.
 
