@@ -21,7 +21,7 @@ Now, the Malayalam learning application is available at https://learn.smc.org.in
 
 Source code: https://github.com/santhoshtr/mlmash
 
-I added all letters of Malayalam there. Added a few common ligatures too. Kavya helped to record and add pronunication of these letters with couple of examples.
+I added all letters of Malayalam there. Added a few common ligatures too. [Kavya](https://kavyamanohar.com/) helped to record and add pronunication of these letters with couple of examples.
 
 This application also got a mention in Malayalam Manorama news paper when they featured language computing application as part of [Keralapiravi](https://en.wikipedia.org/wiki/Kerala_Piravi)(November 1) special coverage.
 
