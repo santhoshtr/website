@@ -24,7 +24,7 @@ Along with a verbal description of syllables in Malayalam we attempt to formaliz
 
 Before starting with definition of syllable model, we need to define some terminology.
 
-## [][3]{#user-content-definitions.anchor}Definitions
+## Definitions
 
   1. `Vowel` &#8211; Vowels of Malayalam -Any of the set: [അആഇഈഉഊഋഎഏഐഒഓഔഔഅം]
   2. `VowelSign` &#8211; Vowel signs. &#8211; Any of the set [ാിീുൃെേൊോൗൂൈ]
@@ -40,7 +40,7 @@ Before starting with definition of syllable model, we need to define some termin
  12. `DotReph` The sign (ൎ). It combines with other consonants as in this example: ൎ + യ -> ൎയ in ഭാൎയ
  13. `HalfConsonant`: A `Consonant` followed by `Virama` Example: പ്, ര്, മ് etc. Or a `DotReph`
 
-## [][6]{#user-content-syllable-model.anchor}Syllable model
+## Syllable model
 
 A syllable in Malayalam can be any of the following.
 
@@ -88,15 +88,16 @@ A syllable boundary is after:
 
 ## Web interface
 
-I prepared a web interface if you just want to try out the syllable analyser and dont want to play with PEG.
+I prepared a web interface if you just want to try out the syllable analyser and don't want to play with PEG.
 
-<https://phon.smc.org.in/syllables/>
+https://phon.smc.org.in
 
-<figure id="attachment_965" aria-describedby="caption-attachment-965" style="width: 652px" class="wp-caption aligncenter">[<img class="size-full wp-image-965" src="/wp-content/uploads/2017/05/Spectacle.T10487.png" alt="" width="652" height="368" srcset="/wp-content/uploads/2017/05/Spectacle.T10487.png 652w, /wp-content/uploads/2017/05/Spectacle.T10487-300x169.png 300w" sizes="(max-width: 652px) 100vw, 652px" />][7]<figcaption id="caption-attachment-965" class="wp-caption-text">Malayalam syllable analyser</figcaption></figure>
+![Malayalam syllable analyser](/wp-content/uploads/2017/05/Spectacle.T10487.png)
+
 
 Now that comes with a JS API too, just include the following file in your web application:
 
-<https://phon.smc.org.in/syllables/lib/malayalam-syllables.js>
+https://phon.smc.org.in/syllables/lib/malayalam-syllables.js
 
 Then use the following method to split a word to syllables.
 
@@ -108,11 +109,9 @@ I prepared a codepen project to demonstrate this.
   See the Pen <a href="https://codepen.io/santhoshtr/pen/BRmJoB/">Malayalam syllable analyser</a> by Santhosh Thottingal (<a href="https://codepen.io/santhoshtr">@santhoshtr</a>) on <a href="https://codepen.io">CodePen</a>.
 </p>
 
-
-
 ## Source code
 
-<https://github.com/santhoshtr/malayalam-syllable-analyser>
+https://github.com/santhoshtr/malayalam-syllable-analyser
 
 Please report any issues or ideas to improve this model there. Thanks!
 
