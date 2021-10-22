@@ -11,15 +11,17 @@ I lead various language computing projects at [Swathanthra Malayalam Computing.]
 
 I have done significant contributions to Malayalam digital typography. I have designed two popular Malayalam typefaces named Chilanka and Manjari. Also maintains a number of other Malayalam unicode fonts. You can see all of these fonts in [SMC website][2]
 
-For my contributions to Malayalam language, I was honored with [Maharshi Badrayan Vyas Samman by the Hon. President of India][8] in 2019. I also received Mathrubhasha Puraskaram 2019 from the [Sree Sankaracharya University of Sanskrit][9], Kalady.
+For my contributions to Malayalam language, I was honored with [Maharshi Badrayan Vyas Samman][8] by the Hon. President of India in 2019. I also received Mathrubhasha Puraskaram 2019 from the [Sree Sankaracharya University of Sanskrit][9], Kalady.
 
-Currently I am working as Principal Software Engineer at Language Engineering team of Wikimedia Foundation. I work on MediaWiki language support, internationalization, localization, input methods for large number of languages in which Wikipedia exist, fonts, translation tools etc. I live at Palakkad, Kerala, India. I work remotely.
+Currently I am working as Principal Software Engineer at Language Engineering team of Wikimedia Foundation. I work on MediaWiki language support, internationalization, localization, input methods for large number of languages in which Wikipedia exist, fonts, translation tools etc. I live at Thiruvananthapuram, Kerala, India. I work remotely.
 
-* Contact:&nbsp;santhosh dot thottingal&nbsp;at gmail dot com
+[docs.thottingal.in][10] is my personal knowledge space I try to document and share everything I know about this world in form of a Digital garden or [Zettelkasten][11].
+
+* Contact: santhosh dot thottingal at gmail dot com
 * [Resume][3]
 * In social media: [Twitter][4], [Facebook][5]
 * My code: [github.com/santhoshtr][6]
-* Design portfolio:&nbsp;[behance.net/sthottingal][7]
+* Design portfolio: [behance.net/sthottingal][7]
 * PGP Fingerprint: EF23 579B BE51 48A8 0EB2 979B 523D E289 34DA 0B5A
 * [Donate](https://liberapay.com/santhosh/donate)
 
@@ -32,3 +34,5 @@ Currently I am working as Principal Software Engineer at Language Engineering te
  [7]: https://behance.net/sthottingal
  [8]: https://thottingal.in/blog/2019/08/16/presidential-award/
  [9]: https://ssus.ac.in/
+[10]: https://docs.thottingal.in
+[11]: https://en.wikipedia.org/wiki/Zettelkasten
