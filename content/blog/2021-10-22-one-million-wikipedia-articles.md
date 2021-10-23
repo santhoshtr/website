@@ -3,7 +3,7 @@ title: "One million Wikipedia articles by translation"
 author: Santhosh Thottingal
 type: post
 date: 2021-10-22T11:59:00+05:30
-url: /blog/2021/10/22/one-million-Wikipedia-articles/
+url: /blog/2021/10/22/one-million-wikipedia-articles/
 categories:
   - Wikipedia
 tags:
