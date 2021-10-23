@@ -19,7 +19,7 @@ Following is a video we created when we celebrated 100 thousand articles milesto
 
 <iframe width="100%" height="480" src="https://www.youtube.com/embed/3btQ5fpn4sA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The English Wikipedia has about 6 million articles and is the largest one. Wikipedia exist in more than 300 languages. The size of them varies a lot. For example, Malayalam Wikipedia has 75000 articles, 150000 articles and Spanish Wikipedia has 1.7 million articles. So a system that helped editors to create one million articles in various language editions is a big achievement and I am proud to be part of the team developed it.
+The English Wikipedia has about 6 million articles and is the largest one. Wikipedia exist in more than 300 languages. The size of them varies a lot. For example, Malayalam Wikipedia has 75000 articles, Hindi has 150000 articles and Spanish Wikipedia has 1.7 million articles. So a system that helped editors to create one million articles in various language editions is a big achievement and I am proud to be part of the team developed it.
 
 The ease of creating articles attracted lot of new editors too. From our casual observations, we saw very active users who created thousands of articles. Some of them developed a habit of translating articles every day. Some of them passionately focus on certain categories of articles and make sure all of them are available in their home Wikipedia. We are very thankful to each of these users.
 
