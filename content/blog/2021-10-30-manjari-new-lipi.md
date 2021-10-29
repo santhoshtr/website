@@ -13,7 +13,7 @@ tags:
 
 ---
 
-Manjari is a traditional orthography font. It has large set of ligatures. Vowel signs like /u/ get attached to its corresponding consonants to form ligatures. But, sometimes there are requirements to illustrate new orthography malayalam content in [Manjari](https://smc.org.in/fonts/manjari). Recently, Manjari was used to typeset an academic book related to Malayalam script and it was required to show some content in new orthography with detached vowel signs and detached reph signs. Using a different font that follows new orthography such as Noto Sans Malayalam was possible, but mixing Noto and Manjari won't give a pleasant reading experience.
+Manjari is a traditional orthography font for Malayalam. It has large set of ligatures, vowel signs like /u/ get attached to its corresponding consonants to form ligatures. But, sometimes there are requirements to illustrate new orthography malayalam content in [Manjari](https://smc.org.in/fonts/manjari). Recently, Manjari was used to typeset an academic book related to Malayalam script and it was required to show some content in new orthography with detached vowel signs and detached reph signs. Using a different font that follows new orthography such as Noto Sans Malayalam was possible, but mixing Noto and Manjari won't give a pleasant reading experience.
 
 In this article, I will explain how Manjari font can be used for this kind of usecases. First in web pages and then in TeX.
 
