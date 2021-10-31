@@ -7,7 +7,7 @@ date: 2010-08-23T11:10:19+00:00
 ---
 An attempt to list down all the public talks/presentations/workshops I did.
 
-> For a more recent list, please take a look at [my digital garden](https://docs.thottinga.in)
+> For a more recent list, please take a look at [my digital garden](https://docs.thottingal.in)
 
 ## 2020
 
