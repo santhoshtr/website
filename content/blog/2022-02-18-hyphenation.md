@@ -92,7 +92,7 @@ In 2017, Scribus added hyphenation patterns for Malayalam and later other langua
 
 ## Feedback
 
-The hyphenation rules were based on inputs from native language speakers and language experts. But I do not claim they are 100% accurate. Also, these rules are based on characters and their context with in a word. There is a valid argument that hyphenation should also respect the meaning change, if any, resulting from the words that formed by splitting a bigger word. That is beyond the scope of these patterns. But some of the application listed above provides ways to provide exception dictionaries(For example, please see Adapting Hyphenation section in the [polyglossia](https://mirror.kku.ac.th/CTAN/macros/unicodetex/latex/polyglossia/polyglossia.pdf) manual).
+The hyphenation rules were based on inputs from native language speakers and language experts. But I do not claim they are 100% accurate. Also, these rules are based on characters and their context with in a word. There is a valid argument that hyphenation should also respect the meaning change, if any, resulting from the words formed by splitting a bigger word. That is beyond the scope of these patterns. But some of the application listed above provides ways to provide exception dictionaries(For example, please see Adapting Hyphenation section in the [polyglossia](https://mirror.kku.ac.th/CTAN/macros/unicodetex/latex/polyglossia/polyglossia.pdf) manual).
 
 Please contact me or use the issue tracker in source code repository to report bugs or provide suggestions for improvement. Thanks in advance.
 
