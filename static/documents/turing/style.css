@@ -1,8 +1,11 @@
-div#page {
+main {
 	background: none repeat scroll 0 0 #FFFFFF;
 	border: 1px solid #FFFFFF;
 	text-align: left;
 	width: 100%;
+  hyphens: auto;
+  hyphenate-character: '';
+  -webkit-hyphenate-character: '';
 }
 
 body {
@@ -10,32 +13,68 @@ body {
 	line-height: 1.5em;
 	background: none repeat scroll 0 0 #eee;
 	color: #252525;
-	font-family: "Manjari", sans;
+	font-family: "Nupuram", "Manjari", sans;
 	text-align: center;
-	margin-left: 25%;
-	margin-right: 25%;
+
+}
+
+@media screen and (min-width: 801px) {
+  body {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  img{
+    margin: 10px;
+    width: 100%;
+  }
+  p {
+    margin: 0 10%;
+  }
+
+  ol, ul, li,  h2, h3,h4, th, td, var, blockquote, pre {
+    margin: 0;
+    padding:10;
+    line-height:150%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+  }
+
+}
+@media screen and (max-width: 800px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  img{
+    margin: 0;
+    width: 100%;
+  }
+  p {
+    margin: 4px;
+  }
+  ol, ul, li,  h2, h3,h4, th, td, var, blockquote, pre {
+    margin: 4px;
+    padding: 10px;
+    line-height:150%;
+    text-align: justify;
+  }
+
 }
 
 h1,h5 {
 	text-align: center;
 }
-ol, ul, li,  h2, h3,h4, th, td, var, blockquote, pre {
-	margin: 0;
-	padding:10;
-	line-height:150%;
-	margin-left: 10%;
-	margin-right: 10%;
-	text-align: justify;
-}
+
 
 p,li{
 	font-size: 1em;
 	text-indent: 15px;
 	line-height:1.5em;
 	text-align: justify;
-	margin-left: 10%;
-	margin-right: 10%;
+
 }
+
 blockquote {
 font-size: 120%;
 margin-left: 20%;
@@ -50,17 +89,14 @@ div.sidebox{
 	float:right;
 	width: 50%;
 	border-top: 5px solid;
-	background-color: lightblue;
+	background-color: antiquewhite;
 	margin-left:20px;
 }
 div.box{
 	border-top: 5px solid;
-	background-color: lightblue;
+	background-color: antiquewhite;
 	margin-left:20px;
 }
-img{
-	margin: 10px;
-} 
 
 
 table {
@@ -194,3 +230,14 @@ table {
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
+
+footer {
+  background: antiquewhite;
+}
+
+@font-face {
+	font-family: 'Nupuram';
+	font-display: swap;
+	font-weight: 400;
+	src: url(https://santhoshtr.gitlab.io/nupuram/fonts/webfonts/Nupuram-VF.woff2?v=1.100) format('woff2');
+}
