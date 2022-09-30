@@ -11,7 +11,7 @@ categories:
 
 I prepared a web frontend for the Malayalam spellchecker based on the [Malayalam morphology analyser][2].
 
-It is available at [https://morph.smc.org.in/spellcheck][3].
+It is available at [https://morph.smc.org.in/spellcheck.html][3].
 
 [![](/wp-content/uploads/2020/06/mlmorph-spellchecker.gif)][3]
 
@@ -23,6 +23,6 @@ The quality of spellcheck and suggestions provided depend on the completeness of
 
 [1]: https://thottingal.in/blog/2018/09/08/malayalam-spellchecker-a-morphology-analyser-based-approach
 [2]: https://morph.smc.org.in
-[3]: https://morph.smc.org.in/spellcheck
+[3]: https://morph.smc.org.in/spellcheck.html
 [4]: https://thottingal.in/blog/2019/03/10/libreoffice-malayalam-spellchecker-using-mlmorph/
 [5]: https://codepen.io/santhoshtr/pen/PoZzOvO
