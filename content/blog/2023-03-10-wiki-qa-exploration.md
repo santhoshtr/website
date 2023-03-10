@@ -70,10 +70,12 @@ And here is a video that showing "Questions" namespace listing all questions, al
 * Enhancements like voting or methods to find most useful questions can become "Frequently asked questions" for the article
 * Other content formats can be phrased as question and can be served by same system. For example, a summary of a large Wikipedia article is "Please provide a summary of this article" question. Also, we can have a question: "Explain this like I am 5 year old"
 * Exposing the questions and answers through internal search engine is first step towards natural language querying. External search engines will also index them.
+* For a question asked by a user, another user can add an answer. But here also, there are some emerging technologies that can provide a candidate answer and ask for human validation and publishing. Extending a LLM with a custom vector embedding and basing the QA on that is possible. For further reading: (a) [Retrieval Enhanced Generative Question Answering with Pinecone](https://github.com/openai/openai-cookbook/blob/main/examples/vector_databases/pinecone/Gen_QA.ipynb) (b) [LlamaIndex llama (GPT Index)](https://github.com/jerryjliu/gpt_index).
 
 ## Disclaimers
 
 * This is just a prototype of a concept and does not discard all product design and community interaction efforts that need to happen, in case this becomes reality one day. I am curious to hear various prospects, product design ideas you may have.
+* There are many important considerations that I omitted for simplicity in this prototype. For example, the dynamic nature of wikipedia articles and need for updating the question list. Using OpenAI's proprietary model may not be the best choice as we may want to find open source large language models.
 * I work at Wikimedia Foundation. However, this proposal and approach are my personal views and does not reflect my employers view. I had written and shared most of this concepts in 2019 in a document to my colleagues and it had this note: "Later we amend the system with machine generated questions and answers as well." :-)
 
 Have fun!
