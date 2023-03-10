@@ -12,25 +12,21 @@ tags:
 ---
 
 
-In this blog post I explain the prospects of providing questions and answers as an additional content format in wikipedia, a [human-in-the-loop](https://hai.stanford.edu/news/humans-loop-design-interactive-ai-systems) approach for that with a prototype.
+In this blog post I explain the prospects of providing questions and answers as an additional content format in wikipedia and a [human-in-the-loop](https://hai.stanford.edu/news/humans-loop-design-interactive-ai-systems) approach for that with a prototype.
 
 ## Introduction
 
-Wikipedia is the destination of curiosity. Curiosity starts with a question. People visit wikipedia when searching answer for that question. However, people come to wikipedia after intermediaries like search engines, that shows the source of answer to them. Wikipedia by itself is not much equipped to answer the questions other than the limited keyword based search.
+Wikipedia is a hub for curiosity, with people visiting the site in search of answers to their questions. However, they typically arrive at Wikipedia via intermediaries such as search engines, which direct them to the relevant article. While Wikipedia's keyword-based search function can be helpful, it may not be sufficient for addressing more complex natural language queries. As a result, AI-based conversational agents like ChatGPT have become increasingly popular for knowledge seekers. However, the accuracy and reliability of information provided by AI systems may be questionable.
 
-With the recent advancements in AI based conversational agents such as ChatGPT, finding information using natural language questions are increasingly becoming a popular method for knowledge seekers. However, the answers given by AI based applications can be false or made up information due to the nature of those systems.
-
-So, there is a need for reliable, verifiable information that can be queried using natural language questions. The editor community of Wikipedia created the largest encyclopedia. If this knowledge based can be utilized to serve natural language queries, it would be quite useful for many people.
+To address this issue, there is a need for a reliable and verifiable source of information that can be queried using natural language questions. Wikipedia's editor community has created the largest encyclopedia in the world, making it an invaluable resource for natural language queries. However, providing an AI-based solution to answer all questions based on Wikipedia content may not align with Wikipedia's principles and practices.
 
 In the current state of natural language processing, the straight forward solution that will come to our mind would be to provide an AI based solution that answer all questions based on Wikipedia content. Baring all technical challenges, let us just assume, we build such a solution. For me, this approach does not go very well with the [wikipedia's principles and practices](https://en.wikipedia.org/wiki/Wikipedia:Large_language_models). Why?
 
-First of all, it is quite possible that the probabilistic answers such a solution gives contain false information even when correct information is present in Wikipedia content. At Wikimedia Foundation, one of my colleuage tested this by providing Wikipedia article to ChatGPT and then asking questions to it.
+One major concern is that such a system may provide probabilistic answers that contain false information, even if the correct information is present in Wikipedia content. This was tested by a colleague at the Wikimedia Foundation, who provided a Wikipedia article to ChatGPT and asked it questions. Another issue is that the content in Wikipedia is always editable, but the answers provided by AI systems are not. They are output from a black box and cannot be explained, nor are they human-approved.
 
-The content in wikipedia is always editable. But the answers resulting from these AI solutions are not editable. They are output from a blackbox. One cannot explain it. Humans are not involved in answering, the answers are not human approved.
+Furthermore, providing a question-answering system that adheres to Wikipedia's principles requires supporting the site's 300+ languages.
 
-Serving a few languages that are supported by current Large language models are not enough for Wikipedia. Wikipedia supports 300+ languages.
-
-How can we use the language capabilities of current large language models and at the same time have a question answering system that adheres to wikipedia's principles?
+Finding a solution that uses the language capabilities of current large language models while still adhering to Wikipedia's principles is an interesting challenge.
 
 ## Proposed solution
 
