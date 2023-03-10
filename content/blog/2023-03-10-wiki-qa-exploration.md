@@ -22,7 +22,7 @@ With the recent advancements in AI based conversational agents such as ChatGPT, 
 
 So, there is a need for reliable, verifiable information that can be queried using natural language questions. The editor community of Wikipedia created the largest encyclopedia. If this knowledge based can be utilized to serve natural language queries, it would be quite useful for many people.
 
-In the current state of natural language processing, the straight forward solution that will come to our mind would be to provide an AI based solution that answer all questions based on Wikipedia content. Baring all technical challenges, let us just assume, we build such a solution. For me, this approach does not go very well with the wikipedia's principles and practices. Why?
+In the current state of natural language processing, the straight forward solution that will come to our mind would be to provide an AI based solution that answer all questions based on Wikipedia content. Baring all technical challenges, let us just assume, we build such a solution. For me, this approach does not go very well with the [wikipedia's principles and practices](https://en.wikipedia.org/wiki/Wikipedia:Large_language_models). Why?
 
 First of all, it is quite possible that the probabilistic answers such a solution gives contain false information even when correct information is present in Wikipedia content. At Wikimedia Foundation, one of my colleuage tested this by providing Wikipedia article to ChatGPT and then asking questions to it.
 
