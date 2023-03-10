@@ -50,7 +50,7 @@ Provide all possible questions and answers in json format with "question" and "a
 
 *I asked for json format just to avoid parsing plain text output from the model. It did provide json, but sometimes as array of questions answers, sometimes with a top level key 'questions' and value as array of questions and answers. Found it unpredictable, but it was not difficult to detect the format of json and act accordingly*
 
-## Protoype
+## Prototype
 
 To illustrate the concept, I build a prototype. To capture the generated questions and answers and expose it as API, I wrote a server application. Source code: https://github.com/santhoshtr/wq and it has a simple web interface that runs at https://wq.thottingal.in. Note that this use the gpt-3.5-turbo API by OpenAI and I don't promise it will run all the time. I will at least keep it running till I use up free API credit I received.
 
