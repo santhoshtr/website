@@ -120,10 +120,12 @@ Source Code: https://github.com/santhoshtr/wq
 
 ## Prospects
 
-* This experiment demonstrated that RAG with vector store can produce reasonable answers for the questions. However, the questions should be answerable from a given context. If the question requiring going through multiple articles and analysing or performing computation, this approach will not work. Abstractive summarization for question answering is completely different problem to solve.
+* This experiment demonstrated that RAG with vector store can produce reasonable answers for the questions. The answers are based on the wikipedia extracts and that avoids the hallucination issues. The approach used in the recent [Wikipedia ChatGPT plugin](https://diff.wikimedia.org/2023/07/13/exploring-paths-for-the-future-of-free-knowledge-new-wikipedia-chatgpt-plugin-leveraging-rich-media-social-apps-and-other-experiments/) experiment follows the same approach to avoid hallucination.
+* However, the questions should be answerable from a given context. If the question requiring going through multiple articles and analysing or performing computation, this approach will not work. Abstractive summarization for question answering is completely different problem to solve.
 * The size of the context is also important for LLM. Just because an LLM support large context size for inputs, [does not mean it will produce well articulated answer from it](https://arxiv.org/pdf/2307.03172.pdf).
 * Whether the vector store can be scaled to the Wikipedia's size and dynamic nature is an engineering question not explored here. Vector store solutions had published various benchmarks on the scalability and performance.
 * Even though I got this working in CPUs does not mean, a bigger system can work just from CPUs.
+* Wikipedia is present in 320 languages. To create vector embedding for another language we need a transformer model for that language. This is not difficult to train and prepare. The vector similarity search is language independent - it works on numbers. The articulation of answer from narrowed context require an LLM that supports the language. This might be difficult. There are LLMs that supports about a dozen of languages, but nothing beyond that. I hope the situation change in future. Or, we can also try translation approach, but that can introduce translation related factual errors.
 
 ## Disclaimers
 
