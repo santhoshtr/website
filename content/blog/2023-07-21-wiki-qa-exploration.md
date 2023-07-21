@@ -2,7 +2,7 @@
 title: "Natural language question answering in Wikipedia - an exploration - Part 3"
 author: Santhosh Thottingal
 type: post
-date: 2023-03-25T9:45:00+05:30
+date: 2023-07-21T9:45:00+05:30
 url: /blog/2023/07/21/wikiqa
 categories:
   - wikipedia
@@ -96,7 +96,7 @@ For LLM, I used the [llama-cpp](https://github.com/ggerganov/llama.cpp) optimize
 
 ## Source code
 
-Source Code: https://github.com/santhoshtr/wq
+Source code: https://github.com/santhoshtr/wq
 
 ## More examples
 
