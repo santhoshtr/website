@@ -1,5 +1,4 @@
 baseurl = "https://thottingal.in/"
-baseURL = "/"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
@@ -7,98 +6,85 @@ title = "Santhosh Thottingal"
 canonifyurls  = true
 
 DefaultContentLanguage = "en"
-paginate = 10
-#theme = "beautifulhugo"
-theme = "poison"
+theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 disqusShortname = "thottingal-in"
 googleAnalytics = " UA-3185981-2"
-pluralizelisttitles = false
 
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [Params]
   #subtitle = "Thoughts of Thottingal"
-  brand = "Santhosh Thottingal"
-  description = "Thoughts of Thottingal" # Used as default meta description if not specified in front matter
-  brand_image = "/sa.png"
   logo = "sa.png"
   favicon = "sa.png"
   dateFormat = "January 2, 2006"
   commit = false
-  dark_mode = true
   rss = true
-  rss_icon = true
   comments = true
-  menu = [
-    {Name = "About", URL = "/page/about/"},
-    {Name = "Talks", URL = "/page/talks/"},
-    {Name = "Posts", URL = "/blog/",  HasChildren = false, Limit = 3},
-  ]
-
   gcse = "018117983803886995692:cspsge7ythu" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
-  # Links to your socials.  Comment or delete any you don't need/use.
-  github_url = "https://github.com/santhoshtr"
-  gitlab_url = "https://gitlab.com/santhoshtr"
-  twitter_url = "https://twitter.com/santhoshtr"
-  mastodon_url = "https://mastodon.social/@sthottingal"
-  youtube_url = "https://youtube.com"
-  email_url = "mailto://santhosh.thottingal+blog@gmail.com"
 
+#[[Params.bigimg]]
+  #src = "img/triangle.jpg"
+  #desc = "Triangle"
+#[[Params.bigimg]]
+  #src = "img/sphere.jpg"
+  #desc = "Sphere"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
+
+[Author]
+  name = "Santhosh Thottingal"
+  email = "santhosh.thottingal@gmail.com"
+  #facebook = "username"
+  #googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
+  gitlab = "santhoshtr"
+  github = "santhoshtr"
+  twitter = "santhoshtr"
+  #reddit = "username"
+  #linkedin = "username"
+  #xing = "username"
+  #stackoverflow = "users/XXXXXXX/username"
+  #snapchat = "username"
+  #instagram = "username"
+  #youtube = "user/username" # or channel/channelname
+  #soundcloud = "username"
+  #spotify = "username"
+  #bandcamp = "username"
+  #itchio = "username"
+  #keybase = "username"
 
 [taxonomies]
-  # series = 'series'
-  tags = 'tags'
+  category = "categories"
+  tag = "tags"
 
+[[menu.main]]
+    name = "Blog"
+    url = "blog"
+    weight = 1
 
-# BeautifulHugo Settings
-# [Author]
-#   name = "Santhosh Thottingal"
-#   email = "santhosh.thottingal@gmail.com"
-#   #facebook = "username"
-#   #googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
-#   gitlab = "santhoshtr"
-#   github = "santhoshtr"
-#   twitter = "santhoshtr"
-#   #reddit = "username"
-#   #linkedin = "username"
-#   #xing = "username"
-#   #stackoverflow = "users/XXXXXXX/username"
-#   #snapchat = "username"
-#   instagram = "santhoshth0ttingal"
-#   #youtube = "user/username" # or channel/channelname
-#   #soundcloud = "username"
-#   #spotify = "username"
-#   #bandcamp = "username"
-#   #itchio = "username"
-#   #keybase = "username"
+[[menu.main]]
+    name = "About"
+    url = "page/about/"
+    weight = 3
 
+[[menu.main]]
+    url = "page/projects"
+    name = "Projects"
+    weight = 2
 
-# [[menu.main]]
-#     name = "Blog"
-#     url = "blog"
-#     weight = 1
+[[menu.main]]
+    url = "page/talks"
+    name = "Talks"
+    weight = 2
 
-# [[menu.main]]
-#     name = "About"
-#     url = "page/about/"
-#     weight = 3
-
-# [[menu.main]]
-#     url = "page/projects"
-#     name = "Projects"
-#     weight = 2
-
-# [[menu.main]]
-#     url = "page/talks"
-#     name = "Talks"
-#     weight = 2
-
-# [[menu.main]]
-#     name = "Tags"
-#     url = "tags"
-#     weight = 3
-
-[markup.goldmark.renderer]
-    unsafe = true
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
