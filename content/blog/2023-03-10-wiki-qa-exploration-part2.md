@@ -1,9 +1,9 @@
 ---
-title: "Natural language question answering in Wikipedia - an exploration - Part2"
+title: "Natural language question answering in Wikipedia - an exploration - Part 3"
 author: Santhosh Thottingal
 type: post
 date: 2023-03-25T9:45:00+05:30
-url: /blog/2023/03/25/wikiqa
+url: /blog/2023/07/21/wikiqa
 categories:
   - wikipedia
 tags:
