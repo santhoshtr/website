@@ -11,7 +11,7 @@ tags:
 
 ---
 
-I wrote about the exploration on Natural language querying for wikipedia in previors two blog posts.
+I wrote about the exploration on Natural language querying for wikipedia in previous two blog posts.
 
 In [Part 1](https://thottingal.in/blog/2023/03/10/wikiqa/), I was suggesting that building such a collection of question and answers can help natural language answering. One missing piece was actually suggesting an answer for a new question that is not part of QA set for article.
 
@@ -74,7 +74,7 @@ The vector embedding of the query is used to find most similar vector embeddings
 
 > Related reading: (a) [Hierarchical Navigable Small Worlds (HNSW)](https://www.pinecone.io/learn/series/faiss/hnsw/), (b) [What is Similarity Search?](https://archive.pinecone.io/learn/what-is-similarity-search/)
 
-We can retrieve mutliple contexts for the question. These contexts are paragraphs that are close the question.
+We can retrieve multiple contexts for the question. These contexts are paragraphs that are close the question.
 
 Now we got a few paragraphs that has the answer for the question. These paragraphs are already helpful for a reader to figure out the answer for the question. But let us try to paraphrase the answer from these contexts. For that articulation job, we use a large language model.
 
@@ -92,7 +92,7 @@ context: {context}
 Answer:
 ```
 
-For LLM, I used the llama-cpp optimied Orca Mini 3 Billion param model(orca-mini-3b.ggmlv3.q4_0.bin) along with llama-cpp-python library so that I can run it on CPUs. Since we are not using any "knowledge" from the LLM, but just asking it to articulate an answer from the given context, any LLM that can do reasonable instruction prompting should work.
+For LLM, I used the [llama-cpp](https://github.com/ggerganov/llama.cpp) optimized Orca Mini 3 Billion param model(orca-mini-3b.ggmlv3.q4_0.bin) along with [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) library so that I can run it on CPUs. Since we are not using any "knowledge" from the LLM, but just asking it to articulate an answer from the given context, any LLM that can do reasonable instruction prompting should work.
 
 ## Source code
 
