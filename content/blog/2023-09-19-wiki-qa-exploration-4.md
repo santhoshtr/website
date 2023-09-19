@@ -57,18 +57,18 @@ In my search for an embedder that can work beyond English, I found E5 model - ba
 
 I tried to create a telegram chat bot that provides a friendly chat interface for the questions, returns the results with a context from wikipedia that can answer the question, an article preview and link to article.
 
-![Example QA using telegram bot](/static/wp-content/uploads/2023/09/wikiqa-example-1.png)
+![Example QA using telegram bot](/wp-content/uploads/2023/09/wikiqa-example-1.png)
 
-![Example QA using telegram bot](/static/wp-content/uploads/2023/09/wikiqa-example-2.jpg)
+![Example QA using telegram bot](/wp-content/uploads/2023/09/wikiqa-example-2.jpg)
 
 
-![Example QA using telegram bot](/static/wp-content/uploads/2023/09/wikiqa-example-3.jpg)
+![Example QA using telegram bot](/wp-content/uploads/2023/09/wikiqa-example-3.jpg)
 
-![Example QA using telegram bot](/static/wp-content/uploads/2023/09/wikiqa-example-4.jpg)
+![Example QA using telegram bot](/wp-content/uploads/2023/09/wikiqa-example-4.jpg)
 
-![Example QA using telegram bot](/static/wp-content/uploads/2023/09/wikiqa-example-5.png)
+![Example QA using telegram bot](/wp-content/uploads/2023/09/wikiqa-example-5.png)
 
-![Example QA using telegram bot](/static/wp-content/uploads/2023/09/wikiqa-example-6.png)
+![Example QA using telegram bot](/wp-content/uploads/2023/09/wikiqa-example-6.png)
 
 *I am not sharing the link of telegram bot here since I cannot run it infinitely and not built for wider usage. However, ping me if you need a link for quick testing.*
 
@@ -92,7 +92,7 @@ Another challenge is that section titles are often not embedded along with parag
 
 The [paper I linked in the beginning of article](https://faculty.washington.edu/ebender/papers/Envisioning_IAS_preprint.pdf) illustrats the issue of context split with this example.
 
-![Context split](/static/wp-content/uploads/2023/09/context-split.jpg)
+![Context split](/wp-content/uploads/2023/09/context-split.jpg)
 
 Additionally, retaining the content from tables, lists, and infoboxes presents its own challenges. How do we preserve the semantic context in a vector embedding for a table? For instance, in a table listing Olympic winners, how can we retrieve an answer to "Who won the most medals?" These are complex issues that require thoughtful solutions.
 
@@ -100,7 +100,7 @@ I also conducted some testing with non-English languages, including Malayalam, m
 
 In my personal view, Wikipedia's approach to question-answering should go beyond providing a single sentence answer without further context on how the answer was obtained, what assumptions were made, who authored it, and how to make corrections. A more effective approach would involve responding to a question with a retrieved context from a Wikipedia article, along with links for further exploration. This approach eliminates the need for probabilistic, black-box algorithms between the user and the knowledge base. Emily Bender and Chirag Shah refer to these approaches as "Generative" and "Discriminative," respectively. Moreover, presenting context invites users to delve deeper, refine their questions, and discover new facts.
 
-!["Generative" vs "Discriminative"](/static/wp-content/uploads/2023/09/generative-vs-discriminative.jpg)
+!["Generative" vs "Discriminative"](/wp-content/uploads/2023/09/generative-vs-discriminative.jpg)
 
 ## Disclaimers
 
