@@ -12,7 +12,7 @@ I am a language computing professional and a typeface designer.
 
 I lead various language computing projects at [Swathanthra Malayalam Computing.][1] Many of my works on Malayalam computing enable millions of Malayalam users on their computers or phones. I maintain a number of free software projects related to Indic language computing too.
 
-I have done significant contributions to Malayalam digital typography. I have designed two popular Malayalam typefaces named Chilanka and Manjari. Also maintains a number of other Malayalam unicode fonts. You can see all of these fonts in [SMC website][2]
+I have done significant contributions to Malayalam digital typography. I have designed  popular Malayalam typefaces Chilanka, Manjari, Nupuram and Malini. Also maintains a number of other Malayalam unicode fonts. You can see all of these fonts in [SMC website][2]
 
 For my contributions to Malayalam language, I was honored with [Maharshi Badrayan Vyas Samman][8] by the Hon. President of India in 2019. I also received Mathrubhasha Puraskaram 2019 from the [Sree Sankaracharya University of Sanskrit][9], Kalady.
 
