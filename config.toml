@@ -75,16 +75,6 @@ googleAnalytics = " UA-3185981-2"
     weight = 3
 
 [[menu.main]]
-    url = "page/projects"
-    name = "Projects"
-    weight = 2
-
-[[menu.main]]
-    url = "page/talks"
-    name = "Talks"
-    weight = 2
-
-[[menu.main]]
     name = "Tags"
     url = "tags"
     weight = 3
