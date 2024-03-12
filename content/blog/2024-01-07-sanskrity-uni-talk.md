@@ -18,6 +18,9 @@ tags:
 [slides](https://docs.google.com/presentation/d/1tTjdwSdN8h08-MwAoiwDwwJDhrSEDbVyEvw3KK1CzuM/)
 
 
+Video recording is given below:
+<iframe width="800" height="600" src="https://www.youtube.com/embed/aE7o62zS_eI?si=cNVC6j_qX6mbeu2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ![](/wp-content/uploads/2024/01/photo_2024-01-07_14-43-54.jpg)
 ![](/wp-content/uploads/2024/01/photo_2024-01-07_14-44-11.jpg)
 ![](/wp-content/uploads/2024/01/photo_2024-01-07_14-44-15.jpg)
