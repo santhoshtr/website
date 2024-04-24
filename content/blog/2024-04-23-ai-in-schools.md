@@ -33,7 +33,7 @@ The news report also mentions AI-generated visualizations for study materials.  
 
 We should also look at what are these AI tools teachers are trained on. Kerala has a commendable history of using Free and Open Source Software (FOSS) in IT education. This approach was hard-won, especially during 2000-2010 when Microsoft aggressively lobbied for classroom digitization with their MVPs (Most Valuable Professionals) promoting MS products.
 
-A malayalam news report says that there is plan to develop a free and opensource "AI Engine" for the above mentioned purposes and a committee has been formed for the same. Ironically, one of those MVPs is now a consultant for this very project by IT@School.
+A malayalam news report says that there is plan to develop a free and opensource "AI Engine" for the above mentioned purposes and a committee has been formed for the same.
 
 ![](/wp-content/uploads/2024/04/ai-in-schools-mb.jpeg)
 
