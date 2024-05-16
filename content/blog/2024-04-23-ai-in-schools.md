@@ -21,6 +21,8 @@ Today, I learned about a teacher training program organized by the Kerala Educat
 
 ![](/wp-content/uploads/2024/04/ai-in-schools-express.jpeg)
 
+![](/wp-content/uploads/2024/04/ai-in-schools-hindustantimes.jpeg)
+
 While I generally support teacher training on new technologies that can potentially improve teaching or save time, I'm curious about the specific problems AI is expected to solve. For instance, the news report mentions AI tools evaluating answer sheets, generating exam questions, and creating unit tests.  Perhaps a better question is should these tasks be automated?  If teachers struggle with these tasks and seek to rely on AI, there might be underlying pedagogical issues, not technological ones.
 
 The news report also highlights using AI for summarizing PDFs and complex texts.  Uncritical acceptance of AI's potential can be detrimental, especially in education.  Many of these AI tools function best, or even exclusively, in English, creating a disadvantage for students using other languages like Malayalam.
