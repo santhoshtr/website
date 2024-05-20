@@ -10,7 +10,7 @@ tags:
   - metapost
 ---
 
-While working with [MetaPost](https://tug.org/metapost.html) for typeface design, I frequently felt the need for a quick and easy way to test code snippets. This mirrors the functionality of popular online sandboxes like CodeSandbox or JSBin, which many developers are already familiar with. These platforms provide a web-based environment where you can edit code, see the output instantly, and avoid the hassle of setting up a complete application or environment.
+While working with [MetaPost](https://tug.org/metapost.html) for typeface design([Nupuram](https://gitlab.com/smc/fonts/Nupuram), [Malini](https://gitlab.com/smc/fonts/Malini)), I frequently felt the need for a quick and easy way to test code snippets. This mirrors the functionality of popular online sandboxes like CodeSandbox or JSBin, which many developers are already familiar with. These platforms provide a web-based environment where you can edit code, see the output instantly, and avoid the hassle of setting up a complete application or environment.
 
 Inspired by this concept, I've been developing a MetaPost sandbox, and I'm excited to share it with you in this blog post.
 
