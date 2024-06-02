@@ -60,3 +60,7 @@ There are additional issues to consider when implementing AI in education, inclu
 
 The rapid pace of technological advancement can lead to a "fear of missing out" (FOMO).  However, schools shouldn't be swayed by passing trends.  A well-rounded education emphasizes core subjects like science, math, and computer science, which provide a strong foundation for future exploration of AI. A thoughtful approach that prioritizes core skills and critical thinking will better equip students to navigate a world increasingly influenced by AI.
 
+**Update**:
+Minister of Education - V Sivankutty - [announced](https://twitter.com/CPIMKerala/status/1796948594467168718) that Kerala will be the first state to tteach AI for 400,000 students in standard-7.
+
+<blockquote class="twitter-tweet"><p lang="ml" dir="ltr">സംസ്ഥാനത്തെ ഏഴാം ക്ലാസിലെ 4 ലക്ഷത്തിലധികം കുട്ടികള്‍ പുതിയ അദ്ധ്യയന വര്‍ഷത്തില്‍ ഐ.സി.ടി. പാഠപുസ്തകത്തിലൂടെ നിര്‍മിത ബുദ്ധിയും പഠിക്കും. <a href="https://t.co/lvP0DS8s2f">https://t.co/lvP0DS8s2f</a><br><br>സ. വി ശിവൻകുട്ടി <a href="https://t.co/Lr5CJ7fxhP">pic.twitter.com/Lr5CJ7fxhP</a></p>&mdash; CPI(M) Kerala (@CPIMKerala) <a href="https://twitter.com/CPIMKerala/status/1796948594467168718?ref_src=twsrc%5Etfw">June 1, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
