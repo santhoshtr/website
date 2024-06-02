@@ -41,3 +41,9 @@ I'm not opposed to using generative AI to enhance readability, but the author sh
 
 Why should I bother to read the content that the author did not want to write themself?
 
+## Update - June 2, 2024
+
+A few days later I published this blog post, Dr Ponnusamy emailed me asking to withdraw the review and collaborate with him to review the fixes he plans to do. Same email came from another person named Padmavathy Ponnusamy, I assume this person is somebody close to him. Padmavathy Ponnusamy commented in this blogpost too, but in a very negative tone. Dr Ponnusamy in LinkedIn [said that](https://www.linkedin.com/feed/update/urn:li:ugcPost:7193891610638639106?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7193891610638639106%2C7195064373093052416%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287195064373093052416%2Curn%3Ali%3AugcPost%3A7193891610638639106%29) "Sometimes for the sake of money people like you also working for some one. Please write a book on Malayalam Computing if you have the knowledge. Book written prior to the arrival of ChatGpt. Thanks for popularise my book. "
+
+I was traveling and couple of days later I read another email talking about discussing before involving lawers etc. A few days later, I came to know that Dr Ponnusamy had contacted the legal team of my employer too. However, I did not respond to any of these intimidation tactics. Anyway, The book "Tamil Computing" is no longer available in Amazon or other online platforms.
+
