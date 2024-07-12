@@ -1,0 +1,25 @@
+body {
+  font-family: "Gentium Book Basic", "Manjari", "Times New Roman", serif;
+}
+
+a.footnote-ref::before {
+  content: "[";
+}
+
+a.footnote-ref::after {
+  content: "]";
+}
+
+h1 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+    line-height: 1.7;
+}
+
+figcaption {
+    font-size: 1em;
+    text-align: center;
+}

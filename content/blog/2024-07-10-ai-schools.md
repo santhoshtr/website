@@ -3,7 +3,7 @@ title: Thoughts on AI teaching in schools
 author: Santhosh Thottingal
 type: post
 date: 2024-07-13T10:00:00+05:30
-url: /blog/2024/07/13/ai-schools
+url: /blog/2024/07/12/ai-schools
 categories:
   - Projects
 tags:
@@ -30,7 +30,7 @@ There are also many opportunities for students to create their own AI applicatio
 
 Students hear the term AI and ML interchangeably. Although, these days, they might hear AI more than ML. It is important to understand the difference and relation between the terms Artificial Intelligence(AI) and Machine Learning(ML).
 
-ML is considered a subfield of AI, and the AI is a subfield of Computer Science and almost as old as Computer Science itself. In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) wrote a seminal paper “Computing Machinery and Intelligence”. Turing did not use the term "Artificial Intelligence" but he posed the big question  “Can machines think?” which laid the foundations for AI. Turing introduced a test, known as the "Turing Test" or "Imitation game", invented to compare computer intelligence and human intelligence.
+ML is considered a subfield of AI, and the AI is a subfield of Computer Science and almost as old as Computer Science itself. In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) wrote a seminal paper “Computing Machinery and Intelligence”. Turing did not use the term "Artificial Intelligence" but he posed the big question  “Can machines think?” which laid the foundations for AI[^1]. Turing introduced a test, known as the "Turing Test" or "Imitation game", invented to compare computer intelligence and human intelligence.
 
 A few years later, in 1956, [McCarthy](https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)), [Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky), [Rochester](https://en.wikipedia.org/wiki/Nathaniel_Rochester_(computer_scientist)), and [Shannon](https://en.wikipedia.org/wiki/Claude_E._Shannon) led a [workshop at Dartmouth College](https://en.wikipedia.org/wiki/Dartmouth_workshop) which aimed to gather a selected group of scientists to work “on the basis of conjecture that every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it”. Their proposal where the goal of the workshop was described was titled “A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence”, which was the first use of the term AI.
 
@@ -47,7 +47,7 @@ For example, In 1996, IBM's [Deep Blue](https://en.wikipedia.org/wiki/Deep_Blue_
 
 AI education in schools is not new. The first efforts to make AI programming tools accessible to children took place in the early 1970s, with the [Logo programming language](https://en.wikipedia.org/wiki/Logo_(programming_language)), and continued through the 1980s. However, AI education suffered [a cold period](https://en.wikipedia.org/wiki/AI_winter) from the 1990s until 2012, when educators, AI
 researchers, and the general public changed their view about AI due to the big success achieved by ML in solving problems such as image recognition, language translation, transcription of speech, game playing, and natural language
-processing[3][4]
+processing[^3][^4]
 
 ### Traditional programming vs Machine Learning
 
@@ -105,7 +105,7 @@ There is also an accompanying textbook that can be used to teach AI to kids. [am
 
 How many pictures do you need? You need a lot of pictures. The more pictures you have, the better the model will be. This is a good way to introduce the concept of how the training data affects the model. If you have more pictures of mangoes than bananas, the model will be better at recognizing mangoes than bananas. This is called bias in the data. This is a good way to introduce the concept of bias in the data.
 
-![Machine learning for kids training interface](/wp-content/uploads/2024/07/car-cup.png)
+![Machine learning for kids training interface](/wp-content/uploads/2024/07/car-cup.png "Machine learning for kids training interface")
 
 I consider going through the training process is essential part of AI programming. There are many things to learn from the training process. The students will understand the pros and cons of training data, the bias in the data, and the effect of training data on the model. They will also understand the privacy concerns in collecting data. They will understand the concept of crowdsourcing too.
 
@@ -151,12 +151,13 @@ AI teaching in schools is important but should be approached carefully. It’s n
 
 ## References and additional reading
 
-* [1] Turing, A. M. (2004). Computing machinery and intelligence (1950). The Essential Turing: The Ideas that Gave Birth to the Computer Age. Ed. B. Jack
+[^1]: Turing, A. M. (2004). Computing machinery and intelligence (1950). The Essential Turing: The Ideas that Gave Birth to the Computer Age. Ed. B. Jack
 Copeland. Oxford: Oxford UP, 433-64
-* [2] McCarthy, J., Minsky, M. L., Rochester, N., & Shannon, C. E. (2006). A Proposal for the Dartmouth Summer Research Project on Artific
+[^2]: McCarthy, J., Minsky, M. L., Rochester, N., & Shannon, C. E. (2006). A Proposal for the Dartmouth Summer Research Project on Artific
 ial Intelligence, August 31, 1955. AI magazine, 27(4), 12.
-* [3] Kahn, K. & Winters, N. (2017) Child-friendly programming interfaces to AI cloud services, Proceedings of EC-TEL 2017: Data Driven Approaches in Digital Education, 10474, 566-570
-* [4] Kahn, K. & Winters, N. (2018) AI Programming by Children, Proceedings of Constructionism 2018, Vilnius, Lithuania, 2018
+[^3]: Kahn, K. & Winters, N. (2017) Child-friendly programming interfaces to AI cloud services, Proceedings of EC-TEL 2017: Data Driven Approaches in Digital Education, 10474, 566-570
+[^4]: Kahn, K. & Winters, N. (2018) AI Programming by Children, Proceedings of Constructionism 2018, Vilnius, Lithuania, 2018
+
 * Understanding computing education - April 2021
 by the Raspberry Pi Foundation Research Seminars [pdf](https://www.raspberrypi.org/app/uploads/2021/05/Understanding-computing-education-Volume-1-%E2%80%93-Raspberry-Pi-Foundation-Research-Seminars.pdf)
 * Moreno-Guerrero, A. J., López-Belmonte, J., Marín-Marín, J. A., & Soler-Costa, R. (2020). [Scientific Development of Educational Artificial Intelligence in

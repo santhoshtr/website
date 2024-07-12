@@ -18,6 +18,11 @@ googleAnalytics = " UA-3185981-2"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.renderHooks]
+      [markup.goldmark.renderHooks.image]
+        enableDefault = true
+      [markup.goldmark.renderHooks.link]
+        enableDefault = false
 
 [Params]
   #subtitle = "Thoughts of Thottingal"
