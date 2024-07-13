@@ -1,6 +1,11 @@
 body {
   font-family: "Gentium Book Basic", "Manjari", "Times New Roman", serif;
 }
+.post-preview {
+  .post-entry {
+    font-family: "Gentium Book Basic", "Manjari", "Times New Roman", serif;
+  }
+}
 
 a.footnote-ref::before {
   content: "[";
@@ -53,10 +58,10 @@ li {
 }
 
 .footnotes {
-    p {
-        font-size: 0.9em;
-        line-height: 1.5;
-    }
+  p {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
 }
 
 .align-middle {

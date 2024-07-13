@@ -9,8 +9,7 @@ categories:
   - AI
 tags:
   - education
-cover:
-  image: /wp-content/uploads/2024/07/ai-for-kids.jpg
+share_img: /wp-content/uploads/2024/07/ai-for-kids.jpg
 ---
 
 Artificial Intelligence (AI) is a hot topic these days, and it's natural to wonder how it fits into education. In this article, we will explore the best practices, concerns, and recommendations for integrating AI into school curriculums. I will also provide references to useful tools and learning materials.
