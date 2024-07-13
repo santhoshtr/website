@@ -19,28 +19,56 @@ p {
   line-height: 1.7;
 }
 
-figcaption {
-  font-size: 1em;
-  text-align: center;
-}
+figure {
+  margin: 2em 0;
+  padding: 0;
 
+  figcaption {
+    font-size: 1em;
+    text-align: left;
+
+    p {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+  }
+}
 .align-right {
   float: right;
   width: 50%;
-
 }
 
+h2 {
+  line-height: 2;
+}
+
+h3 {
+  line-height: 2;
+}
+
+p,
+li {
+  font-size: 1.2em;
+  line-height: 1.7;
+}
+
+.footnotes {
+    p {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+}
 
 .align-middle {
-    width: 80%;
-    margin: auto;
-  }
+  width: 80%;
+  margin: auto;
+}
 
 @media only screen and (max-width: 767px) {
   .align-right {
     float: none;
   }
-  .align-middle{
+  .align-middle {
     width: 100%;
   }
 }
