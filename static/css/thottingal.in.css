@@ -22,6 +22,9 @@ h1 {
 p {
   text-wrap: pretty;
   line-height: 1.7;
+  a {
+    word-break: break-all;
+  }
 }
 
 figure {
