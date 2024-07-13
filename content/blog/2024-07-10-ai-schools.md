@@ -130,10 +130,7 @@ Machine Learning for Kids is an opensource project by [Dane Lane](http://dalelan
 
 The tool was first made available in 2017, and is now being used by thousands of schools, code clubs, and families around the world. The tool is entirely web-based and requires no installs or complicated setup to be able to use. The [source code is available on GitHub](https://github.com/IBM/taxinomitis/), licensed under Apache 2.0.
 
-{{% figure
-  src="https://machinelearningforkids.co.uk/static/images/machinelearningforkids.gif"
-  caption="Machine Learning for Kids website"
-%}}
+![](/wp-content/uploads/2024/07/machinelearningforkids.gif)
 
 
 There is also an accompanying textbook that can be used to teach AI to kids. [amazone.in link](https://www.amazon.in/dp/1718500564)
