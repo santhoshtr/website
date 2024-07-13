@@ -3,7 +3,7 @@ title: Teaching AI in Schools
 author: Santhosh Thottingal
 type: post
 date: 2024-07-13T9:00:00+05:30
-url: /blog/2024/07/13/ai-schools
+url: /blog/2024/07/13/teaching-ai-in-schools/
 categories:
   - Education
   - AI
