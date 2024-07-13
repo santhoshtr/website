@@ -11,15 +11,36 @@ a.footnote-ref::after {
 }
 
 h1 {
-    text-wrap: balance;
+  text-wrap: balance;
 }
 
 p {
-    text-wrap: pretty;
-    line-height: 1.7;
+  text-wrap: pretty;
+  line-height: 1.7;
 }
 
 figcaption {
-    font-size: 1em;
-    text-align: center;
+  font-size: 1em;
+  text-align: center;
+}
+
+.align-right {
+  float: right;
+  width: 50%;
+
+}
+
+
+.align-middle {
+    width: 80%;
+    margin: auto;
+  }
+
+@media only screen and (max-width: 767px) {
+  .align-right {
+    float: none;
+  }
+  .align-middle{
+    width: 100%;
+  }
 }

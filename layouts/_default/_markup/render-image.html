@@ -1,7 +1,9 @@
 {{ if .Title }}
   <figure>
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
-    <figcaption>{{ .Title }}</figcaption>
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"    decoding="async"
+    loading="lazy"
+ >
+    <figcaption>{{ .Title | markdownify }}</figcaption>
   </figure>
 {{ else }}
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">

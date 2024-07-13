@@ -2,85 +2,110 @@
 title: Thoughts on AI teaching in schools
 author: Santhosh Thottingal
 type: post
-date: 2024-07-13T10:00:00+05:30
-url: /blog/2024/07/12/ai-schools
+date: 2024-07-13T12:00:00+05:30
+url: /blog/2024/07/13/ai-schools
 categories:
-  - Projects
+  - Education
+  - AI
 tags:
-  - metapost
+  - education
 ---
 
-Artificial intelligence (AI) is a hot topic these days, and it's natural to wonder how it fits into education. So, let's explore the idea of AI teaching in schools. In this article, I will go through the best practices, concerns, things to avoid and references to tools and learning material.
+Artificial Intelligence (AI) is a hot topic these days, and it's natural to wonder how it fits into education. In this article, we will explore the best practices, concerns, and recommendations for integrating AI into school curriculums. I will also provide references to useful tools and learning materials.
 
 ## Importance of AI education
 
-Why this growing interest in teaching AI at school? AI has erupted in society, creating new applications and possibilities while also introducing some ethical problems. Whether they are conscious of it or not, children use software
-applications based on AI on a daily basis: product recommendation systems, predictive
-writing, face recognition, and many more. Understanding AI is essential for students to be able to navigate the digital world and make informed decisions. It helps them to understand the technology they use and to be critical of it.
+Why is there a growing interest in teaching AI in schools? AI has become deeply integrated into society, creating new applications and possibilities while also introducing ethical concerns. Whether they are aware of it or not, children use AI-based applications daily: product recommendation systems, predictive text, face recognition, and more. Understanding AI is essential for students to navigate the digital world and make informed decisions. It helps them understand the technology they use and be critical of it.
 
-There are growing miconceptions about AI. For example, students might think that AI system can summarize a book so that they can learn a topic in an hour. They are becoming over reliant on AI Chatbots for answers(And then search engines are becoming Chatbots) and an [epistemic shift is happening](https://miniver.blogspot.com/2024/07/ai-students-and-epistemic-crisis.html).
+There are growing misconceptions about AI. For example, students might believe that AI systems can summarize a book so they can learn a topic in an hour. They are becoming overly reliant on AI chatbots for answers, and an [epistemic shift](https://miniver.blogspot.com/2024/07/ai-students-and-epistemic-crisis.html). is occurring as search engines transform into chatbots .
 
 There are also many opportunities for students to create their own AI applications, which can be a fun and engaging way to learn programming for those interested.
 
 
-> This is a continuation of my previous article: ["Concerns on using AI in classrooms"](https://thottingal.in/blog/2024/04/24/ai-in-classrooms/) in which I outlined some basic principles to consider before introducing AI tools in classrooms. In this article, I am not talking about tools, but teaching students about Artificial intelligence.
+> This article continues from my previous article: ["Concerns on using AI in classrooms"](https://thottingal.in/blog/2024/04/24/ai-in-classrooms/) which outlined basic principles to consider before introducing AI tools in classrooms. Here, we focus on teaching students about Artificial Intelligence.
 
 
-### The History, and the terms: Artifical Intelligence vs Machine Learning
+### The History and Terms: Artificial Intelligence vs. Machine Learning
 
-Students hear the term AI and ML interchangeably. Although, these days, they might hear AI more than ML. It is important to understand the difference and relation between the terms Artificial Intelligence(AI) and Machine Learning(ML).
+Students often hear the terms AI and Machine Learning (ML) used interchangeably, though AI is more commonly mentioned these days. It's important to understand the distinction and relationship between Artificial Intelligence (AI) and Machine Learning (ML).
 
-ML is considered a subfield of AI, and the AI is a subfield of Computer Science and almost as old as Computer Science itself. In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) wrote a seminal paper “Computing Machinery and Intelligence”. Turing did not use the term "Artificial Intelligence" but he posed the big question  “Can machines think?” which laid the foundations for AI[^1]. Turing introduced a test, known as the "Turing Test" or "Imitation game", invented to compare computer intelligence and human intelligence.
 
-A few years later, in 1956, [McCarthy](https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)), [Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky), [Rochester](https://en.wikipedia.org/wiki/Nathaniel_Rochester_(computer_scientist)), and [Shannon](https://en.wikipedia.org/wiki/Claude_E._Shannon) led a [workshop at Dartmouth College](https://en.wikipedia.org/wiki/Dartmouth_workshop) which aimed to gather a selected group of scientists to work “on the basis of conjecture that every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it”. Their proposal where the goal of the workshop was described was titled “A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence”, which was the first use of the term AI.
+{{% figure
+  src="https://upload.wikimedia.org/wikipedia/commons/1/17/Alan_Turing_%281912-1954%29_in_1936_at_Princeton_University.jpg"
+  caption="Alan Turing: English mathematician, computer scientist, logician, cryptanalyst, philosopher and theoretical biologist. He was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation"
+  class="align-middle"
+%}}
 
-John McCarthy created the computer programming language LISP in 1958. LISP was initially used primarily by the AI community.
 
-> I would introduce Alan Turing and the Turing test, and the Dartmouth workshop to students. This will give them a historical perspective on AI. Merely saying John McCarthy coined the term AI in 1956 is not doing justice to the history of AI. I also generally dismiss the idea of "Father of AI" as it is a collective effort of many people over many years. There was no single person who invented AI.
+ML is considered a subfield of AI, and the AI is a subfield of Computer Science and almost as old as Computer Science itself. In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) wrote a seminal paper “Computing Machinery and Intelligence,” posing the question, “Can machines think?” This paper laid the foundation for AI and introduced the Turing Test, designed to compare computer intelligence and human intelligence.[^1]. Turing introduced a test, known as the "Turing Test" or "Imitation game", invented to compare computer intelligence and human intelligence.
+
+
+In 1956, [John McCarthy](https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)), [Marvin Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky), [Nathaniel Rochester](https://en.wikipedia.org/wiki/Nathaniel_Rochester_(computer_scientist)), and [Claude Shannon](https://en.wikipedia.org/wiki/Claude_E._Shannon) led a [workshop at Dartmouth College](https://en.wikipedia.org/wiki/Dartmouth_workshop) which aimed to gather scientists to work on the hypothesis that every aspect of learning or any other feature of intelligence can be precisely described and simulated by a machine. Their proposal was titled “[A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence](http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf),” marking the first use of the term AI.
+
+{{% figure
+  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/John_McCarthy_Stanford.jpg/800px-John_McCarthy_Stanford.webp"
+  caption="John McCarthy: American computer scientist and cognitive scientist. He was one of the founders of the discipline of artificial intelligence. He co-authored the document that coined the term artificial intelligence, developed the programming language family Lisp in 1958, initially used primarily by the AI community"
+  class="align-middle"
+%}}
+
+
+![Dartmouth Proposal](/wp-content/uploads/2024/07/dartmouth-proposal.jpg "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence - John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon")
+
+
+Introducing Alan Turing, the Turing Test, and the Dartmouth workshop to students provides a historical perspective on AI. Merely stating that John McCarthy coined the term AI in 1956 does not do justice to the history of AI, which is a collective effort of many individuals over many years. I also generally dismiss the idea of "Father of AI" as it is a collective effort of many people over many years. There was no single person who invented AI.
 
 Artificial Intelligence is the broad idea that describes the various tools and algorithms that enable machines to replicate human behavior and intelligence.
-One such tool is Machine Learning. Other tools are Natural Language Processing, Computer Vision,Deep Learning. For solving a particular problem, in practice, all these tools are used as required.
+One such tool is Machine Learning. Other tools include Natural Language Processing, Computer Vision, and Deep Learning. In practice, solving a particular problem often involves using multiple AI tools.
 
-For example, In 1996, IBM's [Deep Blue](https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)) defeated [Garry Kasparov](https://en.wikipedia.org/wiki/Garry_Kasparov) in Chess. At that time, it was celebrated as a big leap in Artificial Intelligence. However, the AI that was used in DeepBlue was not Deep Learning or Machine Learning, it was mostly a large set of rules, possible next moves selected using a very fast search and evaluation with specialized hardware.
+![AI, ML, DL](https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Unraveling_AI_Complexity_-_A_Comparative_View_of_AI%2C_Machine_Learning%2C_Deep_Learning%2C_and_Generative_AI.png/776px-Unraveling_AI_Complexity_-_A_Comparative_View_of_AI%2C_Machine_Learning%2C_Deep_Learning%2C_and_Generative_AI.png?20230730045308 "A Comparative View of AI, Machine Learning, Deep Learning, and Generative AI [source](https://en.wikipedia.org/wiki/File:Unraveling_AI_Complexity_-_A_Comparative_View_of_AI,_Machine_Learning,_Deep_Learning,_and_Generative_AI.png)")
+
+For example, In 1996, IBM's [Deep Blue](https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)) defeated [Garry Kasparov](https://en.wikipedia.org/wiki/Garry_Kasparov) in Chess. At the time, this was celebrated as a significant leap in AI[^5]. However, the AI used in Deep Blue was not Deep Learning or Machine Learning; it was primarily a large set of rules and fast search and evaluation using specialized hardware.
 
 ## Introducing AI programming
 
-AI education in schools is not new. The first efforts to make AI programming tools accessible to children took place in the early 1970s, with the [Logo programming language](https://en.wikipedia.org/wiki/Logo_(programming_language)), and continued through the 1980s. However, AI education suffered [a cold period](https://en.wikipedia.org/wiki/AI_winter) from the 1990s until 2012, when educators, AI
-researchers, and the general public changed their view about AI due to the big success achieved by ML in solving problems such as image recognition, language translation, transcription of speech, game playing, and natural language
-processing[^3][^4]
+AI education in schools is not new. The first efforts to make AI programming tools accessible to children began in the early 1970s with the [Logo programming language](https://en.wikipedia.org/wiki/Logo_(programming_language)), continuing through the 1980s. However, AI education experienced [a cold period](https://en.wikipedia.org/wiki/AI_winter)  from the 1990s until 2012 when public perception changed due to the success of ML in solving problems such as image recognition, language translation, speech transcription, game playing, and natural language processing.[^3][^4]
 
 ### Traditional programming vs Machine Learning
 
-Stundents learn programming as a set of instructions to the computer. They learn to write code that tells the computer what to do. For example, they write a program to add two numbers, sort a list, or draw a shape. This is called algorithmic programming. In algorithmic programming, we give the computer step-by-step instructions to solve a problem. There is a definite set of rules to follow. Humans know these rules very well too. The output of the program is deterministic - it will always give the same output for the same input.
+Students learn programming as a set of instructions for the computer, writing code that tells the computer what to do. For example, they might write a program to add two numbers, sort a list, or draw a shape. This is called algorithmic programming, where the computer follows a definite set of rules to solve a problem, producing deterministic outputs.
 
-Now, there are problems that don't have clear-cut rules. For example, recognizing a cat in a picture. There are patterns to learn, but there is also room for creativity and understanding the context. This is where Machine Learning comes in. In Machine Learning, we don't give the computer step-by-step instructions. Instead, we give it data and let it learn from that data. This is called Machine Learning.
+Some problems, however, don't have clear-cut rules, such as recognizing a cat in a picture. These problems require creativity and contextual understanding, which is where Machine Learning comes in. Instead of giving step-by-step instructions, we provide data and let the computer learn from it, a process called Machine Learning.
 
-Having a discussion in the classroom on the problems that can be solved by rules vs Machine Learning is a good way to introduce the concept. Ask students to think about problems that don't have clear-cut rules. For example, recognizing a cat in a picture, understanding human speech, or predicting the weather. These are problems where Machine Learning can be useful.
+Discussing the differences between problems solvable by rules and those requiring Machine Learning can introduce the concept to students. For instance, recognizing a cat in a picture, understanding human speech, or predicting the weather are problems where Machine Learning is useful.
 
-From such discussions, students will understand that the output of a Machine Learning model is not deterministic. It is probabilistic. It gives a likely answer based on the data it has seen. This is different from algorithmic programming where the output is deterministic.
+Such discussions help students understand that the output of a Machine Learning model is probabilistic, offering likely answers based on the data it has seen. This differs from algorithmic programming, which produces deterministic outputs.
 
-There are similar problems that you cannot solve with the algorithms students learn in early stages. For example, if we want to share a photo to a friend, we need to store it somewhere that is accessible to your friend. Similarly, to keep track of examination results, you need to store it somewhere. These are problems that can be solved by databases. You can introduce the concept of databases in a similar way.
+There are similar problems that you cannot solve with the algorithms students learn in early stages. For example, if we want to share a photo to a friend, we need to store it somewhere that is accessible to your friend. Similarly, to keep track of examination results, you need to track and store it somewhere. These are problems that can be solved by databases. You can introduce the concept of databases in a similar way.
 
-Having these discussion in classrooms and outlined in textbooks will help students to think about problems and how to pick the right tool to solve them. They will also understand that there is no "magic" in any of these solutions.
+Classroom discussions and textbook outlines on these topics help students think critically about problems and choose the right tools to solve them. They will also understand that there is no "magic" in these solutions.
 
-A discussion on the cost of solution is also important. If we want to store data, we need to have a computer to store it. If we want to train a Machine Learning model, we need a lot of data and a lot of computing power. This can be expensive. But compared to traditional methods, Machine Learning can sometimes be more efficient in the long run, especially when dealing with large amounts of data. This is a good discussion to have in the classroom.
+Discussing the cost of solutions is also important. If we want to store data, we need to have a computer to store it. If we want to train a Machine Learning model, we need a lot of data and a lot of computing power. This is a good discussion to have in the classroom.
 
 
-> There are some AI programming courses these days that teach how to use a tool that does Machine Learning. This is not AI programming. This is using a tool. It is important to make this distinction clear to students. AI programming is about creating the model, training it, and understanding how it works. Using a tool is just using a tool.
+Some AI programming courses teach how to use a tool that performs Machine Learning. This is not AI programming; it is using a tool. It's important to make this distinction clear to students. AI programming involves creating, training, and understanding models, not just using tools.
 
-### The input, the processing, and the output
+### The Input, processing, and Output
 
-When teaching programming, we always have clarity on what is the input, what is the output, and what is the processing required. This is true for Machine Learning too.
+When teaching programming, it's essential to clarify the input, output, and processing required. This applies to Machine Learning as well.
 
-Imagine that we are going to write a program to recognize a mango and banana in a picture. The input is the picture. The program should tell if the picture has mango or banana.
+Imagine writing a program to recognize a mango and a banana in a picture. The input is the picture, and the program should determine if it contains a mango or banana.
 
 In algorithmic programming, we write a program that looks at the picture and checks if there is a mango or banana. Have a discussion on how we can write such a program. Students will try to figure out what makes a mango different from a banana. They will come up with rules like "Mango is yellow and banana is green". Then they will soon come with an exception - "But there are green mangoes too". "Riped banana is yellow too". They will figure out that size of the object can be used. For example, mango is usually smaller than a banana. But there are exceptions. They will soon realize that it is not easy to write a program that can recognize a mango or banana.
 
+![]( "")
+
+{{% figure
+  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Banana_Mango.jpg/337px-Banana_Mango.jpg?20190709111603"
+  caption="Banana Mango. Banana or Mango? Source: commons.wikimedia.org/wiki/File:Banana_Mango.jpg"
+  class="align-right"
+%}}
+
 However, in the discussion, a certain set of features will emerge. For example, color, size, shape, texture. These are the features that can be used to recognize a mango or banana. In machine learning terms, this is called the features of the data. Identifying these features can be called as feature extraction.
+
 
 Stundents who wrote programs like adding number or sorting a list will know that the inputs were numbers or list of numbers. But for Banana and Mango, the input is a picture. This is a good way to introduce the concept of different types of data and how we can process them. No need to go into depth, but it is important know that there are different types of data and different ways to process them.
 
-In Machine Learning, we don't write a program that checks if there is a mango or banana. Instead, we give the computer many pictures of mangoes and bananas and let it learn from the data. The computer will learn the patterns in the data and recognize the mangoes and bananas. This is called training the model. The processing required is to learn from the data and recognize the patterns.
+In Machine Learning, instead of writing rules, we provide the computer with many pictures of mangoes and bananas, letting it learn from the data. This is called training the model. The processing involves learning patterns from the data to recognize the objects.
 
 How do you get the data? You can take pictures of mangoes and bananas. You can also download pictures from the internet. You can ask your friends to give you pictures. This is a good way to introduce the concept of collecting training data.
 
@@ -147,7 +172,12 @@ A block based visual programming tool advertisement like 'students can learn AI 
 Programming is essential for creating AI models. Students need to know how to code to build and train AI models. Otherwise, they are just using a tool.
 
 ## Conclusion
-AI teaching in schools is important but should be approached carefully. It’s not about replacing traditional education but enhancing it. By understanding the basics of AI and ML, students can become better prepared for the future, more critical of technology, and more innovative in their problem-solving approaches.
+
+Teaching AI in schools is not just about equipping students with technical skills but about fostering a deeper understanding of the digital world they inhabit. By introducing AI and Machine Learning concepts early, students can better grasp the technology they use daily, appreciate its potential, and recognize its limitations. Understanding the historical context and foundational principles of AI helps demystify the field and places current advancements in perspective.
+
+Engaging students in discussions about deterministic versus probabilistic problem-solving, the importance of data, and the cost of solutions prepares them for real-world applications. It also emphasizes critical thinking and ethical considerations, essential in an era where AI's impact is profound and far-reaching.
+
+Incorporating AI education into the curriculum not only prepares students for future careers but also empowers them to become informed citizens. They will be better equipped to navigate and contribute to a world increasingly shaped by artificial intelligence. As educators, our goal should be to demystify AI, making it accessible, comprehensible, and exciting, sparking curiosity and innovation in the next generation.
 
 ## References and additional reading
 
@@ -157,6 +187,7 @@ Copeland. Oxford: Oxford UP, 433-64
 ial Intelligence, August 31, 1955. AI magazine, 27(4), 12.
 [^3]: Kahn, K. & Winters, N. (2017) Child-friendly programming interfaces to AI cloud services, Proceedings of EC-TEL 2017: Data Driven Approaches in Digital Education, 10474, 566-570
 [^4]: Kahn, K. & Winters, N. (2018) AI Programming by Children, Proceedings of Constructionism 2018, Vilnius, Lithuania, 2018
+[^5]: News paper reporting of Deep Blue vs Garry Karsparov: https://www.nydailynews.com/wp-content/uploads/migration/2015/05/10/TBKBQNXXLSJKKX4QBNYWGRIV5I.jpg
 
 * Understanding computing education - April 2021
 by the Raspberry Pi Foundation Research Seminars [pdf](https://www.raspberrypi.org/app/uploads/2021/05/Understanding-computing-education-Volume-1-%E2%80%93-Raspberry-Pi-Foundation-Research-Seminars.pdf)
