@@ -110,7 +110,7 @@ In algorithmic programming, we write a program that looks at the picture and che
 
 However, in the discussion, a certain set of features will emerge. For example, color, size, shape, texture. These are the features that can be used to recognize a mango or banana. In machine learning terms, this is called the features of the data. Identifying these features can be called as feature extraction.
 
-Stundents who wrote programs like adding number or sorting a list will know that the inputs were numbers or list of numbers. But for Banana and Mango, the input is a picture. This is a good way to introduce the concept of different types of data and how we can process them. No need to go into depth, but it is important know that there are different types of data and different ways to process them.
+Students who wrote programs like adding number or sorting a list will know that the inputs were numbers or list of numbers. But for Banana and Mango, the input is a picture. This is a good way to introduce the concept of different types of data and how we can process them. No need to go into depth, but it is important know that there are different types of data and different ways to process them.
 
 In Machine Learning, instead of writing rules, we provide the computer with many pictures of mangoes and bananas, letting it learn from the data. This is called training the model. The processing involves learning patterns from the data to recognize the objects.
 
