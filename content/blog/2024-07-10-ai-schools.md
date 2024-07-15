@@ -59,7 +59,7 @@ In 1956, [John McCarthy](https://en.wikipedia.org/wiki/John_McCarthy_(computer_s
 
 ![Dartmouth Proposal](/wp-content/uploads/2024/07/dartmouth-proposal.jpg "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence - John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon")
 
-Introducing Alan Turing[^10], the Turing Test, John McCarthy, and Dartmouth proposal to students provides a historical perspective on AI. Merely stating that *John McCarthy coined the term AI in 1956* does not do justice to the history of AI, which is a collective effort of many individuals over many years. I also generally dismiss the idea of "Father of AI" as it is a collective effort of many people over many years. There was no single person who invented AI.
+Introducing Alan Turing[^10], the Turing Test, John McCarthy, and Dartmouth proposal to students provides a historical perspective on AI. Merely stating that *John McCarthy coined the term AI in 1956* does not do justice to the history of AI. I also generally dismiss the idea of "Father of AI" as it is a collective effort of many people over many years. There was no single person who invented AI.
 
 Artificial Intelligence is the broad idea that describes the various tools and algorithms that enable machines to replicate human behavior and intelligence.
 One such tool is Machine Learning. Other tools include Natural Language Processing, Computer Vision, and Deep Learning. In practice, solving a particular problem often involves using multiple AI tools.
