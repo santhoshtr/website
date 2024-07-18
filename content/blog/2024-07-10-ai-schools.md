@@ -33,12 +33,7 @@ There are also many opportunities for students to create their own AI applicatio
 
 Students often hear the terms AI and Machine Learning (ML) used interchangeably, though AI is more commonly mentioned these days. It's important to understand the distinction and relationship between Artificial Intelligence (AI) and Machine Learning (ML).
 
-
-{{% figure
-  src="https://upload.wikimedia.org/wikipedia/commons/1/17/Alan_Turing_%281912-1954%29_in_1936_at_Princeton_University.jpg"
-  caption="Alan Turing: English mathematician, computer scientist, logician, cryptanalyst, philosopher and theoretical biologist. He was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation"
-  class="align-middle"
-%}}
+<wiki-article article="Alan Turing" language="en"></wiki-article>
 
 
 ML is considered a subfield of AI, and the AI is a subfield of Computer Science and almost as old as Computer Science itself. In 1950, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) wrote a seminal paper [“Computing Machinery and Intelligence,”](https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence) posing the question, “Can machines think?”. This paper laid the foundation for AI and introduced the Turing Test, designed to compare computer intelligence and human intelligence.[^1]. Turing introduced a test, known as the "Turing Test" or "Imitation game", invented to compare computer intelligence and human intelligence.
@@ -50,12 +45,7 @@ caption="Alan Turing's paper “Computing Machinery and Intelligence” posing t
 
 In 1956, [John McCarthy](https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)), [Marvin Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky), [Nathaniel Rochester](https://en.wikipedia.org/wiki/Nathaniel_Rochester_(computer_scientist)), and [Claude Shannon](https://en.wikipedia.org/wiki/Claude_E._Shannon) led a [workshop at Dartmouth College](https://en.wikipedia.org/wiki/Dartmouth_workshop) which aimed to gather scientists to work on the hypothesis that every aspect of learning or any other feature of intelligence can be precisely described and simulated by a machine. Their proposal was titled “[A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence](http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf),” marking the first use of the term AI.
 
-{{% figure
-  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/John_McCarthy_Stanford.jpg/800px-John_McCarthy_Stanford.webp"
-  caption="John McCarthy: American computer scientist and cognitive scientist. He was one of the founders of the discipline of artificial intelligence. He co-authored the document that coined the term artificial intelligence, developed the programming language family Lisp in 1958, initially used primarily by the AI community"
-  class="align-middle"
-%}}
-
+<wiki-article article="John McCarthy (computer scientist)" language="en"></wiki-article>
 
 ![Dartmouth Proposal](/wp-content/uploads/2024/07/dartmouth-proposal.jpg "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence - John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon")
 
@@ -170,6 +160,8 @@ There are also other similar programming tools.
 * [Raise Playground](https://playground.raise.mit.edu/) - Created by the MIT RAISE Initiative and the Personal Robots Group at the MIT Media Lab - it is a block-based programming platform that we developed to support hands-on learning about AI and robotics for students and beginning programmers. It is a free and opensource tool.
 * ecraft2learn - The [eCraft2Learn](https://ecraft2learn.github.io/ai/) project developed a set of extensions to the [Snap! programming language](https://snap.berkeley.edu/) to enable children (and non-expert programmers) to build AI programs. The blocks are available as projects with examples of using the blocks as well as libraries to download and then import into Snap!. It is possible to run Snap! with many of the AI blocks without an Internet connection. It is a free and opensource tool.
 * **Pictoblox**. Pictoblox is a proprietary freeware that is used to teach AI programming. It has similar features of ML4K. However, it is not opensource. It is important to use opensource tools that are transparent and allows students to explore and experiment[^6].
+
+<wiki-article article="Scratch (programming language)" language="en"></wiki-article>
 
 ### Avoiding Misconceptions
 
