@@ -84,7 +84,7 @@ p {
   line-height: 1.7;
   margin: 0;
   padding: 0;
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 img {
@@ -98,11 +98,11 @@ img {
 }
 
 blockquote {
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.7;
   margin: 1em 0;
   padding: 1em;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid var(--text-2);
   background-color: var(--surface-2);
   p {
     margin: 1em 0;
@@ -112,6 +112,7 @@ blockquote {
 aside {
   font-style: italic;
   font-size: 1em;
+  text-wrap: pretty;
 }
 
 aside.left {
@@ -135,6 +136,8 @@ wiki-article {
 @media (max-width: 100ch) {
   article {
     grid-template-columns: auto;
+    padding: 0;
+    margin: 0;
     > * {
       grid-column: 1;
     }
