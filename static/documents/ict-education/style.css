@@ -151,3 +151,19 @@ wiki-article {
     grid-column: 1;
   }
 }
+
+@media screen {
+  .print-only {
+    display: none;
+  }
+
+}
+
+@media print {
+  .print-only {
+    display: block;
+  }
+  article{
+    display: none;
+  }
+}
