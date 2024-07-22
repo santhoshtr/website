@@ -54,9 +54,10 @@ header {
   top: 0;
   opacity: 1;
   background-color: var(--surface-2);
+  border-bottom: 1px solid var(--border-color);
   z-index: 2;
   margin: 0;
-  padding: 0.25em;
+  padding: 0.25em 1em;
   h1 {
     margin: 0;
   }
@@ -133,6 +134,12 @@ wiki-article {
   margin: 1em;
 }
 
+footer {
+  padding: 1em;
+  background-color: var(--surface-2);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
 @media (max-width: 100ch) {
   article {
     grid-template-columns: auto;
