@@ -47,3 +47,7 @@ A few days later I published this blog post, Dr Ponnusamy emailed me asking to w
 
 I was traveling and couple of days later I read another email talking about discussing before involving lawers etc. A few days later, I came to know that Dr Ponnusamy had contacted the legal team of my employer too. However, I did not respond to any of these intimidation tactics. Anyway, The book "Tamil Computing" is no longer available in Amazon or other online platforms.
 
+## Update - August 6, 2024
+
+The book is back to online stores.
+
