@@ -28,3 +28,9 @@ It was an honor to present my work in a conference where Prof Donald Knuth was a
 <wiki-article article="Donald Knuth" language="en"></wiki-article>
 
 This is my second presentation in the Grapholinguistics conference. I presented my work on [Malayalam orthographic reforms: impact on language and popular culture](https://thottingal.in/blog/2018/06/21/grafematik-2018/) in the [Grapholinguistics conference 2018](http://conferences.telecom-bretagne.eu/grafematik/).
+
+## Update
+
+The video of my presentation is available at [https://www.youtube.com/watch?v=nWxFZuNVyy0](https://www.youtube.com/watch?v=nWxFZuNVyy0)
+
+{{< youtube  nWxFZuNVyy0 >}}
