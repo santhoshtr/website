@@ -72,7 +72,7 @@ article {
   grid-template-columns:  60ch ;
   > * {
     grid-column: 2/2;
-    max-inline-size: 60ch;
+    max-inline-size: clamp(600px, 100vw, 60ch);
   }
 }
 
@@ -145,21 +145,12 @@ footer {
 }
 @media (orientation: portrait) {
   article {
-    grid-template-columns: auto;
+    display: block;
     padding: 1em;
     margin: 0;
-    > * {
-      grid-column: 1;
-    }
   }
 
-  aside.left {
-    grid-column: 1;
-  }
 
-  aside.right {
-    grid-column: 1;
-  }
   wiki-article {
     display: none;
   }
