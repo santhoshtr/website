@@ -69,9 +69,10 @@ article {
   padding: 0 1em;
   display: grid;
   gap: 1em;
-  grid-template-columns: 30% auto 30%;
+  grid-template-columns:  60ch ;
   > * {
     grid-column: 2/2;
+    max-inline-size: 60ch;
   }
 }
 
@@ -86,6 +87,7 @@ p {
   margin: 0;
   padding: 0;
   text-wrap: pretty;
+  max-inline-size: 60ch;
 }
 
 img {
@@ -132,6 +134,7 @@ aside.right {
 wiki-article {
   display: block;
   margin: 1em;
+  max-inline-size: clamp(600px, 100vw,60ch);
 }
 
 footer {
@@ -140,10 +143,10 @@ footer {
   border-top: 1px solid var(--border-color);
   text-align: center;
 }
-@media (max-width: 100ch) {
+@media (orientation: portrait) {
   article {
     grid-template-columns: auto;
-    padding: 0;
+    padding: 1em;
     margin: 0;
     > * {
       grid-column: 1;
@@ -156,6 +159,9 @@ footer {
 
   aside.right {
     grid-column: 1;
+  }
+  wiki-article {
+    display: none;
   }
 }
 
