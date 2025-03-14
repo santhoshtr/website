@@ -1,30 +1,23 @@
 
 ## Welcome
 
-This is personal website of [Santhosh Thottingal](/page/about). Here you can read articles about [Malayalam computing](/tags/malayalam/), Natural language processing, [typography](/tags/fonts/). Articles are in Malayalam and English languages.
+This is the personal website of [Santhosh Thottingal](/page/about). Here you'll find insightful articles on [Malayalam computing](/tags/malayalam/), Natural Language Processing, and [Digital Typography](/tags/fonts/), written in both Malayalam and English.
 
-I am a language computing professional and a typeface designer.
+![](/images/santhosh-2019.webp)
 
-<figure style="float:right" class="col-6 alignright is-resized">
+At [Swathanthra Malayalam Computing][1], I lead various language computing projects that enable millions of Malayalam users on their computers and phones. My contributions to Malayalam digital typography include designing popular typefaces such as Chilanka, Manjari, Nupuram, and Malini. I also maintain several other Malayalam unicode fonts, all available on the [SMC website][2].
 
-![](/images/JIM_8464.jpg)
-</figure>
+In recognition of my contributions to Malayalam language, I was honored with the [Maharshi Badrayan Vyas Samman by the President of India][8] in 2019. I also received the Mathrubhasha Puraskaram 2019 from the [Sree Sankaracharya University of Sanskrit][9], Kalady.
 
-I lead various language computing projects at [Swathanthra Malayalam Computing.][1] Many of my works on Malayalam computing enable millions of Malayalam users on their computers or phones. I maintain a number of free software projects related to Indic language computing too.
+Currently, I serve as Principal Software Engineer on the Language Engineering team at Wikimedia Foundation. My work focuses on MediaWiki language support, internationalization, localization, input methods for the numerous languages in which Wikipedia exists, fonts, and translation tools. I work remotely from Palakkad, Kerala, India.
 
-I have done significant contributions to Malayalam digital typography. I have designed  popular Malayalam typefaces Chilanka, Manjari, Nupuram and Malini. Also maintains a number of other Malayalam unicode fonts. You can see all of these fonts in [SMC website][2]
-
-For my contributions to Malayalam language, I was honored with [Maharshi Badrayan Vyas Samman][8] by the Hon. President of India in 2019. I also received Mathrubhasha Puraskaram 2019 from the [Sree Sankaracharya University of Sanskrit][9], Kalady.
-
-Currently I am working as Principal Software Engineer at Language Engineering team of Wikimedia Foundation. I work on MediaWiki language support, internationalization, localization, input methods for large number of languages in which Wikipedia exist, fonts, translation tools etc. I live at Thiruvananthapuram, Kerala, India. I work remotely.
-
-[docs.thottingal.in][10] is my personal knowledge space I try to document and share everything I know about this world in form of a Digital garden or [Zettelkasten][11].
+Visit [docs.thottingal.in][10] to explore my personal knowledge space, where I document and share insights in the form of a [Digital Garden][11] or [Zettelkasten][12].
 
 * Contact: santhosh dot thottingal at gmail dot com
-* [Resume][3]
+* [Resume][3] (outdated)
 * In social media: [Twitter][4], [Facebook][5]
 * My code: [github.com/santhoshtr][6]
-* Design portfolio: [behance.net/sthottingal][7]
+* Design portfolio:&nbsp;[behance.net/sthottingal][7]
 * PGP Fingerprint: EF23 579B BE51 48A8 0EB2 979B 523D E289 34DA 0B5A
 * [Donate](https://liberapay.com/santhosh/donate)
 
@@ -37,5 +30,6 @@ Currently I am working as Principal Software Engineer at Language Engineering te
  [7]: https://behance.net/sthottingal
  [8]: https://thottingal.in/blog/2019/08/16/presidential-award/
  [9]: https://ssus.ac.in/
-[10]: https://docs.thottingal.in
-[11]: https://en.wikipedia.org/wiki/Zettelkasten
+ [10]: https://docs.thottingal.in
+ [11]: https://joelhooks.com/digital-garden
+ [12]: https://en.wikipedia.org/wiki/Zettelkasten
