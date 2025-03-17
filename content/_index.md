@@ -21,12 +21,12 @@ Visit [docs.thottingal.in][10] to explore my personal knowledge space, where I d
 * PGP Fingerprint: EF23 579B BE51 48A8 0EB2 979B 523D E289 34DA 0B5A
 * [Donate](https://liberapay.com/santhosh/donate)
 
- [1]: http://smc.org.in
+ [1]: https://smc.org.in
  [2]: https://smc.org.in/fonts/
- [3]: http://thottingal.in/documents/SanthoshResume2017.pdf
+ [3]: https://thottingal.in/documents/SanthoshResume2017.pdf
  [4]: https://twitter.com/santhoshtr
  [5]: https://www.facebook.com/santhosh.thottingal
- [6]: http://github.com/santhoshtr
+ [6]: https://github.com/santhoshtr
  [7]: https://behance.net/sthottingal
  [8]: https://thottingal.in/blog/2019/08/16/presidential-award/
  [9]: https://ssus.ac.in/
