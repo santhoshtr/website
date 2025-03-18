@@ -14,7 +14,7 @@ Currently, I serve as Principal Software Engineer on the Language Engineering te
 Visit [docs.thottingal.in][10] to explore my personal knowledge space, where I document and share insights in the form of a [Digital Garden][11] or [Zettelkasten][12].
 
 * Contact: santhosh dot thottingal at gmail dot com
-* [Resume][3] (outdated)
+* [Resume][3]
 * In social media: [Twitter][4], [Facebook][5]
 * My code: [github.com/santhoshtr][6]
 * Design portfolio:&nbsp;[behance.net/sthottingal][7]
@@ -23,7 +23,7 @@ Visit [docs.thottingal.in][10] to explore my personal knowledge space, where I d
 
  [1]: https://smc.org.in
  [2]: https://smc.org.in/fonts/
- [3]: https://thottingal.in/documents/SanthoshResume2017.pdf
+ [3]: documents/resume
  [4]: https://twitter.com/santhoshtr
  [5]: https://www.facebook.com/santhosh.thottingal
  [6]: https://github.com/santhoshtr

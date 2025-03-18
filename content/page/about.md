@@ -31,7 +31,7 @@ Visit [docs.thottingal.in][10] to explore my personal knowledge space, where I d
 
  [1]: https://smc.org.in
  [2]: https://smc.org.in/fonts/
- [3]: https://thottingal.in/documents/SanthoshResume2017.pdf
+ [3]: /documents/resume
  [4]: https://twitter.com/santhoshtr
  [5]: https://www.facebook.com/santhosh.thottingal
  [6]: https://github.com/santhoshtr
