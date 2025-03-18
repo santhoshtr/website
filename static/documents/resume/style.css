@@ -1,140 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 body {
-  display: flex;
-  margin: 0;
-  font-size: 14px;
-  background-color: white;
-  color: hsl(214 13.7% 10%);
-  font-family: "Inter", sans-serif;
+	display: flex;
+	margin: 0;
+	font-size: 14px;
+	background-color: white;
+	color: hsl(214 13.7% 10%);
+	font-family: "Inter", sans-serif;
 }
 article {
-  max-width: 1000px;
-  min-width: 800px;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 3fr 9fr;
-  gap: 1em;
-  .side {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    background-color: hsl(210 15.8% 92.5%);
-    padding: 1em;
+	max-width: 1000px;
+	min-width: 800px;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 3fr 9fr;
+	gap: 1em;
+	.side {
+		background-color: hsl(210 15.8% 92.5%);
+		padding: 1em;
 
-    img {
-      border-radius: 50%;
-      aspect-ratio: 1;
-    }
-    h1 {
-      font-size: 1.5em;
-    }
-    p {
-      text-wrap: pretty;
-    }
-    a {
-      color: currentColor;
-      text-decoration: none;
-    }
-  }
-  .main {
-
-    padding: 1em;
-    p,
-    li {
-      max-width: 75ch;
-      font-size: 1em;
-      line-height: 1.5;
-      text-wrap: pretty;
-    }
-    h2 {
-      font-size: 1.2em;
-    }
-  }
+		img {
+			border-radius: 50%;
+			aspect-ratio: 1;
+		}
+		h1 {
+			font-size: 1.5em;
+		}
+		p {
+			text-wrap: pretty;
+		}
+		a {
+			color: currentColor;
+			text-decoration: none;
+		}
+	}
+	.main {
+		padding: 1em;
+		p,
+		li {
+			max-width: 75ch;
+			font-size: 1em;
+			line-height: 1.5;
+			text-wrap: pretty;
+		}
+		h2 {
+			font-size: 1.2em;
+		}
+	}
 }
 
 dl {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 0.5em;
-  dd {
-    margin: 0;
-  }
+	display: grid;
+	grid-template-columns: 30px auto;
+	gap: 0.5em;
+	dd {
+		margin: 0;
+	}
 }
 
 .experience-section {
-  margin: 0 auto;
+	margin: 0 auto;
 
-  .company {
-    margin-bottom: 1em;
-    margin-left: 1em;
-    .company-name {
-      font-size: 1em;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 5px;
-    }
-    .company-duration {
-      font-style: italic;
-      color: #666;
-    }
-  }
-  .role {
-    margin-left: 20px;
-    padding: 0 1em;
-    border-left: 2px solid #bbb;
-    display: flex;
-    gap: 1em;
+	.company {
+		margin-bottom: 1em;
+		margin-left: 1em;
+		.company-name {
+			font-size: 1em;
+			font-weight: bold;
+			color: #333;
+			margin-bottom: 5px;
+		}
+		.company-duration {
+			font-style: italic;
+			color: #666;
+		}
+	}
+	.role {
+		margin-left: 20px;
+		padding: 0 1em;
+		border-left: 2px solid #bbb;
+		display: flex;
+		gap: 1em;
 
-    .role-title {
-      font-weight: bold;
-      color: #444;
-    }
-    .role-duration {
-      font-style: italic;
-      color: #666;
-      margin-bottom: 5px;
-    }
-  }
+		.role-title {
+			font-weight: bold;
+			color: #444;
+		}
+		.role-duration {
+			font-style: italic;
+			color: #666;
+			margin-bottom: 5px;
+		}
+	}
 }
 
 .awards-section {
-  .award {
-    display: block;
-    margin: 0.5em 1em;
-    line-height: 1.4em;
-  }
-  .award-name {
-    display: inline;
-    font-weight: bold;
-  }
-  .award-year {
-    display: inline;
-    font-style: italic;
-  }
-  .award-for {
-    display: block;
-    font-style: italic;
-  }
+	.award {
+		display: block;
+		margin: 0.5em 1em;
+		line-height: 1.4em;
+	}
+	.award-name {
+		display: inline;
+		font-weight: bold;
+	}
+	.award-year {
+		display: inline;
+		font-style: italic;
+	}
+	.award-for {
+		display: block;
+		font-style: italic;
+	}
 }
 .research-section {
-  .paper {
-    margin: 1em;
-    padding: 0;
-  }
-  .paper-title {
-    font-weight: bold;
-  }
-  .conference {
-    font-style: italic;
-    color: #666;
-  }
+	.paper {
+		margin: 1em;
+		padding: 0;
+	}
+	.paper-title {
+		font-weight: bold;
+	}
+	.conference {
+		font-style: italic;
+		color: #666;
+	}
 }
 
 .projects-section {
-  .project {
-    display: block;
-    margin: 0.5em 1em;
-    line-height: 1.4em;
-    text-wrap: pretty;
-  }
+	.project {
+		display: block;
+		margin: 0.5em 1em;
+		line-height: 1.4em;
+		text-wrap: pretty;
+	}
+}
+
+@media (orientation: portrait) {
+	article {
+		max-width: 100vw;
+		min-width: 100vw;
+		grid-template-columns: 1fr;
+		.side {
+			img {
+				width: 50vw;
+			}
+		}
+	}
+}
+
+@media (orientation: landscape) {
+	article {
+		.side {
+			position: sticky;
+			top: 0;
+			height: 100vh;
+			img {
+				width: 100%;
+			}
+		}
+	}
 }
