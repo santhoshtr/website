@@ -160,3 +160,50 @@ dl {
 		}
 	}
 }
+
+@media print {
+	body {
+		background-color: white !important;
+		font-size: 12px;
+	}
+
+	article {
+		max-width: 100vw;
+		min-width: 100vw;
+		grid-template-columns: 1fr;
+		.side {
+			background-color: white !important;
+			img {
+				width: 1in !important;
+			}
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+		&::after {
+			content: " (" attr(href) ")";
+			font-size: 0.8em;
+			color: #666;
+		}
+	}
+
+	.role {
+		break-inside: avoid;
+	}
+
+	h2 {
+		margin-top: 1em;
+		border-bottom: 1px solid #ddd;
+		break-after: avoid;
+	}
+
+	.main {
+		padding-top: 0;
+	}
+
+	@page {
+		margin: 1in;
+	}
+}
