@@ -9,7 +9,7 @@ At [Swathanthra Malayalam Computing][1], I lead various language computing proje
 
 In recognition of my contributions to Malayalam language, I was honored with the [Maharshi Badrayan Vyas Samman by the President of India][8] in 2019. I also received the Mathrubhasha Puraskaram 2019 from the [Sree Sankaracharya University of Sanskrit][9], Kalady.
 
-Currently, I serve as Principal Software Engineer on the Language Engineering team at Wikimedia Foundation. My work focuses on MediaWiki language support, internationalization, localization, input methods for the numerous languages in which Wikipedia exists, fonts, and translation tools. I work remotely from Palakkad, Kerala, India.
+Currently, I serve as Principal Software Engineer on the Language Engineering team at Wikimedia Foundation. My work focuses on MediaWiki language support, internationalization, localization, input methods for the numerous languages in which Wikipedia exists, fonts, and translation tools. I work remotely from Thiruvananthapuram, Kerala, India.
 
 Visit [docs.thottingal.in][10] to explore my personal knowledge space, where I document and share insights in the form of a [Digital Garden][11] or [Zettelkasten][12].
 
