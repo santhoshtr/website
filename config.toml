@@ -11,7 +11,10 @@ metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 disqusShortname = "thottingal-in"
-googleAnalytics = " G-NXL37BD6DQ"
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-NXL37BD6DQ'
 
 [markup]
   defaultMarkdownHandler = "goldmark"
