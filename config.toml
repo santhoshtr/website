@@ -11,6 +11,7 @@ metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 disqusShortname = "thottingal-in"
+enableRobotsTXT = true
 
 [services]
   [services.googleAnalytics]
