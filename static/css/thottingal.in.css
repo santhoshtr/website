@@ -1,82 +1,82 @@
 body {
-  font-family: "Gentium Book Basic", "Manjari", "Times New Roman", serif;
+	font-family: "Gentium Book Basic", "Manjari", "Times New Roman", serif;
 }
 .post-preview {
-  .post-entry {
-    font-family: "Gentium Book Basic", "Manjari", "Times New Roman", serif;
-  }
+	.post-entry {
+		font-family: "Gentium Book Basic", "Manjari", "Times New Roman", serif;
+	}
 }
 
 a.footnote-ref::before {
-  content: "[";
+	content: "[";
 }
 
 a.footnote-ref::after {
-  content: "]";
+	content: "]";
 }
 
 h1 {
-  text-wrap: balance;
+	text-wrap: balance;
 }
 
 p {
-  text-wrap: pretty;
-  line-height: 1.7;
-  a {
-    word-break: break-all;
-  }
+	text-wrap: pretty;
+	line-height: 1.7;
+	a {
+		word-break: break-word;
+	}
 }
 
 figure {
-  margin: 2em 0;
-  padding: 0;
+	margin: 2em 0;
+	padding: 0;
 
-  figcaption {
-    font-size: 1em;
-    text-align: left;
+	figcaption {
+		font-size: 1em;
+		text-align: left;
 
-    p {
-      font-size: 1em;
-      line-height: 1.5;
-    }
-  }
+		p {
+			font-size: 1em;
+			line-height: 1.5;
+		}
+	}
 }
 .align-right {
-  float: right;
-  width: 50%;
+	float: right;
+	width: 50%;
 }
 
 h2 {
-  line-height: 2;
+	line-height: 2;
 }
 
 h3 {
-  line-height: 2;
+	line-height: 2;
 }
 
 p,
 li {
-  font-size: 1.2em;
-  line-height: 1.7;
+	font-size: 1.2em;
+	line-height: 1.7;
 }
 
 .footnotes {
-  p {
-    font-size: 0.9em;
-    line-height: 1.5;
-  }
+	p {
+		font-size: 0.9em;
+		line-height: 1.5;
+	}
 }
 
 .align-middle {
-  width: 80%;
-  margin: auto;
+	width: 80%;
+	margin: auto;
 }
 
 @media only screen and (max-width: 767px) {
-  .align-right {
-    float: none;
-  }
-  .align-middle {
-    width: 100%;
-  }
+	.align-right {
+		float: none;
+	}
+	.align-middle {
+		width: 100%;
+	}
 }
