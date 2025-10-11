@@ -72,6 +72,8 @@ article {
       max-height: 2rem;
       cursor: pointer;
       vertical-align: super;
+      text-indent: 0;
+      
     }
 
     .sidenote {
@@ -89,6 +91,7 @@ article {
       position: relative;
       text-align: start;
       opacity: 0.8;
+      text-indent: 0;
       &:before {
         content: counter(sidenote-counter);
         vertical-align: super;
@@ -111,15 +114,15 @@ article {
     }
   }
   figure {
-    position: relative;
+
     counter-increment: figure-counter;
     /* Clear floats to ensure proper layout */
     overflow: visible;
-    /* Ensure figure establishes a block formatting context */
-    display: block;
-  
+    display: grid;
+  place-content: center;
+  place-items: center;
     margin: 0;
-    img{  max-width: 75ch;}
+    img{  max-width: 75ch;display:block;}
     figcaption{
     text-align: center;
     }
