@@ -16,146 +16,176 @@
 
 
 
-body {
-  margin: auto;
-  font-family: Malini, Manjari, sans-serif;
-  font-size: 18px;
-display: grid;
-gap: 1em;
-
-
-  > header {
-    text-align: center;
-    h1, h2, h3 {
-      text-wrap: balance;
-
-}
-  }
-
-}
-main {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	nav {
-		ul{
-			list-style: none;
-			position: sticky;
-			top:2em;
-			a {
-				text-decoration: none;
-				color: currentColor;
-				line-height: 2;
-			}
-		}
-	}
-	@media (max-width: 800px) {
-	grid-template-columns: 1fr;
-	padding: 0.5em;
-	}
-}
-article {
-  max-width: min(75ch,100vw);
-  display: grid;
-  gap: 1em;
-  margin-block-end: 4em;
-  counter-reset: sidenote-counter figure-counter;
-  p {
-  font-size: 1em;
-    text-wrap: pretty;
-    line-height: 1.5;
-    text-align: justify;
-     text-indent: 2ch;
-    max-width:min(75ch,100vw);
-    hyphens: auto;hyphenate-limit-chars: 6 3 2;
-    -webkit-hyphenate-character: "";
-    hyphenate-character: "";
-
-    label.sidenote-number {
-      display: inline-block;
-      max-height: 2rem;
-      cursor: pointer;
-      vertical-align: super;
-      text-indent: 0;
-      
-    }
-
-    .sidenote {
-      clear: right;
-      --sidenote-width: 200px;
-      --sidenote-gap: 35px;
-
-      margin-right: calc(-1 * var(--sidenote-width) - var(--sidenote-gap));
-      margin-left: var(--sidenote-gap);
-      margin-top: 0.3rem;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-      line-height: 1.4;
-      vertical-align: baseline;
-      position: relative;
-      text-align: start;
-      opacity: 0.8;
-      text-indent: 0;
-      &:before {
-        content: counter(sidenote-counter);
-        vertical-align: super;
-        padding-right: 0.2rem;
-        font-size: 0.8rem;
-        top: -0.4rem;
-        left: -0.1rem;
-      }
-    }
-    .sidenote-number {
-      counter-increment: sidenote-counter;
-      pointer-events: none;
-      &:after {
-        content: counter(sidenote-counter);
-        font-size: 0.8rem;
-        top: -0.5rem;
-        left: -0.05rem;
-           opacity: 0.8;
-      }
-    }
-  }
-  figure {
-
-    counter-increment: figure-counter;
-    /* Clear floats to ensure proper layout */
-    overflow: visible;
+  body {
+    margin: auto;
+    font-family: Malini, Manjari, sans-serif;
+    font-size: 18px;
     display: grid;
-  place-content: center;
-  place-items: center;
-    margin: 0;
-    img{  max-width: min(75ch,90vw);display:block;}
-    figcaption{
-    text-align: center;
+    gap: 1em;
+    font-synthesis: style;
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: light-dark(#3c3c43, #dfdfd6);
+    background-color: light-dark(#fff, #1b1b1f);
+
+    >header {
+      text-align: center;
+
+      h1,
+      h2,
+      h3 {
+        text-wrap: balance;
+
+      }
+    }
+
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    nav {
+      ul {
+        list-style: none;
+        position: sticky;
+        top: 2em;
+
+        a {
+          text-decoration: none;
+          color: currentColor;
+          line-height: 2;
+        }
+      }
+    }
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+      padding: 0.5em;
     }
   }
-  .note{
-        border-left: 8px solid steelblue;
-        padding: 2em;
-        background: lemonchiffon;
-        color: black;
-  }
-  @media (min-width: 1170px) {
-    .sidenote {
-      float: right;
-      width: var(--sidenote-width);
-      &.right{
+
+  article {
+    max-width: min(75ch, 100vw);
+    display: grid;
+
+    margin-block-end: 4em;
+    counter-reset: sidenote-counter figure-counter;
+
+    p {
+      font-size: 1em;
+      text-wrap: pretty;
+      line-height: 1.5;
+      text-align: justify;
+      text-indent: 2ch;
+      max-width: min(75ch, 100vw);
+      hyphens: auto;
+      hyphenate-limit-chars: 6 3 2;
+      -webkit-hyphenate-character: "";
+      hyphenate-character: "";
+
+      label.sidenote-number {
+        display: inline-block;
+        max-height: 2rem;
+        cursor: pointer;
+        vertical-align: super;
+        text-indent: 0;
+
+      }
+
+      .sidenote {
+        clear: right;
+        --sidenote-width: 200px;
+        --sidenote-gap: 35px;
+
+        margin-right: calc(-1 * var(--sidenote-width) - var(--sidenote-gap));
+        margin-left: var(--sidenote-gap);
+        margin-top: 0.3rem;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        vertical-align: baseline;
+        position: relative;
+        text-align: start;
+        opacity: 0.8;
+        text-indent: 0;
+
+        &:before {
+          content: counter(sidenote-counter);
+          vertical-align: super;
+          padding-right: 0.2rem;
+          font-size: 0.8rem;
+          top: -0.4rem;
+          left: -0.1rem;
+        }
+      }
+
+      .sidenote-number {
+        counter-increment: sidenote-counter;
+        pointer-events: none;
+
+        &:after {
+          content: counter(sidenote-counter);
+          font-size: 0.8rem;
+          top: -0.5rem;
+          left: -0.05rem;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    figure {
+
+      counter-increment: figure-counter;
+      /* Clear floats to ensure proper layout */
+      overflow: visible;
+      display: grid;
+      place-content: center;
+      place-items: center;
+      margin: 0;
+
+      img {
+        max-width: min(75ch, 90vw);
+        display: block;
+      }
+
+      figcaption {
+        text-align: center;
+      }
+    }
+
+    .note {
+      border-left: 8px solid steelblue;
+      padding: 2em;
+      background: lemonchiffon;
+      color: black;
+    }
+
+    @media (min-width: 1170px) {
+      .sidenote {
         float: right;
+        width: var(--sidenote-width);
+
+        &.right {
+          float: right;
+        }
+
+        &.left {
+          float: left;
+        }
       }
-      &.left{
-        float: left;
+    }
+
+    @media (max-width: 1170px) {
+      .sidenote {
+        display: block !important;
+        position: static;
+        float: none;
+        width: 95%;
+        margin: 1rem 2.5%;
+        clear: both;
       }
     }
   }
-  @media (max-width: 1170px) {
-    .sidenote {
-      display: block !important;
-      position: static;
-      float: none;
-      width: 95%;
-      margin: 1rem 2.5%;
-      clear: both;
-    }
-  }
-}
