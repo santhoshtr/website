@@ -1,8 +1,20 @@
   :root {
     --font-family-sans-serif: system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif;
     --font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-
+    --border-radius: 0.5rem;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 0.5rem;
+    --spacing-lg: 1rem;
+    --spacing-xl: 1rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
   }
+
+
 
   body {
     margin: auto;
@@ -12,7 +24,7 @@
     gap: 1em;
     font-synthesis: style;
     text-rendering: optimizeLegibility;
-
+    interpolate-size: allow-keywords;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: light-dark(#3c3c43, #dfdfd6);
@@ -49,17 +61,16 @@
       }
     }
 
-    @media (orientation: portrait) {
+    @media (max-width: 800px) {
       grid-template-columns: 1fr;
       padding: 0.5em;
-      margin: auto;
     }
   }
 
   article {
     max-width: min(75ch, 100vw);
     display: grid;
-
+    anchor-name: --article;
     margin-block-end: 4em;
     counter-reset: sidenote-counter figure-counter;
 
@@ -79,35 +90,57 @@
         display: inline-block;
         max-height: 2rem;
         cursor: pointer;
-        vertical-align: super;
         text-indent: 0;
+        font-size: 0.8em;
+        padding: 2px;
+        font-family: monospace;
+        text-box: trim-both cap alphabetic;
+        background: steelblue;
+        border-radius: 50%;
       }
 
       .sidenote {
         clear: right;
         --sidenote-width: 200px;
         --sidenote-gap: 35px;
-
         margin-right: calc(-1 * var(--sidenote-width) - var(--sidenote-gap));
         margin-left: var(--sidenote-gap);
         margin-top: 0.3rem;
         margin-bottom: 20px;
+        position: relative;
+        float: right;
+        width: var(--sidenote-width);
         font-size: 0.9rem;
         line-height: 1.4;
-        vertical-align: baseline;
-        position: relative;
         text-align: start;
         opacity: 0.8;
         text-indent: 0;
 
         &:before {
           content: counter(sidenote-counter);
+          font-family: monospace;
           vertical-align: super;
           padding-right: 0.2rem;
           font-size: 0.8rem;
           top: -0.4rem;
           left: -0.1rem;
         }
+      }
+
+      @supports (anchor-name: --article) {
+        .sidenote {
+          position: absolute;
+          anchor-name: --sidenote;
+          top: anchor(top);
+          bottom: auto;
+          left: calc(anchor(--article right) + 1em);
+
+          &~.sidenote {
+            top: calc(anchor(--sidenote bottom) + 1.5em);
+          }
+        }
+
+
       }
 
       .sidenote-number {
@@ -156,25 +189,11 @@
       color: black;
     }
 
-    @media (orientation: landscape) {
-      .sidenote {
-        float: right;
-        width: var(--sidenote-width);
-
-        &.right {
-          float: right;
-        }
-
-        &.left {
-          float: left;
-        }
-      }
-    }
 
     @media (orientation: portrait) {
       .sidenote {
         display: block !important;
-        position: static;
+        position: static !important;
         float: none;
         width: 95%;
         margin: 1rem 2.5%;
