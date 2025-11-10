@@ -200,4 +200,15 @@
         clear: both;
       }
     }
+    @media print {
+        .sidenote {
+        display: block !important;
+        position: static !important;
+        float: none;
+        width: 95%;
+        margin: 1rem 2.5%;
+        clear: both;
+      }
+      .noprint{display: none;}
+    }
   }
