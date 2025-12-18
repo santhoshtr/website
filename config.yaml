@@ -4,7 +4,7 @@ layoutdir: layouts
 publishdir: public
 title: "Santhosh Thottingal"
 canonifyurls: true
-copyright: "© Santhosh Thottingal"
+copyright: "© 2024 Santhosh Thottingal. All rights reserved."
 DefaultContentLanguage: en
 theme: PaperMod
 metaDataFormat: yaml
@@ -13,6 +13,7 @@ pygmentCodeFences: true
 disqusShortname: "thottingal-in"
 enableRobotsTXT: true
 enableEmoji: true
+languageCode: en-us
 
 outputs:
   home:
@@ -58,21 +59,48 @@ params:
   profileMode: false
   env: production
   defaultTheme: auto
-  author: "Santhosh Thottingal"
-  subtitle: "Software Developer & Open Source Enthusiast"
-  description: "Thoughts and technical writings by Santhosh Thottingal"
-  keywords:
-    - blog
-    - development
-    - software
 
+  # Author & Site Identity
+  author: "Santhosh Thottingal"
+  subtitle: "Language Computing Professional & Typeface Designer"
+  description: "Santhosh Thottingal's personal blog about language computing, typography, open source software, and technology. Posts on Malayalam language, typeface design, and software engineering."
+  keywords:
+    - language computing
+    - typeface design
+    - Malayalam
+    - open source
+    - software engineering
+    - typography
+    - Wikimedia
+    - digital typography
+    - unicode fonts
+    - SMC
+
+  # SEO Tags
+  og:
+    title: "Santhosh Thottingal"
+    description: "Personal blog by Santhosh Thottingal on language computing, typeface design, and open source."
+    image: "https://thottingal.in/images/santhosh-2019.webp"
+    url: "https://thottingal.in"
+    type: "website"
+
+  twitter:
+    card: "summary_large_image"
+    creator: "@santhoshtr"
+    site: "@santhoshtr"
+
+  # Schema Markup
+  publisherName: "Santhosh Thottingal"
+  publisherType: "Person"
+  publisherLogo: "https://thottingal.in/sa.png"
+
+  # Blog Configuration
   logo: "sa.png"
   logoWidth: 200
   favicon: "sa.png"
   dateFormat: "January 2, 2006"
   ShowShareButtons: true
   ShowReadingTime: true
-  # disableSpecial1stPost: true
   displayFullLangName: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
@@ -86,11 +114,29 @@ params:
   comments: true
   disableThemeToggle: true
 
+  # Analytics
   googleAnalyticsID: "G-NXL37BD6DQ"
 
+  # SEO Settings
   enableInlineShortcodes: true
   enableRobotsTXT: true
 
+  # Robots Configuration
+  robotsTxt:
+    - userAgent: "*"
+      allow: "/"
+      disallow: "/admin/"
+    - userAgent: "Googlebot"
+      allow: "/"
+
+  # Sitemap Configuration
+  sitemapFormat: "xml"
+
+  # Search Engine Optimization
+  minify:
+    minifyOutput: true
+
+  # Search Options
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -106,17 +152,24 @@ params:
 
   homeInfoParams:
     title: "Santhosh Thottingal"
-    content: "Welcome! I write about software development, open source, and technology."
+    content: |
+      Language computing professional and typeface designer.
+      Principal Software Engineer at Wikimedia Foundation.
+      Expertise in Malayalam language computing, digital typography, and open source software.
 
   socialIcons:
     - name: github
       url: "https://github.com/santhoshtr"
+      title: "GitHub Profile - View my code repositories"
     - name: gitlab
       url: "https://gitlab.com/santhoshtr"
+      title: "GitLab Profile - Additional projects"
     - name: twitter
       url: "https://twitter.com/santhoshtr"
+      title: "Twitter - Follow for updates"
     - name: email
       url: "mailto:santhosh.thottingal@gmail.com"
+      title: "Email contact"
 
 author:
   name: "Santhosh Thottingal"
@@ -124,6 +177,9 @@ author:
   gitlab: "santhoshtr"
   github: "santhoshtr"
   twitter: "santhoshtr"
+  linkedin: "santhoshtr"
+  website: "https://thottingal.in"
+  bio: "Language computing professional, typeface designer, and Principal Software Engineer at Wikimedia Foundation"
 
 taxonomies:
   category: categories
@@ -143,3 +199,56 @@ menu:
     - name: Search
       url: search
       weight: 4
+
+# SEO Configuration
+minify:
+  minifyOutput: true
+
+# Sitemap Configuration
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+
+# Privacy Configuration
+privacy:
+  disqus:
+    disable: false
+  googleAnalytics:
+    anonymizeIP: true
+    disable: false
+    respectDoNotTrack: true
+  instagram:
+    disable: false
+  twitter:
+    disable: false
+  vimeo:
+    disable: false
+  youtube:
+    disable: false
+
+# Media Types for RSS
+mediaTypes:
+  text/html:
+    suffixes:
+      - html
+
+outputFormats:
+  HTML:
+    mediaType: text/html
+    path: /
+  RSS:
+    baseName: index
+    mediaType: application/rss+xml
+
+# Permalinks
+permalinks:
+  blog: /blog/:year/:month/:day/:filename/
+  page: /:filename/
+
+# Caching
+caches:
+  getjson:
+    maxAge: 3600s
+  getcsv:
+    maxAge: 3600s
