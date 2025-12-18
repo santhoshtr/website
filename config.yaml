@@ -1,0 +1,145 @@
+baseurl: "https://thottingal.in/"
+contentdir: content
+layoutdir: layouts
+publishdir: public
+title: "Santhosh Thottingal"
+canonifyurls: true
+copyright: "© Santhosh Thottingal"
+DefaultContentLanguage: en
+theme: PaperMod
+metaDataFormat: yaml
+pygmentsUseClasses: true
+pygmentCodeFences: true
+disqusShortname: "thottingal-in"
+enableRobotsTXT: true
+enableEmoji: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+services:
+  googleAnalytics:
+    id: G-NXL37BD6DQ
+  disqus:
+    shortname: thottingal-in
+
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+    renderHooks:
+      image:
+        enableDefault: true
+      link:
+        enableDefault: false
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    noClasses: false
+    style: monokai
+    tabWidth: 4
+
+params:
+  profileMode: false
+  env: production
+  defaultTheme: auto
+  author: "Santhosh Thottingal"
+  subtitle: "Software Developer & Open Source Enthusiast"
+  description: "Thoughts and technical writings by Santhosh Thottingal"
+  keywords:
+    - blog
+    - development
+    - software
+
+  logo: "sa.png"
+  logoWidth: 200
+  favicon: "sa.png"
+  dateFormat: "January 2, 2006"
+  ShowShareButtons: true
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: false
+  showBreadcrumbs: true
+  showCodeCopyButtons: true
+  comments: true
+  disableThemeToggle: true
+
+  googleAnalyticsID: "G-NXL37BD6DQ"
+
+  enableInlineShortcodes: true
+  enableRobotsTXT: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+
+  homeInfoParams:
+    title: "Santhosh Thottingal"
+    content: "Welcome! I write about software development, open source, and technology."
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/santhoshtr"
+    - name: gitlab
+      url: "https://gitlab.com/santhoshtr"
+    - name: twitter
+      url: "https://twitter.com/santhoshtr"
+    - name: email
+      url: "mailto:santhosh.thottingal@gmail.com"
+
+author:
+  name: "Santhosh Thottingal"
+  email: "santhosh.thottingal@gmail.com"
+  gitlab: "santhoshtr"
+  github: "santhoshtr"
+  twitter: "santhoshtr"
+
+taxonomies:
+  category: categories
+  tag: tags
+
+menu:
+  main:
+    - name: Blog
+      url: blog
+      weight: 1
+    - name: Tags
+      url: tags
+      weight: 2
+    - name: Archives
+      url: archives
+      weight: 3
+    - name: Search
+      url: search
+      weight: 4
