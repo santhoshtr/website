@@ -39,9 +39,9 @@ markup:
       unsafe: true
     renderHooks:
       image:
-        enableDefault: true
+        useEmbedded: fallback
       link:
-        enableDefault: false
+        useEmbedded: never
   highlight:
     anchorLineNos: false
     codeFences: true
@@ -243,8 +243,8 @@ outputFormats:
 
 # Permalinks
 permalinks:
-  blog: /blog/:year/:month/:day/:filename/
-  page: /:filename/
+  blog: /blog/:year/:month/:day/:contentbasename/
+  page: /:contentbasename/
 
 # Caching
 caches:

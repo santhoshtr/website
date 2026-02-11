@@ -2,7 +2,7 @@
 title: മലയാളലിപിയും വിദ്യാഭ്യാസവും
 author: Santhosh Thottingal
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2018-03-11T00:00:00+00:00
 draft: true
 url: /?p=1387
 medium_post:
