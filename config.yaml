@@ -113,7 +113,7 @@ params:
   showBreadcrumbs: true
   showCodeCopyButtons: true
   comments: true
-  disableThemeToggle: true
+  disableThemeToggle: false
 
   # Analytics
   googleAnalyticsID: "G-NXL37BD6DQ"
