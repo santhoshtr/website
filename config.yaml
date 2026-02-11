@@ -20,6 +20,7 @@ outputs:
     - HTML
     - RSS
     - JSON
+    - llms
 
 buildDrafts: false
 buildFuture: false
@@ -240,6 +241,11 @@ outputFormats:
   RSS:
     baseName: index
     mediaType: application/rss+xml
+  llms:
+    mediaType: "text/plain"
+    baseName: "llms"
+    isPlainText: true
+    notAlternative: true
 
 # Permalinks
 permalinks:
