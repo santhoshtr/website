@@ -200,3 +200,7 @@
 {{- partial "templates/twitter_cards.html" . }}
 {{- partial "templates/schema_json.html" . }}
 {{- end -}}
+
+{{ if .Param "math" }}
+{{ partialCached "math.html" . }}
+{{ end }}

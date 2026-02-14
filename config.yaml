@@ -43,6 +43,15 @@ markup:
         useEmbedded: fallback
       link:
         useEmbedded: never
+    passthrough:
+      delimiters:
+        block:
+        - - '\['
+          - '\]'
+        inline:
+        - - '\('
+          - '\)'
+      enable: true
   highlight:
     anchorLineNos: false
     codeFences: true
@@ -60,7 +69,7 @@ params:
   profileMode: false
   env: production
   defaultTheme: auto
-
+  math: true
   # Author & Site Identity
   author: "Santhosh Thottingal"
   subtitle: "Language Computing Professional & Typeface Designer"
