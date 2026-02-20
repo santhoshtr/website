@@ -2,8 +2,7 @@
 title: "Variable interpolatable smooth curves and outlines"
 author: Santhosh Thottingal
 type: post
-draft: true
-date: 2026-02-18T05:00:00+05:30
+date: 2026-02-15T05:00:00+05:30
 url: /blog/2026/02/14/var-interpolatable-smooth-curves/
 categories:
   - Type Design
@@ -164,13 +163,14 @@ This formula ensures smooth transitions between segments by relating the interio
 | Simple 4-point wave curve | `(50,100)..(150,50)..(250,150)..(350,100)` |![](/wp-content/uploads/2026/02/wave-simple-fitted.svg)|
 
 
-You may also try this in an [interactive demo available here](https://santhoshtr.github.io/kurbo-curve-fit-stroke/)
+> You may also try this in an [interactive demo available here](https://santhoshtr.github.io/kurbo-curve-fit-stroke/)
 
 Following is a video recording of me drawing Malayalam letter 'va' with the curve fitting algorithm.
 
-<video src="/wp-content/uploads/2026/02/curve-fit-demo.mp4" width="600" controls autoplay loop></video>
+<video src="/wp-content/uploads/2026/02/curve-fit-demo.mp4" width="100%" controls autoplay loop></video>
 
-Source code for curve fitter is available here: https://github.com/santhoshtr/kurbo-curve-fit-stroke
+> Source code for curve fitter is available here: https://github.com/santhoshtr/kurbo-curve-fit-stroke
+
 
 ## Parallel outline of a curve
 
@@ -185,10 +185,225 @@ In the above image, two definitions of a parallel curve is illustrated: 1) envel
 
 Calculating accurate parallel curve for an arbitrary curve is quite complex. The exact offset curve of a cubic Bézier can be described using a bezier curve of degree 10. But such a curve is quite complex to calculate and work with.
 Thus, in practice the approach is almost always to compute an approximation to the true parallel curve.
-A single cubic Bézier might not be a good enough approximation to the parallel curve of the source cubic Bézier, so in those cases it is sudivided into multiple Bézier segments.[^6]
+A single cubic Bézier might not be a good enough approximation to the parallel curve of the source cubic Bézier,
+so in those cases it is sudivided into multiple Bézier segments.[^6]
 
-## Variable offset parallel curves
-## Interpolatable Variable offset parallel curves
+> For a detailed explanation on why offsetting a bezier curve is hard, see [pomax's "A primer on bezier curves"][13]
+
+I am using Kurbo rust library for the explorations outlined in this article.
+The [Kurbo library][14] has a stroke algorithm to expand a path (skeleton or a list of
+connected Cubic curves) with a given offset $d$. It works well and is based on extensive
+research by the Kurbo team.
+
+
+I adapted the system to try variable stroking where the value of $d$ varies at curve joints.
+This is useful in illustrating variable thickness letters. It reuses most of the
+code from the Kurbo library. Wherever the constant value $d$ is used, a value from an array of varying
+widths is supplied.
+
+![](/wp-content/uploads/2026/02/variable-stroke-non-interpolatable.webp)
+
+The resulting stroke outline is acceptable to the eye, but not great in terms of the number of points in the outline.
+
+As I mentioned eariler, my objective is to see if such outlines can be used in type engineering (font making),
+especially for variable fonts. However, variable fonts need interpolatable shapes.
+
+For glyphs to interpolate correctly, they must be compatible across all masters. This means they must have the:
+
+* Same number of paths and points.
+* Same contour order.
+* Same starting point for each contour.
+
+The unpredictable number of points in the outline as the input widths change is not acceptable for that workflow.
+There are curve simplification algorithms, but they are also not usable as they add non-deterministic points.
+
+Following is a vide illustrating the interpolating nature of a glyph 'e' when the glyph outlines passes the above three conditions.
+
+<video src="/wp-content/uploads/2026/02/interpolatable-e.mp4" width="100%" controls autoplay loop></video>
+
+> If you like to observe how interpolation works for variable fonts, [SAMSA Interpolator is a good tool][17]
+
+## Interpolatable Variable Strokes
+
+A simple trick I tried first achieving interpolation is to make the sub-divisions of the outline
+for a path segment deterministic. In the above curve, if you look carefully, you can see that the subdivisions in outlines are sometime two, sometimes three.
+Initially I set a fixed, 4 sub-divisions for every path segment. But later I changed it to dynamic based on the curvature of the source path.
+
+The resulting curves are interpolatable but lost the perfection from the previous step.
+where the stroke calculation was based on a complex error reduction strategy. My approach reduced that to a
+simpler [Tiller-Hanson-like approach][15]. This subdivision approach is discussed in detail in Raph's parallel bezier curve essay for constant offset curves[^6]
+
+![](/wp-content/uploads/2026/02/variable-stroke-interpolatable-subdivisions.web)
+
+When I [shared][16] this work with the Kurbo team, Raph suggested using a linear perturbation system:
+
+$B_{offset}(t) = B(t) + c \cdot D(t)$
+
+*   **$B(t)$**: This is our **Source Spine** (the cubic Bézier you are stroking).
+*   **$c$**: This is the **Scalar Width** (or half-width). In a variable stroke, this is our $w(t)$.
+*   **$D(t)$**: This is a **"Direction Curve"**. It represents the Normal Vector, but approximated as a cubic Bézier itself.
+
+Intuitively, instead of trying to calculate a perfect parallel curve
+(which is mathematically impossible to represent exactly as a Bézier),
+we are creating a "vector field" that points outwards from the curve.
+
+1.  Define a curve $D(t)$ that represents "Straight Out" (Normal) along the spine.
+2.  To generate the offset, take the spine point $B(t)$ and add $D(t)$ multiplied by the width at that point.
+
+Why does this guarantee interpolatability? If you have a "Thin" shape and a "Bold" shape,
+they share the exact same $B(t)$ and $D(t)$. The *only* thing that changes is $c$ (the width).
+Because the formula is **linear** (it's just addition), point $P_{offset}$
+moves in a straight line as you increase the weight.
+This is the definition of perfect variable font interpolation.
+
+Instead of my dynamic curvature-based sub-divisions, Raph recommended using a single midpoint.
+Since we know the start point (from $t=0$) and the end point (from $t=1$),
+and we know the tangents (from the derivative formula below),
+we still have degrees of freedom: **how long are the control handles?**
+Raph suggests calculating the exact offset point at $t=0.5$ (the middle).
+You then mathematically solve for the handle lengths that force the cubic curve to pass through that middle point.
+This is deterministic and fast.
+
+The endpoint tangents for variable offset are $(1 + \kappa d)x' + n d'$
+
+This formula tells you exactly **what direction the offset curve is pointing** at any moment $t$.
+
+
+$$toffset = (1 + \kappa d)x' + nd'$$
+
+#### **Part A: The "Parallel" Movement**
+*   **$x'$**: This is the tangent of the spine (moving forward along the road).
+*   **$d$**: The current width.
+*   **$\kappa$**: The curvature (how tight the turn is).
+
+#### **Part B: The "Taper" Movement** - sideways push
+*   **$n$**: The Unit Normal (pointing 90° sideways).
+*   **$d'$**: The **Derivative of Width** (The slope). How fast is the width changing?
+
+If the pen is getting wider ($d' > 0$), the edge of the ink must move **outwards** away from the center.
+This adds a sideways vector component.
+
+
+
+This approach had one limitation though. While the outline curve is smooth for a segment, at segment joints,
+kinks(sharp jumps) can happen we suuch segments are joined.
+Since the tangent calculation based on $(1 + \kappa d)x' + nd'$ need some
+updates to handle the case of segment joins I guess.
+
+
+The sideways movement of the stroke) based on how much the width
+changes per segment  - $d'$ but when segment A and B has different lengths,
+the rate change is rapid in some cases. this changes the angle of the offset curve,
+creating the kink you see here:
+
+![G1 Continuity Error at Segment Joints](/wp-content/uploads/2026/02/var-interpolation-continuity-error.png)
+
+So we need an error correction mechanism at segment joins to get $G_1$ continuity.
+
+> **Curve continuity**
+> There are different levels of Geomatric Curve continuity. Higher continuity is required to create smoother and more natural Curves.
+> * G0: Two Curves are connected, but only their positions match at the connection point.
+> * G1: Two Curves are connected, and their positions and directions match at the connection point.
+> * G2: Two Curves are connected, and their positions, directions, and curvatures match at the connection point.
+> * G3: Two Curves are connected, and their positions, directions, curvatures, and curvature change rates match at the connection point.
+> ![Curve continuity](/wp-content/uploads/2026/02/curve-continuity.webp)
+> Illustration from https://doc.plasticity.xyz/cad-essentials/continuity-curve-and-surface
+
+> For a more thorough introduction to curve continuity,  see Freya Holmér’s excellent video
+> {{< youtube jvPPXbo87ds >}}
+
+## Error Correction Based on Skeleton
+
+The variable-width stroking process, while mathematically elegant,
+introduces challenges at segment boundaries where the width changes dynamically.
+The stroke outline can have G₁ continuity errors (directional discontinuities) at these joints due
+to the complex interplay between curvature, width taper, and segment transitions.
+
+To address this, we employ a **two-stage error correction strategy** that leverages
+the original skeleton (the input curve) as a reference guide for fixing problematic points.
+
+When we stroke a curve with variable width using the linear perturbation formula:
+
+$$B_{offset}(t) = B(t) + w(t) \cdot D(t)$$
+
+The offset curve is smooth within each segment, but at segment joints where two different segments meet, discontinuities can emerge. This happens because:
+
+1. **Width derivative changes**: The rate of width change ($d'$) differs between adjacent segments
+2. **Curvature discontinuities**: The skeleton may have different curvatures at segment joints
+3. **Normal vector discontinuities**: The direction curve $D(t)$ may shift abruptly between segments
+
+These combine to create **kinks** in the stroke outline where the tangent direction changes abruptly.
+
+We address this with a three-stage process embedded in the `refit_stroke()` function:
+
+#### **Stage 1a: Extract and Classify Outline Points**
+
+When the stroke outline is generated, we extract its on-curve points (the corner-like features where segments join).
+At each point, we calculate:
+
+- **Incoming tangent angle**: The direction the curve is heading into this point
+- **Outgoing tangent angle**: The direction the curve is heading out of this point
+- **Point type**: Classify as either "Corner" (angles differ significantly) or "Smooth" (angles match)
+
+The threshold for this classification is configurable (default: 15° for variable-width strokes).
+
+**Example: Variable-width stroke outline (wave-simple test case)**
+
+
+| Original Curve | Stroke Outline | After Stage 1 Correction |
+|---|---|---|
+| ![](/wp-content/uploads/2026/02/wave-simple-fitted.svg) | ![](/wp-content/uploads/2026/02/wave-simple-stroke.svg) | ![](/wp-content/uploads/2026/02/wave-simple-refitted.svg) |
+
+#### **Stage 1b: Detect Misclassified Corners (With Skeleton)**
+
+If skeleton information is available, we perform a second-pass analysis:
+
+- Match each outline point to its closest skeleton point using spatial proximity (within 2.0 units)
+- For points classified as "Corner" in the outline, check if they correspond to "Smooth" points in the skeleton
+- If there's a mismatch, the outline point is likely a **false positive corner** caused by stroking artifacts rather than a real intentional corner
+
+We correct these misclassified points by:
+- Using the skeleton's tangent direction (which is stable and reliable)
+- Replacing the problematic outline angles with the skeleton's incoming and outgoing angles
+- Re-classifying the point as "Smooth"
+
+**Example: Skeleton-aware correction catches false corners**
+
+![Skeleton-Aware Correction Workflow](/wp-content/uploads/2026/02/wave-simple-skeleton-correction.svg)
+
+#### **Stage 2: Detect and Correct G₁ Failures (With Skeleton)**
+
+After initial classification and smoothing, we check for **G₁ continuity failures** — points where incoming and outgoing angles still differ by more than a tiny threshold (0.5°, indicating non-smoothness in the fitted curve).
+
+For each failing point, if skeleton information is available:
+
+1. **Geometric matching**: Find the closest skeleton point using the outline point's spatial location
+2. **Angle extraction**: If a match is found, extract the skeleton's tangent angle at that location
+3. **Selective correction**: Use the skeleton's angle to override the outline-derived angle at the failing point
+4. **Propagation**: Re-apply G₁ smoothing to all neighboring points, which propagates the correction and helps neighboring points converge
+
+The correction is **selective and conservative**:
+- Only failing points are corrected
+- Only if a confident skeleton match exists (spatial distance < 2.0 units)
+- If the correction succeeds, we validate again; if it still fails, we continue anyway (graceful degradation)
+
+#### **Stage 3: Fit the Refined Curve**
+
+Once all corrections are applied, the outline points are passed through the curve fitting algorithm with:
+- Corrected point classifications (fewer false corners)
+- Corrected/validated tangent angles (ensuring G₁ continuity)
+- The full constraint set from the two-parameter curve approach
+
+The result is a clean, smooth curve that respects the original geometry while resolving the stroking-induced discontinuities.
+
+
+Now let us try the Malayalam letter va again, this time with stroke:
+
+<video src="/wp-content/uploads/2026/02/interpolatable-va.mp4" width="100%" controls autoplay loop></video>
+
+As you can see, we get variable smooth stroke. And it is interpolatable for width by retaining the number of points.
+
+Thanks for reading!
 
 [1]: https://en.wikipedia.org/wiki/MetaPost
 [2]: https://mirror.gutenberg-asso.fr/tex.loria.fr/prod-graph/mp.pdf
@@ -202,6 +417,12 @@ A single cubic Bézier might not be a good enough approximation to the parallel 
 [10]: https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization
 [11]: https://www.youtube.com/watch?v=aVwxzDHniEw
 [12]: https://en.wikipedia.org/wiki/Parallel_curve
+[13]: https://pomax.github.io/bezierinfo/#offsetting
+[14]: https://github.com/linebender/kurbo
+[15]: https://math.stackexchange.com/questions/465782/control-points-of-offset-bezier-curve
+[16]: https://xi.zulipchat.com/#narrow/channel/260979-kurbo/topic/Variable.20interpolatable.20stroke.20expansion/with/568408959
+[17]: https://www.axis-praxis.org/samsa/
+[18]: https://www.youtube.com/watch?v=jvPPXbo87ds
 
 ## References
 
