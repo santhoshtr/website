@@ -59,17 +59,16 @@ I read about this work in 2018, and the following set of features described in t
 >
 >The net effect is more flexibility over the resulting shapes, intuitive control, and always smooth results (in the form of G2 continuity - if the artist wants to draw a lumpy line, there’s nothing preventing that).
 
-This is exactly what MetaPost is doing inside, except with Hobby's curves. So If I build a system that uses Raph's smooth curve fitting for smooth curves,
+This is very close to MetaPost's core parametric curve handling system, except with Hobby's curves. So If I build a system that uses Raph's smooth curve fitting for smooth curves,
 that would be step 1 towards a modern parametric type design system. I have a dream to build a DSL based parametric type design system, inspired by MetaPost, but
 not a generic drawing system as MetaPost, focused towards type design.
 
-> **Note**
-> One of the major shifts in software engineering that happened in the past several months is that AI agentic coding makes you capable of
-> taking up projects that are more ambitious, projects that you postponed in the past. I am embracing this radical change and enjoying it a lot.
+In this article, I want to connect these pieces together and show a complete workflow. First, I will summarise Raph Levien's two-parameter spline and my Rust implementation of a curve fitting algorithm based on it. Then I will show how to use that to build variable-width strokes that remain interpolatable for variable fonts. Finally, I will explain a skeleton-based error correction method that fixes continuity problems at stroke segment joins while preserving interpolatability.
 
 ## Curve Fitting
 
-Last November, I wrote a curve fitting program in Rust based on Raph Levien's two-parameter curve formulation. The algorithm accepts a sequence of 2D points (with optional tangent constraints) and produces a smooth cubic Bézier path that interpolates all input points while maintaining $G^2$ continuity within segments and $G^1$ continuity at corners.
+
+Last November, I wrote a curve fitting program in Rust based on Raph Levien's two-parameter curve formulation. In this formulation, each segment between two points is controlled by two parameters: the tangent angle at the start point and the tangent angle at the end point. The algorithm accepts a sequence of 2D points (with optional tangent constraints) and produces a smooth cubic Bézier path that interpolates all input points while maintaining $G^2$ continuity within segments and $G^1$ continuity at corners.
 
 The curve fitting algorithm operates in three phases:
 
@@ -103,7 +102,7 @@ where,
 Then, given this two-parameter curve, use a global solver to choose tangents so that the curvature is matched on both sides of each control point.
 
 
-#### Curvature Optimization
+### Curvature Optimization
 
 The iterative solver adjusts tangent angles to minimize curvature discontinuity at interior points.
 The solver uses a [damped Newton method][10] to find tangent angles that minimize curvature mismatch.
@@ -254,7 +253,7 @@ Why does this guarantee interpolatability? If you have a "Thin" shape and a "Bol
 they share the exact same $B(t)$ and $D(t)$. The *only* thing that changes is $c$ (the width).
 Because the formula is **linear** (it's just addition), point $P_{offset}$
 moves in a straight line as you increase the weight.
-This is the definition of perfect variable font interpolation.
+This is the definition of perfect variable font interpolation. Since we keep the same sampling of $B(t)$ and $D(t)$ for all masters, all three requirements above for variable fonts are satisfied: the number of points and paths stays fixed, the contour order is unchanged, and the starting point for each contour is consistent.
 
 Instead of my dynamic curvature-based sub-divisions, Raph recommended using a single midpoint.
 Since we know the start point (from $t=0$) and the end point (from $t=1$),
@@ -271,12 +270,12 @@ This formula tells you exactly **what direction the offset curve is pointing** a
 
 $$toffset = (1 + \kappa d)x' + nd'$$
 
-#### **Part A: The "Parallel" Movement**
+### Part A: The "Parallel" Movement
 *   **$x'$**: This is the tangent of the spine (moving forward along the road).
 *   **$d$**: The current width.
 *   **$\kappa$**: The curvature (how tight the turn is).
 
-#### **Part B: The "Taper" Movement** - sideways push
+### Part B: The "Taper" Movement - sideways push
 *   **$n$**: The Unit Normal (pointing 90° sideways).
 *   **$d'$**: The **Derivative of Width** (The slope). How fast is the width changing?
 
@@ -318,33 +317,20 @@ introduces challenges at segment boundaries where the width changes dynamically.
 The stroke outline can have G₁ continuity errors (directional discontinuities) at these joints due
 to the complex interplay between curvature, width taper, and segment transitions.
 
-To address this, we employ a **two-stage error correction strategy** that leverages
+To address this, we employ a **multi-stage error correction strategy** that leverages
 the original skeleton (the input curve) as a reference guide for fixing problematic points.
 
-When we stroke a curve with variable width using the linear perturbation formula:
+When we stroke a curve with variable width using the linear perturbation formula
 
 $$B_{offset}(t) = B(t) + w(t) \cdot D(t)$$
 
-The offset curve is smooth within each segment, but at segment joints where two different segments meet, discontinuities can emerge. This happens because:
+the offset curve is smooth within each segment, but at segment joints where two different segments meet it can still develop visible kinks. This happens for three reasons at once: the rate of width change ($d'$) can jump between segments, the curvature of the skeleton may change at the join, and the direction curve $D(t)$ may also shift. Together, these effects make the tangent direction of the stroke jump at some outline points.
 
-1. **Width derivative changes**: The rate of width change ($d'$) differs between adjacent segments
-2. **Curvature discontinuities**: The skeleton may have different curvatures at segment joints
-3. **Normal vector discontinuities**: The direction curve $D(t)$ may shift abruptly between segments
+To fix this, I run a multi-stage process embedded in the `refit_stroke()` function.
 
-These combine to create **kinks** in the stroke outline where the tangent direction changes abruptly.
+### Stage 1a: Extract and Classify Outline Points
 
-We address this with a three-stage process embedded in the `refit_stroke()` function:
-
-#### **Stage 1a: Extract and Classify Outline Points**
-
-When the stroke outline is generated, we extract its on-curve points (the corner-like features where segments join).
-At each point, we calculate:
-
-- **Incoming tangent angle**: The direction the curve is heading into this point
-- **Outgoing tangent angle**: The direction the curve is heading out of this point
-- **Point type**: Classify as either "Corner" (angles differ significantly) or "Smooth" (angles match)
-
-The threshold for this classification is configurable (default: 15° for variable-width strokes).
+When the stroke outline is generated, I first extract its on-curve points — the corner-like features where segments join — and compute the incoming and outgoing tangent angles at each of them. Based on how different those two angles are, the point is classified as either a "Corner" (angles differ significantly) or "Smooth" (angles match within a tolerance). The threshold for this classification is configurable; for variable-width strokes I use 15° as a reasonable default.
 
 **Example: Variable-width stroke outline (wave-simple test case)**
 
@@ -353,47 +339,21 @@ The threshold for this classification is configurable (default: 15° for variabl
 |---|---|---|
 | ![](/wp-content/uploads/2026/02/wave-simple-fitted.svg) | ![](/wp-content/uploads/2026/02/wave-simple-stroke.svg) | ![](/wp-content/uploads/2026/02/wave-simple-refitted.svg) |
 
-#### **Stage 1b: Detect Misclassified Corners (With Skeleton)**
+### Stage 1b: Detect Misclassified Corners (With Skeleton)
 
-If skeleton information is available, we perform a second-pass analysis:
-
-- Match each outline point to its closest skeleton point using spatial proximity (within 2.0 units)
-- For points classified as "Corner" in the outline, check if they correspond to "Smooth" points in the skeleton
-- If there's a mismatch, the outline point is likely a **false positive corner** caused by stroking artifacts rather than a real intentional corner
-
-We correct these misclassified points by:
-- Using the skeleton's tangent direction (which is stable and reliable)
-- Replacing the problematic outline angles with the skeleton's incoming and outgoing angles
-- Re-classifying the point as "Smooth"
+If skeleton information is available, I do a second pass. Each outline point is matched to its closest skeleton point (within 2.0 units). For points that the first stage marked as "Corner", I now check what the corresponding skeleton point says — if the skeleton considers that location smooth, the corner on the outline is probably just a stroking artefact. In that case I borrow the skeleton's incoming and outgoing tangent directions, replace the outline-derived angles, and re-classify the point as "Smooth".
 
 **Example: Skeleton-aware correction catches false corners**
 
 ![Skeleton-Aware Correction Workflow](/wp-content/uploads/2026/02/wave-simple-skeleton-correction.svg)
 
-#### **Stage 2: Detect and Correct G₁ Failures (With Skeleton)**
+### Stage 2: Detect and Correct G₁ Failures (With Skeleton)
 
-After initial classification and smoothing, we check for **G₁ continuity failures** — points where incoming and outgoing angles still differ by more than a tiny threshold (0.5°, indicating non-smoothness in the fitted curve).
+After this first clean-up, there can still be G₁ continuity failures — places where the incoming and outgoing tangents differ by more than a tiny threshold (I use 0.5°, which is a visually meaningful difference for these curves). For each such point, if I can match it confidently to a skeleton point, I again take the skeleton's tangent direction as the ground truth and override the outline-derived angle. Then I re-run the G₁ smoothing on the neighbourhood so that the correction propagates to nearby points. This step is deliberately conservative: only points that actually fail the G₁ test are touched, and only when the skeleton match is within 2.0 units.
 
-For each failing point, if skeleton information is available:
+### Stage 3: Fit the Refined Curve
 
-1. **Geometric matching**: Find the closest skeleton point using the outline point's spatial location
-2. **Angle extraction**: If a match is found, extract the skeleton's tangent angle at that location
-3. **Selective correction**: Use the skeleton's angle to override the outline-derived angle at the failing point
-4. **Propagation**: Re-apply G₁ smoothing to all neighboring points, which propagates the correction and helps neighboring points converge
-
-The correction is **selective and conservative**:
-- Only failing points are corrected
-- Only if a confident skeleton match exists (spatial distance < 2.0 units)
-- If the correction succeeds, we validate again; if it still fails, we continue anyway (graceful degradation)
-
-#### **Stage 3: Fit the Refined Curve**
-
-Once all corrections are applied, the outline points are passed through the curve fitting algorithm with:
-- Corrected point classifications (fewer false corners)
-- Corrected/validated tangent angles (ensuring G₁ continuity)
-- The full constraint set from the two-parameter curve approach
-
-The result is a clean, smooth curve that respects the original geometry while resolving the stroking-induced discontinuities.
+Once these corrections are applied, I send the outline points back through the same curve fitting algorithm described earlier. At this point the point classifications are cleaner (fewer false corners) and the tangent angles at the joins have been validated or corrected using the skeleton as a reference. With that improved constraint set, the two-parameter curve fitter produces a new outline that respects the original geometry while smoothing out the stroking-induced discontinuities. At segment joints I explicitly aim for $G^1$ continuity (matching position and direction); I do not attempt to enforce $G^2$ continuity of curvature on the outline.
 
 
 Now let us try the Malayalam letter va again, this time with stroke:
@@ -403,6 +363,11 @@ Now let us try the Malayalam letter va again, this time with stroke:
 As you can see, we get variable smooth stroke. And it is interpolatable for width by retaining the number of points.
 
 Thanks for reading!
+
+> **Note**
+> One of the major shifts in software engineering that happened in the past several months is that AI agentic coding makes you capable of
+> taking up projects that are more ambitious, projects that you postponed in the past. I am embracing this radical change and enjoying it a lot.
+
 
 [1]: https://en.wikipedia.org/wiki/MetaPost
 [2]: https://mirror.gutenberg-asso.fr/tex.loria.fr/prod-graph/mp.pdf
