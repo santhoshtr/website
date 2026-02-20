@@ -25,7 +25,7 @@ Extending it is also almost impossible.
 
 While I was using MetaPost to design my last couple of typefaces, I was very curious about the underlying mathematics and 2D semantics that produce the smooth curves.
 Aesthetics of smooth curves is one of my pet peeves. Some of you may know that my most successful typeface [Manjari][4] uses spiral splines for
-smooth curves to achieve the pleasing aesthetics of the Malayalam script[^3]. The curves in Manjari was based on Spiral Splines by Raph Levien[^5]. I consider [Raph Levien][6] as one of the expert in curve semantics and I
+smooth curves to achieve the pleasing aesthetics of the Malayalam script[^3]. The curves in Manjari were based on Spiral Splines by Raph Levien[^5]. I consider [Raph Levien][6] as one of the experts in curve semantics and I
 actively follow his research and writings.
 
 > A spline is a sequence of connected curves. A Bézier spline is a spline made up of Bézier curves.
@@ -40,7 +40,7 @@ we can define angle of entry and exit for the curve tangents through the points.
 > For an in-depth reading on Hobby curves, refer this article: [Hobby’s algorithm for aesthetic Bézier splines][7]
 
 In 2018, Raph Levien published [a new approach for smooth curve fitting][8], using a two-parameter curve approach[^4].
-There is a [javascript implementation][9] and demo. I am embedding the demo below:
+There is a [JavaScript implementation][9] and demo. I am embedding the demo below:
 
 
 <iframe src="https://spline.technology/demo/" width="100%" height="520px"></iframe>
@@ -85,8 +85,8 @@ The tangents are given by the parameters.
 > For a more thorough introduction to Bézier curves, see [Freya Holmér’s excellent video.][11]
 > {{< youtube  aVwxzDHniEw >}}
 
-A cubic Bzier has two internal control points. Both must lie on the line tangent to the corresponding endpoint,
-in order to enforce the given tangent constraint. That leaves merely the length the control arm
+A cubic Bézier has two internal control points. Both must lie on the line tangent to the corresponding endpoint,
+in order to enforce the given tangent constraint. That leaves merely the length of the control arm
 (the signed distance from the endpoint to the control point along the tangent vector) as a free parameter.
 The new spline uses this simple function for the left control arm length, as a function of $\theta_0$ and $\theta_1$; the right arm is symmetrical:
 
@@ -147,7 +147,7 @@ For closed curves, the algorithm identifies a starting point (preferably a corne
 For segments without explicit endpoint constraints, the solver uses a specialized formula to compute appropriate endpoint tangents:
 
 \begin{aligned}
-endpointtangent = 0.5\sin(2\theta)
+\text{endpoint tangent} = 0.5\sin(2\theta)
 \end{aligned}
 
 This formula ensures smooth transitions between segments by relating the interior tangent angle to the required endpoint tangent direction.
@@ -175,7 +175,7 @@ Following is a video recording of me drawing Malayalam letter 'va' with the curv
 ## Parallel outline of a curve
 
 [Parallel outline of a curve][12], often known as 'stroking' generates an outline around a given curve.
-The original curve in the context is also called a skeleon curve.
+The original curve in the context is also called a skeleton curve.
 It can also be defined as a curve whose points are at a constant normal distance from a given curve.
 
 ![Two definitions of a parallel curve: 1) envelope of a family of congruent circles, 2) by a fixed normal distance. Source https://en.wikipedia.org/wiki/Parallel_curve#/media/File:Offset-definition-poss.svg](https://upload.wikimedia.org/wikipedia/commons/a/a7/Offset-definition-poss.svg)
@@ -186,7 +186,7 @@ In the above image, two definitions of a parallel curve is illustrated: 1) envel
 Calculating accurate parallel curve for an arbitrary curve is quite complex. The exact offset curve of a cubic Bézier can be described using a bezier curve of degree 10. But such a curve is quite complex to calculate and work with.
 Thus, in practice the approach is almost always to compute an approximation to the true parallel curve.
 A single cubic Bézier might not be a good enough approximation to the parallel curve of the source cubic Bézier,
-so in those cases it is sudivided into multiple Bézier segments.[^6]
+so in those cases it is subdivided into multiple Bézier segments.[^6]
 
 > For a detailed explanation on why offsetting a bezier curve is hard, see [pomax's "A primer on bezier curves"][13]
 
@@ -205,7 +205,7 @@ widths is supplied.
 
 The resulting stroke outline is acceptable to the eye, but not great in terms of the number of points in the outline.
 
-As I mentioned eariler, my objective is to see if such outlines can be used in type engineering (font making),
+As I mentioned earlier, my objective is to see if such outlines can be used in type engineering (font making),
 especially for variable fonts. However, variable fonts need interpolatable shapes.
 
 For glyphs to interpolate correctly, they must be compatible across all masters. This means they must have the:
@@ -217,7 +217,7 @@ For glyphs to interpolate correctly, they must be compatible across all masters.
 The unpredictable number of points in the outline as the input widths change is not acceptable for that workflow.
 There are curve simplification algorithms, but they are also not usable as they add non-deterministic points.
 
-Following is a vide illustrating the interpolating nature of a glyph 'e' when the glyph outlines passes the above three conditions.
+Following is a video illustrating the interpolating nature of a glyph 'e' when the glyph outlines pass the above three conditions.
 
 <video src="/wp-content/uploads/2026/02/interpolatable-e.mp4" width="100%" controls autoplay loop></video>
 
@@ -225,15 +225,15 @@ Following is a vide illustrating the interpolating nature of a glyph 'e' when th
 
 ## Interpolatable Variable Strokes
 
-A simple trick I tried first achieving interpolation is to make the sub-divisions of the outline
-for a path segment deterministic. In the above curve, if you look carefully, you can see that the subdivisions in outlines are sometime two, sometimes three.
+A simple trick I tried first for achieving interpolation is to make the sub-divisions of the outline
+for a path segment deterministic. In the above curve, if you look carefully, you can see that the subdivisions in outlines are sometimes two, sometimes three.
 Initially I set a fixed, 4 sub-divisions for every path segment. But later I changed it to dynamic based on the curvature of the source path.
 
 The resulting curves are interpolatable but lost the perfection from the previous step.
 where the stroke calculation was based on a complex error reduction strategy. My approach reduced that to a
 simpler [Tiller-Hanson-like approach][15]. This subdivision approach is discussed in detail in Raph's parallel bezier curve essay for constant offset curves[^6]
 
-![](/wp-content/uploads/2026/02/variable-stroke-interpolatable-subdivisions.web)
+![](/wp-content/uploads/2026/02/variable-stroke-interpolatable-subdivisions.webp)
 
 When I [shared][16] this work with the Kurbo team, Raph suggested using a linear perturbation system:
 
@@ -286,14 +286,13 @@ This adds a sideways vector component.
 
 
 This approach had one limitation though. While the outline curve is smooth for a segment, at segment joints,
-kinks(sharp jumps) can happen we suuch segments are joined.
-Since the tangent calculation based on $(1 + \kappa d)x' + nd'$ need some
-updates to handle the case of segment joins I guess.
+kinks (sharp jumps) can happen when such segments are joined.
+Since the tangent calculation based on $(1 + \kappa d)x' + nd'$ needs some
+updates to handle the case of segment joins.
 
 
-The sideways movement of the stroke) based on how much the width
-changes per segment  - $d'$ but when segment A and B has different lengths,
-the rate change is rapid in some cases. this changes the angle of the offset curve,
+The sideways movement of the stroke, based on how much the width
+changes per segment — $d'$ — is rapid when segment A and B have different lengths. This changes the angle of the offset curve,
 creating the kink you see here:
 
 ![G1 Continuity Error at Segment Joints](/wp-content/uploads/2026/02/var-interpolation-continuity-error.png)
@@ -301,7 +300,7 @@ creating the kink you see here:
 So we need an error correction mechanism at segment joins to get $G_1$ continuity.
 
 > **Curve continuity**
-> There are different levels of Geomatric Curve continuity. Higher continuity is required to create smoother and more natural Curves.
+> There are different levels of geometric curve continuity. Higher continuity is required to create smoother and more natural curves.
 > * G0: Two Curves are connected, but only their positions match at the connection point.
 > * G1: Two Curves are connected, and their positions and directions match at the connection point.
 > * G2: Two Curves are connected, and their positions, directions, and curvatures match at the connection point.
