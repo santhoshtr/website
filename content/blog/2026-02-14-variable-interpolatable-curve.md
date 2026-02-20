@@ -2,8 +2,8 @@
 title: "Variable interpolatable smooth curves and outlines"
 author: Santhosh Thottingal
 type: post
-date: 2026-02-15T05:00:00+05:30
-url: /blog/2026/02/14/var-interpolatable-smooth-curves/
+date: 2026-02-20T05:00:00+05:30
+url: /blog/2026/02/20/var-interpolatable-smooth-curves/
 categories:
   - Type Design
   - Type Engineering
@@ -108,15 +108,25 @@ The iterative solver adjusts tangent angles to minimize curvature discontinuity 
 The solver uses a [damped Newton method][10] to find tangent angles that minimize curvature mismatch.
 The damping factor increases with iteration count to ensure convergence.
 For each point connecting two segments, the algorithm computes curvature at the end of the left segment ($\kappa_0$)
-and at the start of the right segment ($\kappa_1$).
+and at the start of the right segment ($\kappa_1$), and also the chord lengths $d_0$ and $d_1$ for those segments.
 
-The curvature error is computed as:
+We want a scalar error that measures how badly the curvature mismatches at each join. Instead of simply taking $\kappa_0 - \kappa_1$, we want three things: symmetry between the two sides, sensitivity to scale (a given jump on a short segment matters more than on a long one), and good behaviour when angles wrap modulo $2\pi$.
+We define
 
 \begin{aligned}
-\text{err} = \text{atan2}\left(\sin(\kappa_0) \cdot c_1, \cos(\kappa_0) \cdot c_0\right) - \text{atan2}\left(\sin(\kappa_1) \cdot c_0, \cos(\kappa_1) \cdot c_1\right)
+c_0 & = \sqrt{d_0}, \\
+c_1 & = \sqrt{d_1}.
 \end{aligned}
 
-where $c_0 = \sqrt{d_0}$ and $c_1 = \sqrt{d_1}$ are the square roots of the adjacent chord lengths. This error formulation naturally accounts for the different scales of the two segments.
+You can think of $c_0$ and $c_1$ as the two axes of an ellipse. Each curvature value is mapped to a point on that ellipse, and we compare their angles there. The curvature error is then
+
+\begin{aligned}
+\text{err} = \text{atan2}\bigl(\sin(\kappa_0)c_1\, \cos(\kappa_0)c_0\bigr) - \text{atan2}\bigl(\sin(\kappa_1)c_0\, \cos(\kappa_1)c_1\bigr)
+\end{aligned}
+
+Here $\text{atan2}(\sin(\kappa), \cos(\kappa))$ is the usual way to turn sine/cosine back into a wrapped angle. The $c_0$ and $c_1$ factors skew the unit circle into an ellipse whose axes depend on the chord lengths, so the error naturally weights the two sides according to their scale. When $\kappa_0$ and $\kappa_1$ agree in this elliptical sense, the error is zero; otherwise it gives a signed measure of how much the curvature twists across the join.
+
+![Curvature error measured as the angular difference between κ₀ and κ₁ on an ellipse scaled by chord lengths c₀ and c₁](/wp-content/uploads/2026/02/curve-correction.png)
 
 When explicit tangent constraints are provided at a point, the solver treats it as a fixed parameter rather than an optimization variable.
 
@@ -128,8 +138,7 @@ When explicit tangent constraints are provided at a point, the solver treats it 
 |CurveToLine|Converts to corner with line tangent|Transitioning from curved to straight|
 
 
-The algorithm automatically converts Smooth points to Corner if the incoming and outgoing tangent angles differ by more than
-1e-6 radians (approximately 0.00006 degrees).
+The algorithm automatically converts Smooth points to Corner if the incoming and outgoing tangent angles differ by more than 1e-6 radians. This threshold is effectively a floating-point epsilon — it catches cases where the geometry is numerically discontinuous rather than semantically distinguishing nearly-smooth from truly-smooth joints.
 
 When an explicit angle is provided, the solver treats it as a hard constraint and does not modify it during optimization. This allows precise control over curve shape at specific points.
 
@@ -155,10 +164,10 @@ This formula ensures smooth transitions between segments by relating the interio
 
 |Description| Points(In metapost style) | Output|
 |-----------|--------|-------|
-| Simple diagonal line stroke | `(0,0)--(100,100)` | ![](/wp-content/uploads/2026/02/straight-line-fitted.svg)
+| Simple diagonal line stroke | `(0,0)--(100,100)` | ![](/wp-content/uploads/2026/02/straight-line-fitted.svg)|
 | 90-degree corner with different incoming/outgoing angles | `(50,100)--(100,100)--(100,50)` | ![](/wp-content/uploads/2026/02/corner-angle-fitted.svg)|
-| Letter O | `(100,50)..(150,100)..(100,150)..(50,100)..cycle` | ![](/wp-content/uploads/2026/02/letter-o-fitted.svg)
-| Curve with explicit tangent constraints | `(50,100){dir 10}..{dir 90}(150,50)..(250,150)` |![](/wp-content/uploads/2026/02/metapost-style-fitted.svg)
+| Letter O | `(100,50)..(150,100)..(100,150)..(50,100)..cycle` | ![](/wp-content/uploads/2026/02/letter-o-fitted.svg)|
+| Curve with explicit tangent constraints | `(50,100){dir 10}..{dir 90}(150,50)..(250,150)` |![](/wp-content/uploads/2026/02/metapost-style-fitted.svg)|
 | Simple 4-point wave curve | `(50,100)..(150,50)..(250,150)..(350,100)` |![](/wp-content/uploads/2026/02/wave-simple-fitted.svg)|
 
 
@@ -177,10 +186,10 @@ Following is a video recording of me drawing Malayalam letter 'va' with the curv
 The original curve in the context is also called a skeleton curve.
 It can also be defined as a curve whose points are at a constant normal distance from a given curve.
 
-![Two definitions of a parallel curve: 1) envelope of a family of congruent circles, 2) by a fixed normal distance. Source https://en.wikipedia.org/wiki/Parallel_curve#/media/File:Offset-definition-poss.svg](https://upload.wikimedia.org/wikipedia/commons/a/a7/Offset-definition-poss.svg)
+![Two definitions of a parallel curve: 1) envelope of a family of congruent circles, 2) by a fixed normal distance. Source https://en.wikipedia.org/wiki/Parallel_curve#/media/File:Offset-definition-poss.svg](/wp-content/uploads/2026/02/Offset-definition-poss.svg.png)
 
 
-In the above image, two definitions of a parallel curve is illustrated: 1) envelope of a family of congruent circles, 2) by a fixed normal distance
+In the above image, two definitions of a parallel curve is illustrated: 1) envelope of a family of congruent circles, 2) by a fixed normal distance. [source](https://commons.wikimedia.org/wiki/File:Offset-definition-poss.svg)
 
 Calculating accurate parallel curve for an arbitrary curve is quite complex. The exact offset curve of a cubic Bézier can be described using a bezier curve of degree 10. But such a curve is quite complex to calculate and work with.
 Thus, in practice the approach is almost always to compute an approximation to the true parallel curve.
@@ -223,9 +232,8 @@ Following is a video illustrating the interpolating nature of a glyph 'e' when t
 > If you like to observe how interpolation works for variable fonts, [SAMSA Interpolator is a good tool][17]
 
 ## Interpolatable Variable Strokes
-
-A simple trick I tried first for achieving interpolation is to make the sub-divisions of the outline
-for a path segment deterministic. In the above curve, if you look carefully, you can see that the subdivisions in outlines are sometimes two, sometimes three.
+Before abandoning the above approach of using a custom parallel curve constructor with substituted offsets, I tried to see if I can make the curve points constant.
+In the above curve, if you look carefully, you can see that the subdivisions in outlines are sometimes two, sometimes three.
 Initially I set a fixed, 4 sub-divisions for every path segment. But later I changed it to dynamic based on the curvature of the source path.
 
 The resulting curves are interpolatable but lost the perfection from the previous step.
@@ -236,11 +244,11 @@ simpler [Tiller-Hanson-like approach][15]. This subdivision approach is discusse
 
 When I [shared][16] this work with the Kurbo team, Raph suggested using a linear perturbation system:
 
-$B_{offset}(t) = B(t) + c \cdot D(t)$
+$B_{offset}(t) = B(t) + w(t) \cdot D(t)$
 
 *   **$B(t)$**: This is our **Source Spine** (the cubic Bézier you are stroking).
-*   **$c$**: This is the **Scalar Width** (or half-width). In a variable stroke, this is our $w(t)$.
-*   **$D(t)$**: This is a **"Direction Curve"**. It represents the Normal Vector, but approximated as a cubic Bézier itself.
+*   **$w(t)$**: The **width** (half-width) at parameter $t$. For a constant-width stroke this is a scalar; for variable strokes it varies along the curve.
+*   **$D(t)$**: This is a **"Direction Curve"**. It represents the unit normal vector along the spine, approximated as a cubic Bézier itself. Concretely, we evaluate the true unit normals at $t=0$, $t=0.5$, and $t=1$ of the spine segment, then fit a cubic Bézier through those three normal vectors. This gives us a smooth Bézier approximation of the normal field that can be combined with $B(t)$ using simple arithmetic.
 
 Intuitively, instead of trying to calculate a perfect parallel curve
 (which is mathematically impossible to represent exactly as a Bézier),
@@ -250,7 +258,7 @@ we are creating a "vector field" that points outwards from the curve.
 2.  To generate the offset, take the spine point $B(t)$ and add $D(t)$ multiplied by the width at that point.
 
 Why does this guarantee interpolatability? If you have a "Thin" shape and a "Bold" shape,
-they share the exact same $B(t)$ and $D(t)$. The *only* thing that changes is $c$ (the width).
+they share the exact same $B(t)$ and $D(t)$. The *only* thing that changes is $w(t)$ (the width).
 Because the formula is **linear** (it's just addition), point $P_{offset}$
 moves in a straight line as you increase the weight.
 This is the definition of perfect variable font interpolation. Since we keep the same sampling of $B(t)$ and $D(t)$ for all masters, all three requirements above for variable fonts are satisfied: the number of points and paths stays fixed, the contour order is unchanged, and the starting point for each contour is consistent.
@@ -263,40 +271,41 @@ Raph suggests calculating the exact offset point at $t=0.5$ (the middle).
 You then mathematically solve for the handle lengths that force the cubic curve to pass through that middle point.
 This is deterministic and fast.
 
-The endpoint tangents for variable offset are $(1 + \kappa d)x' + n d'$
+The endpoint tangents for variable offset are $(1 + \kappa w)x' + n w'$
 
 This formula tells you exactly **what direction the offset curve is pointing** at any moment $t$.
 
 
-$$toffset = (1 + \kappa d)x' + nd'$$
+$$toffset = (1 + \kappa w)x' + nw'$$
 
-### Part A: The "Parallel" Movement
+Part A: The "Parallel" Movement
+
 *   **$x'$**: This is the tangent of the spine (moving forward along the road).
-*   **$d$**: The current width.
+*   **$w$**: The current width (half-width), i.e. $w(t)$.
 *   **$\kappa$**: The curvature (how tight the turn is).
 
-### Part B: The "Taper" Movement - sideways push
+Part B: The "Taper" Movement - sideways push
 *   **$n$**: The Unit Normal (pointing 90° sideways).
-*   **$d'$**: The **Derivative of Width** (The slope). How fast is the width changing?
+*   **$w'$**: The **Derivative of Width** (The slope). How fast is the width changing?
 
-If the pen is getting wider ($d' > 0$), the edge of the ink must move **outwards** away from the center.
+If the pen is getting wider ($w' > 0$), the edge of the ink must move **outwards** away from the center.
 This adds a sideways vector component.
 
 
 
 This approach had one limitation though. While the outline curve is smooth for a segment, at segment joints,
 kinks (sharp jumps) can happen when such segments are joined.
-Since the tangent calculation based on $(1 + \kappa d)x' + nd'$ needs some
+Since the tangent calculation based on $(1 + \kappa w)x' + nw'$ needs some
 updates to handle the case of segment joins.
 
 
 The sideways movement of the stroke, based on how much the width
-changes per segment — $d'$ — is rapid when segment A and B have different lengths. This changes the angle of the offset curve,
+changes per segment — $w'$ — is rapid when segment A and B have different lengths. This changes the angle of the offset curve,
 creating the kink you see here:
 
 ![G1 Continuity Error at Segment Joints](/wp-content/uploads/2026/02/var-interpolation-continuity-error.png)
 
-So we need an error correction mechanism at segment joins to get $G_1$ continuity.
+So we need an error correction mechanism at segment joins to get $G^1$ continuity.
 
 > **Curve continuity**
 > There are different levels of geometric curve continuity. Higher continuity is required to create smoother and more natural curves.
@@ -314,7 +323,7 @@ So we need an error correction mechanism at segment joins to get $G_1$ continuit
 
 The variable-width stroking process, while mathematically elegant,
 introduces challenges at segment boundaries where the width changes dynamically.
-The stroke outline can have G₁ continuity errors (directional discontinuities) at these joints due
+The stroke outline can have $G^1$ continuity errors (directional discontinuities) at these joints due
 to the complex interplay between curvature, width taper, and segment transitions.
 
 To address this, we employ a **multi-stage error correction strategy** that leverages
@@ -347,9 +356,9 @@ If skeleton information is available, I do a second pass. Each outline point is 
 
 ![Skeleton-Aware Correction Workflow](/wp-content/uploads/2026/02/wave-simple-skeleton-correction.svg)
 
-### Stage 2: Detect and Correct G₁ Failures (With Skeleton)
+### Stage 2: Detect and Correct $G^1$ Failures (With Skeleton)
 
-After this first clean-up, there can still be G₁ continuity failures — places where the incoming and outgoing tangents differ by more than a tiny threshold (I use 0.5°, which is a visually meaningful difference for these curves). For each such point, if I can match it confidently to a skeleton point, I again take the skeleton's tangent direction as the ground truth and override the outline-derived angle. Then I re-run the G₁ smoothing on the neighbourhood so that the correction propagates to nearby points. This step is deliberately conservative: only points that actually fail the G₁ test are touched, and only when the skeleton match is within 2.0 units.
+After this first clean-up, there can still be $G^1$ continuity failures — places where the incoming and outgoing tangents differ by more than a tiny threshold (I use 0.5°, which is a visually meaningful difference for these curves). For each such point, if I can match it confidently to a skeleton point, I again take the skeleton's tangent direction as the ground truth and override the outline-derived angle. Then I re-run the $G^1$ smoothing on the neighbourhood so that the correction propagates to nearby points. This step is deliberately conservative: only points that actually fail the $G^1$ test are touched, and only when the skeleton match is within 2.0 units.
 
 ### Stage 3: Fit the Refined Curve
 
@@ -364,9 +373,13 @@ As you can see, we get variable smooth stroke. And it is interpolatable for widt
 
 Thanks for reading!
 
-> **Note**
-> One of the major shifts in software engineering that happened in the past several months is that AI agentic coding makes you capable of
-> taking up projects that are more ambitious, projects that you postponed in the past. I am embracing this radical change and enjoying it a lot.
+---
+## Notes
+
+* Thanks to Raph Levien for the inputs. The above approach is an engineer's approximation. Raph and Kurbo team is actively working on better algorithms and I am eagerly looking forward for that.
+* One of the major shifts in software engineering that happened in the past several months is that AI agentic coding makes you capable of taking up projects that are more ambitious, projects that you postponed in the past. I am embracing this radical change and enjoying it a lot.*
+* What next? I wanted to focus on the DSL based type design system and use this curve generation as core backend.
+* I found Deepwiki can generate detailed explanation of code repositories. Checkout [deepwiki documentation of this exploration](https://deepwiki.com/santhoshtr/kurbo-curve-fit-stroke)
 
 
 [1]: https://en.wikipedia.org/wiki/MetaPost
