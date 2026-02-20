@@ -1,12 +1,3 @@
-body {
-  font-family: "Gentium Book Basic", "Manjari", "Times New Roman", serif;
-}
-.post-preview {
-  .post-entry {
-    font-family: "Gentium Book Basic", "Manjari", "Times New Roman", serif;
-  }
-}
-
 a.footnote-ref::before {
   content: "[";
 }
@@ -32,39 +23,17 @@ figure {
   padding: 0;
 
   figcaption {
-    font-size: 1em;
     text-align: left;
 
     p {
-      font-size: 1em;
       line-height: 1.5;
     }
   }
 }
+
 .align-right {
   float: right;
   width: 50%;
-}
-
-h2 {
-  line-height: 2;
-}
-
-h3 {
-  line-height: 2;
-}
-
-p,
-li {
-  font-size: 1.2em;
-  line-height: 1.7;
-}
-
-.footnotes {
-  p {
-    font-size: 0.9em;
-    line-height: 1.5;
-  }
 }
 
 .align-middle {
@@ -78,21 +47,5 @@ li {
   }
   .align-middle {
     width: 100%;
-  }
-}
-
-aside {
-  position: relative;
-  width: 100%;
-  clear: right;
-  margin: 0 0 1em 1.5em;
-  padding: 10px;
-  border-left: 4px solid #ccc;
-  font-style: italic;
-
-  @media (max-width: 767px) {
-    float: none;
-    width: 100%;
-    margin: 1em 0;
   }
 }
