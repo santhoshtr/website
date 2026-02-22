@@ -13,6 +13,7 @@ h1 {
 p {
   text-wrap: pretty;
   line-height: 1.7;
+
   a {
     word-break: break-word;
   }
@@ -45,7 +46,50 @@ figure {
   .align-right {
     float: none;
   }
+
   .align-middle {
     width: 100%;
+  }
+  p > aside {
+    display: none;
+  }
+}
+
+/* Side notes */
+article {
+  anchor-name: --article;
+}
+
+@supports (anchor-name: --article) {
+  .sidenote {
+    position: absolute;
+    anchor-name: --sidenote;
+    top: anchor(top);
+    bottom: auto;
+    left: calc(anchor(--article right) + 1em);
+    clear: right;
+    --sidenote-width: 40ch;
+    --sidenote-gap: 35px;
+    margin-right: calc(-1 * var(--sidenote-width) - var(--sidenote-gap));
+    margin-left: var(--sidenote-gap);
+    margin-top: 0.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    float: right;
+    width: var(--sidenote-width);
+    font-size: 0.8em;
+    line-height: 1.4;
+    text-align: start;
+    text-wrap: pretty;
+    opacity: 0.8;
+    text-indent: 0;
+
+    &.left {
+      right: calc(anchor(--article left) - 1em);
+    }
+
+    & ~ .sidenote {
+      top: calc(anchor(--sidenote bottom) + 1.5em);
+    }
   }
 }
