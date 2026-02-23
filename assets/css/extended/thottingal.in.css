@@ -53,14 +53,45 @@ figure {
   p > aside {
     display: none;
   }
+  .toc {
+    display: none;
+  }
 }
 
 /* Side notes */
+body {
+  anchor-name: --body;
+  --toc-top-position: 10ch;
+}
+html {
+  container-type: scroll-state;
+  container-name: scroller;
+}
+@container scroller scroll-state(scrollable: top) {
+  body {
+    --toc-top-position: 1ch;
+  }
+}
+
 article {
   anchor-name: --article;
 }
 
 @supports (anchor-name: --article) {
+  .toc {
+    position: fixed;
+    left: 0;
+    right: calc(anchor(--article left) + 3em);
+    top: calc(anchor(--body top) + var(--toc-top-position));
+    font-size: 0.85em;
+    background: var(--theme) !important;
+    border: none;
+    scroll-target-group: auto;
+    a:target-current {
+      /* Styles for the currently active link */
+      font-weight: bold;
+    }
+  }
   .sidenote {
     position: absolute;
     anchor-name: --sidenote;
