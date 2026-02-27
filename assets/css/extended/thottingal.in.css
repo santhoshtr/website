@@ -50,9 +50,11 @@ figure {
   .align-middle {
     width: 100%;
   }
-  p > aside {
+
+  p>aside {
     display: none;
   }
+
   .toc {
     display: none;
   }
@@ -63,10 +65,12 @@ body {
   anchor-name: --body;
   --toc-top-position: 10ch;
 }
+
 html {
   container-type: scroll-state;
   container-name: scroller;
 }
+
 @container scroller scroll-state(scrollable: top) {
   body {
     --toc-top-position: 1ch;
@@ -87,9 +91,16 @@ article {
     background: var(--theme) !important;
     border: none;
     scroll-target-group: auto;
-    a:target-current {
-      /* Styles for the currently active link */
-      font-weight: bold;
+
+    a {
+      opacity: 0.8;
+
+      &:target-current {
+        /* Styles for the currently active link */
+        font-weight: bold;
+        opacity: 1;
+        ;
+      }
     }
   }
   .sidenote {
@@ -119,8 +130,8 @@ article {
       right: calc(anchor(--article left) - 1em);
     }
 
-    & ~ .sidenote {
+    &~.sidenote {
       top: calc(anchor(--sidenote bottom) + 1.5em);
     }
   }
-}
+

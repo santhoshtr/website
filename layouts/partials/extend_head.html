@@ -1,0 +1,3 @@
+{{ with .Params.customcss }}
+  <link rel="stylesheet" href="{{ . | absURL }}" />
+{{ end }}

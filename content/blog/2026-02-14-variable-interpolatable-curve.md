@@ -9,7 +9,7 @@ categories:
   - Type Engineering
   - Rust
   - Curves
-ShowToc: true
+showToc: true
 TocOpen: true
 ---
 

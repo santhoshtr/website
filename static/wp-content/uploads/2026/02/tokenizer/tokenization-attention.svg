@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="666" viewBox="0 0 860 666" font-family="JetBrains Mono, Menlo, monospace">
+  <rect width="860" height="666" fill="#0c0e14" rx="12"/>
+  <defs>
+    <marker id="ah4ade80" markerWidth="7" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#4ade80"/>
+    </marker>
+    <marker id="ah7dd3fc" markerWidth="7" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#7dd3fc"/>
+    </marker>
+    <marker id="ahc084fc" markerWidth="7" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#c084fc"/>
+    </marker>
+    <marker id="ahf87171" markerWidth="7" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#f87171"/>
+    </marker>
+    <marker id="ahfb923c" markerWidth="7" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#fb923c"/>
+    </marker>
+  </defs>
+  <text x="36" y="56" font-family="Georgia, serif" font-size="15" fill="#4ade80" font-style="italic">① Word tokens</text>
+  <rect x="36.0" y="64" width="45.2" height="32" rx="5" fill="#0f1f3d" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="58.6" y="85.0" text-anchor="middle" font-size="13" font-weight="600" fill="#7dd3fc">The</text>
+  <rect x="87.2" y="64" width="53.6" height="32" rx="5" fill="#2d2200" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="114.0" y="85.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f5c542">bank</text>
+  <rect x="146.8" y="64" width="45.2" height="32" rx="5" fill="#0f1f3d" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="169.4" y="85.0" text-anchor="middle" font-size="13" font-weight="600" fill="#7dd3fc">can</text>
+  <rect x="198.0" y="64" width="95.6" height="32" rx="5" fill="#0f1f3d" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="245.8" y="85.0" text-anchor="middle" font-size="13" font-weight="600" fill="#7dd3fc">guarantee</text>
+  <rect x="299.6" y="64" width="87.2" height="32" rx="5" fill="#0f1f3d" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="343.2" y="85.0" text-anchor="middle" font-size="13" font-weight="600" fill="#7dd3fc">deposits</text>
+  <rect x="392.8" y="64" width="53.6" height="32" rx="5" fill="#0f1f3d" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="419.6" y="85.0" text-anchor="middle" font-size="13" font-weight="600" fill="#7dd3fc">will</text>
+  <rect x="452.4" y="64" width="62.0" height="32" rx="5" fill="#0f1f3d" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="483.4" y="85.0" text-anchor="middle" font-size="13" font-weight="600" fill="#7dd3fc">cover</text>
+  <rect x="520.4" y="64" width="70.4" height="32" rx="5" fill="#0f1f3d" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="555.6" y="85.0" text-anchor="middle" font-size="13" font-weight="600" fill="#7dd3fc">future</text>
+  <rect x="596.8" y="64" width="62.0" height="32" rx="5" fill="#0f1f3d" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="627.8" y="85.0" text-anchor="middle" font-size="13" font-weight="600" fill="#7dd3fc">costs</text>
+  <path d="M58.6,99.0 C77.1,116.5 95.5,116.5 114.0,99.0" stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah7dd3fc)" opacity="0.9"/>
+  <path d="M169.4,99.0 C150.9,118.1 132.5,118.1 114.0,99.0" stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah7dd3fc)" opacity="0.9"/>
+  <path d="M245.8,99.0 C201.9,131.0 157.9,131.0 114.0,99.0" stroke="#c084fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahc084fc)" opacity="0.9"/>
+  <path d="M343.2,99.0 C266.8,144.3 190.4,144.3 114.0,99.0" stroke="#4ade80" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah4ade80)" opacity="0.9"/>
+  <path d="M627.8,99.0 C456.5,144.3 285.3,144.3 114.0,99.0" stroke="#fb923c" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahfb923c)" opacity="0.9"/>
+  <text x="36" y="185" font-size="12.5" fill="#4ade80" opacity="0.9">✓  9 tokens — clean attention, meaning is clear</text>
+  <line x1="36" y1="224" x2="824" y2="224" stroke="#252a38" stroke-width="1"/>
+  <text x="36" y="274" font-family="Georgia, serif" font-size="15" fill="#fb923c" font-style="italic">② Sub-word tokens</text>
+  <rect x="36.0" y="282" width="43.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="57.7" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">The</text>
+  <rect x="85.1" y="282" width="35.3" height="32" rx="5" fill="#2d2200" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="102.8" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#f5c542">▸b</text>
+  <rect x="126.2" y="282" width="51.4" height="32" rx="5" fill="#2d2200" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="151.9" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#f5c542">ank◂</text>
+  <rect x="183.3" y="282" width="43.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="205.0" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">can</text>
+  <rect x="232.4" y="282" width="51.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="258.1" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">guar</text>
+  <rect x="289.6" y="282" width="35.3" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="307.2" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">an</text>
+  <rect x="330.6" y="282" width="43.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="352.3" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">tee</text>
+  <rect x="379.7" y="282" width="43.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="401.4" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">dep</text>
+  <rect x="428.8" y="282" width="35.3" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="446.5" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">os</text>
+  <rect x="469.9" y="282" width="43.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="491.6" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">its</text>
+  <rect x="519.0" y="282" width="51.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="544.7" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">will</text>
+  <rect x="576.2" y="282" width="43.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="597.8" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">cov</text>
+  <rect x="625.3" y="282" width="35.3" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="642.9" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">er</text>
+  <rect x="666.3" y="282" width="43.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="688.0" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">fut</text>
+  <rect x="715.4" y="282" width="43.4" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="737.1" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">ure</text>
+  <rect x="764.5" y="282" width="59.5" height="32" rx="5" fill="#1a1000" stroke="#3b1f00" stroke-width="1.5"/>
+  <text x="794.3" y="303.0" text-anchor="middle" font-size="12" font-weight="600" fill="#fb923c">costs</text>
+  <path d="M57.7,317.0 C72.7,332.9 87.7,332.9 102.8,317.0" stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah7dd3fc)" opacity="0.9"/>
+  <path d="M57.7,317.0 C89.1,341.8 120.5,341.8 151.9,317.0" stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah7dd3fc)" opacity="0.9"/>
+  <path d="M205.0,317.0 C170.9,344.7 136.8,344.7 102.8,317.0" stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah7dd3fc)" opacity="0.9"/>
+  <path d="M205.0,317.0 C187.3,339.1 169.6,339.1 151.9,317.0" stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah7dd3fc)" opacity="0.9"/>
+  <path d="M401.4,317.0 C301.9,362.3 202.3,362.3 102.8,317.0" stroke="#fb923c" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahfb923c)" opacity="0.9"/>
+  <path d="M401.4,317.0 C318.2,362.3 235.0,362.3 151.9,317.0" stroke="#fb923c" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahfb923c)" opacity="0.9"/>
+  <path d="M794.3,317.0 C563.8,362.3 333.3,362.3 102.8,317.0" stroke="#fb923c" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahfb923c)" opacity="0.9"/>
+  <path d="M794.3,317.0 C580.1,362.3 366.0,362.3 151.9,317.0" stroke="#fb923c" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahfb923c)" opacity="0.9"/>
+  <text x="36" y="403" font-size="12.5" fill="#fb923c" opacity="0.9">⚠  16 tokens — 'bank' is split, attention is doubled</text>
+  <line x1="36" y1="442" x2="824" y2="442" stroke="#252a38" stroke-width="1"/>
+  <text x="36" y="492" font-family="Georgia, serif" font-size="15" fill="#f87171" font-style="italic">③ Character tokens</text>
+  <rect x="36.0" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="50.2" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">T</text>
+  <rect x="70.4" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="84.6" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">h</text>
+  <rect x="104.8" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="119.0" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">e</text>
+  <rect x="139.2" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="153.4" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">·</text>
+  <rect x="173.6" y="500" width="28.4" height="32" rx="5" fill="#2d2200" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="187.8" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f5c542">b</text>
+  <rect x="208.0" y="500" width="28.4" height="32" rx="5" fill="#2d2200" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="222.2" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f5c542">a</text>
+  <rect x="242.4" y="500" width="28.4" height="32" rx="5" fill="#2d2200" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="256.6" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f5c542">n</text>
+  <rect x="276.8" y="500" width="28.4" height="32" rx="5" fill="#2d2200" stroke="#f5c542" stroke-width="1.5"/>
+  <text x="291.0" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f5c542">k</text>
+  <rect x="311.2" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="325.4" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">·</text>
+  <rect x="345.6" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="359.8" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">c</text>
+  <rect x="380.0" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="394.2" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">a</text>
+  <rect x="414.4" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="428.6" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">n</text>
+  <rect x="448.8" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="463.0" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">·</text>
+  <rect x="483.2" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="497.4" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">d</text>
+  <rect x="517.6" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="531.8" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">e</text>
+  <rect x="552.0" y="500" width="28.4" height="32" rx="5" fill="#160808" stroke="#2e1010" stroke-width="1.5"/>
+  <text x="566.2" y="521.0" text-anchor="middle" font-size="13" font-weight="600" fill="#f87171">p</text>
+  <path d="M50.2,535.0 C96.1,564.5 141.9,564.5 187.8,535.0" stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah7dd3fc)" opacity="0.9"/>
+  <path d="M84.6,535.0 C130.5,566.2 176.3,566.2 222.2,535.0" stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah7dd3fc)" opacity="0.9"/>
+  <path d="M119.0,535.0 C164.9,567.8 210.7,567.8 256.6,535.0" stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ah7dd3fc)" opacity="0.9"/>
+  <path d="M359.8,535.0 C302.5,574.6 245.1,574.6 187.8,535.0" stroke="#fb923c" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahfb923c)" opacity="0.9"/>
+  <path d="M394.2,535.0 C336.9,576.2 279.5,576.2 222.2,535.0" stroke="#fb923c" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahfb923c)" opacity="0.9"/>
+  <path d="M428.6,535.0 C371.3,577.9 313.9,577.9 256.6,535.0" stroke="#fb923c" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahfb923c)" opacity="0.9"/>
+  <path d="M497.4,535.0 C394.2,580.3 291.0,580.3 187.8,535.0" stroke="#f87171" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahf87171)" opacity="0.9"/>
+  <path d="M531.8,535.0 C428.6,580.3 325.4,580.3 222.2,535.0" stroke="#f87171" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahf87171)" opacity="0.9"/>
+  <path d="M566.2,535.0 C463.0,580.3 359.8,580.3 256.6,535.0" stroke="#f87171" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahf87171)" opacity="0.9"/>
+  <path d="M50.2,535.0 C107.5,580.3 164.9,580.3 222.2,535.0" stroke="#c084fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahc084fc)" opacity="0.9"/>
+  <path d="M84.6,535.0 C141.9,580.3 199.3,580.3 256.6,535.0" stroke="#c084fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahc084fc)" opacity="0.9"/>
+  <path d="M119.0,535.0 C176.3,580.3 233.7,580.3 291.0,535.0" stroke="#c084fc" stroke-width="1.6" fill="none" stroke-linecap="round" marker-end="url(#ahc084fc)" opacity="0.9"/>
+  <text x="36" y="621" font-size="12.5" fill="#f87171" opacity="0.9">✗  55+ tokens — every char attends to every other char</text>
+</svg>

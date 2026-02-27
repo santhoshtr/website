@@ -1,0 +1,50 @@
+@import "./tailwind-colors.css";
+
+token:nth-child(5n + 1) {
+  --color: var(--color-rose-800);
+}
+
+token:nth-child(5n + 2) {
+  --color: var(--color-teal-800);
+}
+token:nth-child(5n + 3) {
+  --color: var(--color-amber-800);
+}
+token:nth-child(5n + 4) {
+  --color: var(--color-blue-800);
+}
+token:nth-child(5n + 5) {
+  --color: var(--color-violet-800);
+}
+
+token {
+  position: relative;
+  border-bottom: 2px solid var(--color);
+  padding: 0 8px;
+  margin: 4px;
+  font-size: 1.25em;
+  display: iniline;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 2px; /* thickness */
+    height: 0.25lh; /* how far the cap extends upward */
+    background: var(--color);
+  }
+
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}
+
+table:has(token) {
+  th,
+  td {
+    border: 2px solid var(--border);
+  }
+}
