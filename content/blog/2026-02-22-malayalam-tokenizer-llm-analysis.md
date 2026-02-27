@@ -30,7 +30,7 @@ The full source is at [github.com/smc/malayalam-tokenizer](https://github.com/sm
 - [smcproject/malayalam-bpe-tokenizer](https://huggingface.co/smcproject/malayalam-bpe-tokenizer)
 - [smcproject/malayalam-unigram-tokenizer](https://huggingface.co/smcproject/malayalam-unigram-tokenizer)
 
-A live comparison demo is available at the [SMC HuggingFace space](https://huggingface.co/smcproject/malayalam-bpe-tokenizer).
+A live comparison demo is available at the [SMC HuggingFace space](https://huggingface.co/spaces/smcproject/malayalam-tokenizer-comparison).
 
 ---
 
