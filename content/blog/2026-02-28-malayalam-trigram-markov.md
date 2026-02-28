@@ -2,6 +2,7 @@
 title: "From Tokens to Text: A Trigram Markov Model for Malayalam"
 type: post
 date: 2026-02-28T05:00:00+05:30
+url: /blog/2026/02/28/malayalam-markov-chain
 tags: ["NLP", "Malayalam", "Markov Chain", "Language Modeling", "Trigram", "CSF", "Rust"]
 categories: ["Natural Language Processing", "Machine Learning"]
 series: ["Malayalam Language Modeling"]
