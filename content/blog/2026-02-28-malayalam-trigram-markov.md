@@ -49,7 +49,7 @@ For tokenized Malayalam, a single word might be split into 2-3 tokens. Therefore
 
 ## Just Use a Markov Chain Library?
 
-Can't we just use a markov chain library? There are plenty of libraries. For example, python [markovify](https://github.com/jsvine/markovify) library is popular and has been used in many applications. There are many tutorials on how to build a markov text generator with a few lines of python code.
+Can't we just use a markov chain library? There are plenty of libraries. For example, python [markovify](https://github.com/jsvine/markovify) library is popular and has been used in many applications. There are many tutorials on how to build a markov text generator with a few lines of python code.<span class="sidenote">Infact, several years ago, I [had attempted building one](https://github.com/santhoshtr/markovchain), it worked with small corpus and was very slow and resource hungry.</span>
 
 The only difference is that we're dealing with Malayalam—a language with a nearly infinite vocabulary. English words are mostly discrete blocks. You have "the," "cat," "sat"—you put them next to each other like LEGO bricks. Malayalam, on the other hand, is agglutinative. You don't just stack blocks; you fuse them together to create new, complex shapes like clay.
 
