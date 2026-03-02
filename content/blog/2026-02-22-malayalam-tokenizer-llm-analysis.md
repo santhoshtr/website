@@ -652,7 +652,7 @@ The tokenizers we trained here are a small piece of this. They demonstrate that 
 ## Notes
 
 * I did an illustrated talk about Linguistics, Malayalam and AI at Malayalam University last year. Unfortunately it was not recorded, but my presentation slides are [available here]( https://santhoshtr.github.io/ai-linguistics-malayalam-talk)
-* Beyond numbers and theoretical analysis, testing a tokenizer is often done with a downstream task. I worked on a Markov Chain based text generator for Malayalam based on this tokenizer. I will write an article about it later.
+* Beyond numbers and theoretical analysis, testing a tokenizer is often done with a downstream task. I worked on a Markov Chain based text generator for Malayalam based on this tokenizer. I will write an article about it later. Update: That article is here: [From Tokens to Text: A Trigram Markov Model for Malayalam](https://thottingal.in/blog/2026/02/28/malayalam-markov-chain/)
 * Thanks to Kavya Manohar for valuable discussions to frame the thoughts in this article.
 
 ## References
