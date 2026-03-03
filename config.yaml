@@ -26,9 +26,9 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-services:
-  googleAnalytics:
-    id: G-NXL37BD6DQ
+#services:
+  #googleAnalytics:
+  #  id: G-NXL37BD6DQ
   # disqus:
   #   shortname: thottingal-in
 
@@ -125,7 +125,7 @@ params:
   disableThemeToggle: false
 
   # Analytics
-  googleAnalyticsID: "G-NXL37BD6DQ"
+  #googleAnalyticsID: "G-NXL37BD6DQ"
 
   # SEO Settings
   enableInlineShortcodes: true
