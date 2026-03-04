@@ -4,8 +4,6 @@ author: Santhosh Thottingal
 type: post
 date: 2014-07-20T06:05:19+00:00
 url: /blog/2014/07/20/typesetting-malayalam-using-xetex/
-medium_post:
-  - 'O:11:"Medium_Post":11:{s:16:"author_image_url";s:75:"https://cdn-images-1.medium.com/fit/c/200/200/1*As1EIgy-TLEcibTNPBApCQ.jpeg";s:10:"author_url";s:31:"https://medium.com/@sthottingal";s:11:"byline_name";N;s:12:"byline_email";N;s:10:"cross_link";s:2:"no";s:2:"id";s:12:"5436bc1f40d4";s:21:"follower_notification";s:3:"yes";s:7:"license";s:11:"cc-40-by-sa";s:14:"publication_id";s:2:"-1";s:6:"status";s:6:"public";s:3:"url";s:78:"https://medium.com/@sthottingal/typesetting-malayalam-using-xetex-5436bc1f40d4";}'
 categories:
   - Malayalam
   - Tutorial
@@ -25,7 +23,7 @@ Following packages are required to install to get a working xetex environment in
 
 - texlive-xetex
 - texlive-latex-extra
-- texlive-lang-indic
+- texlive-lang-other
 
 You also need reasonably good unicode compatible Malayalam fonts. These fonts also comes with GNU/Linux distros. Search for malayalam fonts in your package manager and install if not already installed. Eg fonts: Meera, Rachana etc.
 
